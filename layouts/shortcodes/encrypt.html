@@ -4,11 +4,18 @@
 
 <div>
   {{ with .Get "encrypted"}}
-    <a id="decrypt" href="#" class="btn btn-default"><i class="fas fa-lock"></i> Decrypt</a>
+    <span class="btn cstyle primary">
+      <a id="decrypt" href="#"><i class="fas fa-lock"></i> Decrypt</a>
+    </span>
   {{ else }}
-    <a id="encrypt" href="#" class="btn btn-default"><i class="fas fa-lock-open"></i> Encrypt</a>
+    <span class="btn cstyle primary">
+      <a id="encrypt" href="#"><i class="fas fa-lock-open"></i> Encrypt</a>
+    </span>
   {{ end}}
   <div id="encrypt-div">
     {{ .Inner }}
   </div>
 </div>
+
+<script src="{{"js/sjcl.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/encrypt.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>

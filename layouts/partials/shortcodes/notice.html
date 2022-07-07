@@ -8,6 +8,12 @@
   {{- if eq $style "warning" }}{{ $icon = default "exclamation-triangle" }}{{ end }}
   {{- if eq $style "note" }}{{ $icon = default "exclamation-circle" }}{{ end }}
   {{- if eq $style "tip" }}{{ $icon = default "lightbulb" }}{{ end }}
+  <!-- [x] russfeld -->
+  {{- if eq $style "noiframe" }}
+    {{ $icon = default "times-circle" }}
+    {{ $title = "Web Only"}}
+  {{ end }}
+  <!-- end -->
 {{- end }}
 {{- $icon = trim $icon " " }}
 {{- if and $icon (not (findRE ".*?\\bfa-\\w.*?" $icon)) }}
