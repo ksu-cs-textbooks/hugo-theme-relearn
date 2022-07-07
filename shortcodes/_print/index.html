@@ -10,18 +10,18 @@
     <title>Shortcodes :: Hugo Relearn Theme</title>
     <link rel="canonical" type="text/html" href="/hugo-theme-relearn/shortcodes/" title="Hugo Relearn Theme" />
     <link rel="alternate" type="application/rss&#43;xml" href="/hugo-theme-relearn/shortcodes/index.xml" title="Hugo Relearn Theme" />
-    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657140252" type="image/svg+xml">
-    <link href="/hugo-theme-relearn/css/nucleus.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/auto-complete.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657140252" rel="stylesheet" id="variant-style">
-    <link href="/hugo-theme-relearn/css/ie.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/variant.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/print.css?1657140252" rel="stylesheet">
-    <script src="/hugo-theme-relearn/js/variant.js?1657140252"></script>
+    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657152586" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/nucleus.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/auto-complete.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657152586" rel="stylesheet" id="variant-style">
+    <link href="/hugo-theme-relearn/css/ie.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/variant.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/print.css?1657152586" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/variant.js?1657152586"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/K-State-Computational-Core.github.io\/hugo-theme-relearn/';
       variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
     </script>
-    <script src="/hugo-theme-relearn/js/jquery.min.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/jquery.min.js?1657152586"></script>
   </head>
   <body class="mobile-support print" data-url="/hugo-theme-relearn/shortcodes/">
     <div id="body" class="default-animation">
@@ -84,7 +84,10 @@
 
 <p>Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.</p>
 <p>But this happens to be a bad idea. Everyone uses Markdown because it&rsquo;s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.</p>
-<p>To avoid this limitations, Hugo created <a href="https://gohugo.io/extras/shortcodes/">shortcodes</a>. A shortcode is a simple snippet inside a page.</p>
+<p>To avoid this limitations, Hugo created 
+
+<a href="https://gohugo.io/extras/shortcodes/" target="_blank" rel="noopener">shortcodes</a>
+. A shortcode is a simple snippet inside a page.</p>
 <p>The Relearn theme provides multiple shortcodes on top of existing ones.</p>
 
 <div class="children children-h2 children-sort-">
@@ -257,7 +260,10 @@
 <tr>
 <td style="text-align:left"><strong>icon</strong></td>
 <td style="text-align:left">see notes</td>
-<td style="text-align:left"><a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a> set to the left of the title. Depending le** there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching iseverity<br/>- for all other colors: <code>paperclip</code><br/><br/>If you want no icon, you have to set this parameter to <code>&quot; &quot;</code> (a non empty d with spaces)</td>
+<td style="text-align:left">
+
+<a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a>
+ set to the left of the title. Depending le** there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching iseverity<br/>- for all other colors: <code>paperclip</code><br/><br/>If you want no icon, you have to set this parameter to <code>&quot; &quot;</code> (a non empty d with spaces)</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>sort</strong></td>
@@ -267,7 +273,10 @@
 <tr>
 <td style="text-align:left"><strong>pattern</strong></td>
 <td style="text-align:left"><code>.*</code></td>
-<td style="text-align:left">A <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>, used to filter the attachments by file name. For example:<br/><br/>- to match a file suffix of &lsquo;jpg&rsquo;, use <code>.*jpg</code> (not <code>*.jpg</code>)<br/>- to match file names ending in <code>jpg</code> or <code>png</code>, use <code>.*(jpg|png)</code></td>
+<td style="text-align:left">A 
+
+<a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">regular expressions</a>
+, used to filter the attachments by file name. For example:<br/><br/>- to match a file suffix of &lsquo;jpg&rsquo;, use <code>.*jpg</code> (not <code>*.jpg</code>)<br/>- to match file names ending in <code>jpg</code> or <code>png</code>, use <code>.*(jpg|png)</code></td>
 </tr>
 </tbody>
 </table>
@@ -300,7 +309,10 @@
 </div>
 
 <h3 id="style-and-icons">Style and Icons</h3>
-<p>For further examples for <strong>style</strong>, <strong>title</strong> and <strong>icon</strong>, see the <a href="/hugo-theme-relearn/shortcodes/notice/"><code>notice</code> shortcode</a> documentation. The parameter are working the same way for both shortcodes, besides having different defaults.</p>
+<p>For further examples for <strong>style</strong>, <strong>title</strong> and <strong>icon</strong>, see the 
+
+<a href="/hugo-theme-relearn/shortcodes/notice/"><code>notice</code> shortcode</a>
+ documentation. The parameter are working the same way for both shortcodes, besides having different defaults.</p>
 
             <footer class="footline">
             </footer>
@@ -389,7 +401,10 @@
 <tr>
 <td style="text-align:left"><strong>icon</strong></td>
 <td style="text-align:left">see notes</td>
-<td style="text-align:left"><a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a> set to the left of the title. Depending on the <strong>style</strong> there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching icon for the severity<br/>- for all other colors: <em>&lt;empty&gt;</em><br/><br/>If you want no icon for a severity style, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces)</td>
+<td style="text-align:left">
+
+<a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a>
+ set to the left of the title. Depending on the <strong>style</strong> there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching icon for the severity<br/>- for all other colors: <em>&lt;empty&gt;</em><br/><br/>If you want no icon for a severity style, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces)</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>iconposition</strong></td>
@@ -624,7 +639,10 @@
 <tr>
 <td style="text-align:left"><strong>description</strong></td>
 <td style="text-align:left"><code>false</code></td>
-<td style="text-align:left">When <code>true</code> shows a short text under each page in the list. When no description or summary exists for the page, the first 70 words of the content is taken - <a href="https://gohugo.io/content/summaries/">read more info about summaries on gohugo.io</a>.</td>
+<td style="text-align:left">When <code>true</code> shows a short text under each page in the list. When no description or summary exists for the page, the first 70 words of the content is taken - 
+
+<a href="https://gohugo.io/content/summaries/" target="_blank" rel="noopener">read more info about summaries on gohugo.io</a>
+.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>depth</strong></td>
@@ -634,7 +652,10 @@
 <tr>
 <td style="text-align:left"><strong>sort</strong></td>
 <td style="text-align:left">see notes</td>
-<td style="text-align:left">The sort order of the displayed list.<br/><br/>If not set it is sorted by the <a href="/hugo-theme-relearn/basics/configuration/#global-site-parameters"><code>ordersectionsby</code></a> setting of the site and the pages frontmatter<br/><br/>- <code>weight</code>: to sort on menu order<br/>- <code>title</code>: to sort alphabetically on menu label.</td>
+<td style="text-align:left">The sort order of the displayed list.<br/><br/>If not set it is sorted by the 
+
+<a href="/hugo-theme-relearn/basics/configuration/#global-site-parameters"><code>ordersectionsby</code></a>
+ setting of the site and the pages frontmatter<br/><br/>- <code>weight</code>: to sort on menu order<br/>- <code>title</code>: to sort alphabetically on menu label.</td>
 </tr>
 </tbody>
 </table>
@@ -773,7 +794,10 @@ So its content is used as description.</p>
           <article class="default">
 <h1>page 1-1</h1>
 
-<p>This is a demo child page with a hidden child. You can still access the hidden child <a href="/hugo-theme-relearn/shortcodes/children/children-1/children-1-1/children-1-1-1/">directly</a> or via the search.</p>
+<p>This is a demo child page with a hidden child. You can still access the hidden child 
+
+<a href="/hugo-theme-relearn/shortcodes/children/children-1/children-1-1/children-1-1-1/">directly</a>
+ or via the search.</p>
 <h2 id="subpages-of-this-page">Subpages of this page</h2>
 
 <ul class="children children-li children-sort-">
@@ -1022,7 +1046,10 @@ No need to press you!
 <li>multiple paragraphs</li>
 <li>bullet point lists</li>
 <li><em>emphasized</em>, <strong>bold</strong> and even <strong><em>bold emphasized</em></strong> text</li>
-<li><a href="https://example.com">links</a></li>
+<li>
+
+<a href="https://example.com" target="_blank" rel="noopener">links</a>
+</li>
 <li>etc.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
@@ -1100,7 +1127,10 @@ No need to press you!
 <td style="text-align:left"><strong>file</strong></td>
 <td style="text-align:left">1</td>
 <td style="text-align:left"><em>&lt;empty&gt;</em></td>
-<td style="text-align:left">The path to the file to be included. Path resolution adheres to <a href="https://gohugo.io/functions/readfile/">Hugo&rsquo;s build-in <code>readFile</code> function</a></td>
+<td style="text-align:left">The path to the file to be included. Path resolution adheres to 
+
+<a href="https://gohugo.io/functions/readfile/" target="_blank" rel="noopener">Hugo&rsquo;s build-in <code>readFile</code> function</a>
+</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>hidefirstheading</strong></td>
@@ -1118,7 +1148,10 @@ No need to press you!
 <li>multiple paragraphs</li>
 <li>bullet point lists</li>
 <li><em>emphasized</em>, <strong>bold</strong> and even <strong><em>bold emphasized</em></strong> text</li>
-<li><a href="https://example.com">links</a></li>
+<li>
+
+<a href="https://example.com" target="_blank" rel="noopener">links</a>
+</li>
 <li>etc.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
@@ -1134,7 +1167,10 @@ No need to press you!
           <article class="default">
 <h1>Math</h1>
 
-<p>The <code>math</code> shortcode generates beautiful formatted math and chemical formulae using the <a href="https://mathjax.org/">MathJax</a> library.</p>
+<p>The <code>math</code> shortcode generates beautiful formatted math and chemical formulae using the 
+
+<a href="https://mathjax.org/" target="_blank" rel="noopener">MathJax</a>
+ library.</p>
 
 <span class="math align-center">
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
@@ -1153,7 +1189,10 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 <div class="box notices cstyle note">
     <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
     <div class="box-content">
-<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (<a href="#configuration">see the configuration section</a>).</p>
+<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (
+
+<a href="#configuration">see the configuration section</a>
+).</p>
     </div>
 </div>
 
@@ -1226,7 +1265,10 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 <h2 id="configuration">Configuration</h2>
 <p>MathJax is configured with default settings. You can customize MathJax&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code> or override these settings per page thru your pages frontmatter.</p>
 <p>The JSON object of your <code>config.toml</code> / frontmatter is forwarded into MathJax&rsquo;s configuration object.</p>
-<p>See <a href="https://docs.mathjax.org/en/latest/options/index.html">MathJax documentation</a> for all allowed settings.</p>
+<p>See 
+
+<a href="https://docs.mathjax.org/en/latest/options/index.html" target="_blank" rel="noopener">MathJax documentation</a>
+ for all allowed settings.</p>
 
 <div class="box notices cstyle note">
     <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
@@ -1287,7 +1329,10 @@ $$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$$
           <article class="default">
 <h1>Mermaid</h1>
 
-<p>The <code>mermaid</code> shortcode generates diagrams and flowcharts from text, in a similar manner as Markdown using the <a href="https://mermaidjs.github.io/">Mermaid</a> library.</p>
+<p>The <code>mermaid</code> shortcode generates diagrams and flowcharts from text, in a similar manner as Markdown using the 
+
+<a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">Mermaid</a>
+ library.</p>
 
 <div class="mermaid" align="center">
 graph LR;
@@ -1305,7 +1350,13 @@ graph LR;
 <div class="box notices cstyle warning">
     <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Warning</div>
     <div class="box-content">
-<p>Due to limitations with <a href="https://github.com/mermaid-js/mermaid/issues/1846">Mermaid</a>, it is currently not possible to use Mermaid code fences in an initially collapsed <code>expand</code> shortcode. This is a know issue and <a href="https://github.com/McShelby/hugo-theme-relearn/issues/187">can&rsquo;t be fixed by this theme</a>.</p>
+<p>Due to limitations with 
+
+<a href="https://github.com/mermaid-js/mermaid/issues/1846" target="_blank" rel="noopener">Mermaid</a>
+, it is currently not possible to use Mermaid code fences in an initially collapsed <code>expand</code> shortcode. This is a know issue and 
+
+<a href="https://github.com/McShelby/hugo-theme-relearn/issues/187" target="_blank" rel="noopener">can&rsquo;t be fixed by this theme</a>
+.</p>
     </div>
 </div>
 <h2 id="usage">Usage</h2>
@@ -1315,7 +1366,10 @@ graph LR;
 <div class="box notices cstyle note">
     <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
     <div class="box-content">
-<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (<a href="#configuration">see the configuration section</a>).</p>
+<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (
+
+<a href="#configuration">see the configuration section</a>
+).</p>
     </div>
 </div>
 
@@ -1391,9 +1445,15 @@ graph LR;
 </tbody>
 </table>
 <h2 id="configuration">Configuration</h2>
-<p>Mermaid is configured with default settings. You can customize Mermaid&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code>, override these settings per page thru your pages frontmatter or override these setting per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives">diagram directives</a>.</p>
+<p>Mermaid is configured with default settings. You can customize Mermaid&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code>, override these settings per page thru your pages frontmatter or override these setting per diagramm thru 
+
+<a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives" target="_blank" rel="noopener">diagram directives</a>
+.</p>
 <p>The JSON object of your <code>config.toml</code> / frontmatter is forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> function.</p>
-<p>See <a href="http://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults">Mermaid documentation</a> for all allowed settings.</p>
+<p>See 
+
+<a href="http://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults" target="_blank" rel="noopener">Mermaid documentation</a>
+ for all allowed settings.</p>
 <p>The <code>theme</code> setting can also be set by your used color variant. This will be the sitewide default and can - again - be overridden by your settings in <code>config.toml</code>, frontmatter or diagram directives.</p>
 
 <div class="box notices cstyle note">
@@ -1645,7 +1705,10 @@ classDiagram
 <td style="text-align:left"><strong>icon</strong></td>
 <td style="text-align:left">3</td>
 <td style="text-align:left">see notes</td>
-<td style="text-align:left"><a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a> set to the left of the title. Depending on the <strong>style</strong> there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching icon for the severity<br/>- for all other colors: <em>&lt;empty&gt;</em><br/><br/>If you want no icon for a severity style, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces)</td>
+<td style="text-align:left">
+
+<a href="/hugo-theme-relearn/cont/icons/#finding-an-icon">Font Awesome icon name</a>
+ set to the left of the title. Depending on the <strong>style</strong> there may be a default icon. Any given value will overwrite the default.<br/><br/>- for severity styles: a nice matching icon for the severity<br/>- for all other colors: <em>&lt;empty&gt;</em><br/><br/>If you want no icon for a severity style, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces)</td>
 </tr>
 <tr>
 <td style="text-align:left"><em><strong>&lt;content&gt;</strong></em></td>
@@ -1685,7 +1748,10 @@ classDiagram
 <li>multiple paragraphs</li>
 <li>bullet point lists</li>
 <li><em>emphasized</em>, <strong>bold</strong> and even <strong><em>bold emphasized</em></strong> text</li>
-<li><a href="https://example.com">links</a></li>
+<li>
+
+<a href="https://example.com" target="_blank" rel="noopener">links</a>
+</li>
 <li>etc.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
@@ -1924,7 +1990,10 @@ classDiagram
 <h2 id="examples">Examples</h2>
 <h3 id="editurl-from-configtoml"><code>editURL</code> from <code>config.toml</code></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">value</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span>
-</span></span></code></pre></div><p><code>editURL</code> value: <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/</a></p>
+</span></span></code></pre></div><p><code>editURL</code> value: 
+
+<a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/" target="_blank" rel="noopener">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/</a>
+</p>
 
             <footer class="footline">
             </footer>
@@ -1934,7 +2003,10 @@ classDiagram
           <article class="default">
 <h1>Swagger</h1>
 
-<p>This shortcode uses the <a href="https://mrin9.github.io/RapiDoc">RapiDoc</a> library to display your Swagger / OpenAPI Specifications.</p>
+<p>This shortcode uses the 
+
+<a href="https://mrin9.github.io/RapiDoc" target="_blank" rel="noopener">RapiDoc</a>
+ library to display your Swagger / OpenAPI Specifications.</p>
 
 <div class="box notices cstyle note">
     <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
@@ -2324,12 +2396,12 @@ classDiagram
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/hugo-theme-relearn/js/auto-complete.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/search.js?1657140252"></script>
+        <script src="/hugo-theme-relearn/js/auto-complete.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/search.js?1657152586"></script>
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
@@ -2442,13 +2514,13 @@ classDiagram
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-star" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Star</a>
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork McShelby/hugo-theme-relearn on GitHub">Fork</a>
           <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657140252"></script>
+          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657152586"></script>
         </div>
       </div>
     </aside>
-    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657152586"></script>
     <script>
       function useMathJax( config ){
         window.MathJax = Object.assign({
@@ -2473,9 +2545,9 @@ classDiagram
       }
       useMathJax( JSON.parse("{}") );
     </script>
-    <script id="MathJax-script" async src="/hugo-theme-relearn/js/mathjax/tex-mml-chtml.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/jquery.svg.pan.zoom.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/mermaid.min.js?1657140252"></script>
+    <script id="MathJax-script" async src="/hugo-theme-relearn/js/mathjax/tex-mml-chtml.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/jquery.svg.pan.zoom.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/mermaid.min.js?1657152586"></script>
     <script>
       function useMermaid( config ){
         if (typeof mermaid != 'undefined' && typeof mermaid.mermaidAPI != 'undefined') {
@@ -2488,7 +2560,7 @@ classDiagram
       }
       useMermaid( JSON.parse("{ \"securityLevel\": \"loose\" }") );
     </script>
-    <script src="/hugo-theme-relearn/js/rapidoc-min.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/rapidoc-min.js?1657152586"></script>
     <script>
       function useSwagger( config ){
         if( config.theme ){
@@ -2498,6 +2570,6 @@ classDiagram
       }
       useSwagger( JSON.parse("{}") );
     </script>
-    <script src="/hugo-theme-relearn/js/theme.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/theme.js?1657152586"></script>
   </body>
 </html>

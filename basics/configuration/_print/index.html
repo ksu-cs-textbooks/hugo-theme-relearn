@@ -10,18 +10,18 @@
     <title>Configuration :: Hugo Relearn Theme</title>
     <link rel="canonical" type="text/html" href="/hugo-theme-relearn/basics/configuration/" title="Hugo Relearn Theme" />
     <link rel="alternate" type="application/rss&#43;xml" href="/hugo-theme-relearn/basics/configuration/index.xml" title="Hugo Relearn Theme" />
-    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657140252" type="image/svg+xml">
-    <link href="/hugo-theme-relearn/css/nucleus.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/auto-complete.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657140252" rel="stylesheet" id="variant-style">
-    <link href="/hugo-theme-relearn/css/ie.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/variant.css?1657140252" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/print.css?1657140252" rel="stylesheet">
-    <script src="/hugo-theme-relearn/js/variant.js?1657140252"></script>
+    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657152586" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/nucleus.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/auto-complete.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657152586" rel="stylesheet" id="variant-style">
+    <link href="/hugo-theme-relearn/css/ie.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/variant.css?1657152586" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/print.css?1657152586" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/variant.js?1657152586"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/K-State-Computational-Core.github.io\/hugo-theme-relearn/';
       variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
     </script>
-    <script src="/hugo-theme-relearn/js/jquery.min.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/jquery.min.js?1657152586"></script>
   </head>
   <body class="mobile-support print" data-url="/hugo-theme-relearn/basics/configuration/">
     <div id="body" class="default-animation">
@@ -107,7 +107,10 @@
 <h1>Configuration</h1>
 
 <h2 id="global-site-parameters">Global site parameters</h2>
-<p>On top of <a href="https://gohugo.io/overview/configuration/">Hugo global configuration</a>, the Relearn theme lets you define the following parameters in your <code>config.toml</code> (here, values are default).</p>
+<p>On top of 
+
+<a href="https://gohugo.io/overview/configuration/" target="_blank" rel="noopener">Hugo global configuration</a>
+, the Relearn theme lets you define the following parameters in your <code>config.toml</code> (here, values are default).</p>
 <p>Note that some of these parameters are explained in details in other sections of this documentation.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="c"># This controls whether submenus will be expanded (true), or collapsed (false) in the</span>
@@ -183,7 +186,10 @@
 <p>The theme runs best if your site is installed in the root of your webserver. If your site is served from a subfolder, eg. <code>https://example.com/mysite/</code>, you have to set the following lines to your <code>config.toml</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://example.com/mysite/&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">canonifyURLs</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></div><p>Without <code>canonifyURLs=true</code> URLs in sublemental pages (like <code>sitemap.xml</code>, <code>rss.xml</code>) will be generated falsly while your HTML files will still work. See <a href="https://github.com/gohugoio/hugo/issues/5226">https://github.com/gohugoio/hugo/issues/5226</a>.</p>
+</span></span></code></pre></div><p>Without <code>canonifyURLs=true</code> URLs in sublemental pages (like <code>sitemap.xml</code>, <code>rss.xml</code>) will be generated falsly while your HTML files will still work. See 
+
+<a href="https://github.com/gohugoio/hugo/issues/5226" target="_blank" rel="noopener">https://github.com/gohugoio/hugo/issues/5226</a>
+.</p>
 <h2 id="activate-search">Activate search</h2>
 <p>If not already present, add the follow lines in the same <code>config.toml</code> file.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
@@ -208,13 +214,19 @@ When you build the site with <code>hugo server</code>, hugo generates it interna
     </div>
 </div>
 <h2 id="mathjax">MathJax</h2>
-<p>The MathJax configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one. See <a href="/hugo-theme-relearn/shortcodes/math/">Math</a> for additional documentation.</p>
+<p>The MathJax configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one. See 
+
+<a href="/hugo-theme-relearn/shortcodes/math/">Math</a>
+ for additional documentation.</p>
 <h3 id="math-example">Example</h3>
 <p>MathJax is globally disabled. By default it won&rsquo;t be loaded by any page.</p>
 <p>On page &ldquo;Physics&rdquo; you coded some JavaScript for a dynamic formulae. You can set the MathJax parameters locally to load mathJax on this page.</p>
 <p>You also can disable MathJax for specific pages while globally enabled.</p>
 <h2 id="mermaid">Mermaid</h2>
-<p>The Mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one. See <a href="/hugo-theme-relearn/shortcodes/mermaid/">Mermaid</a> for additional documentation.</p>
+<p>The Mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one. See 
+
+<a href="/hugo-theme-relearn/shortcodes/mermaid/">Mermaid</a>
+ for additional documentation.</p>
 <h3 id="mermaid-example">Example</h3>
 <p>Mermaid is globally disabled. By default it won&rsquo;t be loaded by any page.</p>
 <p>On page &ldquo;Architecture&rdquo; you coded some JavaScript to dynamically generate a class diagram. You can set the Mermaid parameters locally to load mermaid on this page.</p>
@@ -316,12 +328,12 @@ default values:</p>
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/hugo-theme-relearn/js/auto-complete.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657140252"></script>
-        <script src="/hugo-theme-relearn/js/search.js?1657140252"></script>
+        <script src="/hugo-theme-relearn/js/auto-complete.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657152586"></script>
+        <script src="/hugo-theme-relearn/js/search.js?1657152586"></script>
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
@@ -434,13 +446,13 @@ default values:</p>
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-star" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Star</a>
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork McShelby/hugo-theme-relearn on GitHub">Fork</a>
           <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657140252"></script>
+          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657152586"></script>
         </div>
       </div>
     </aside>
-    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657140252"></script>
-    <script src="/hugo-theme-relearn/js/theme.js?1657140252"></script>
+    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657152586"></script>
+    <script src="/hugo-theme-relearn/js/theme.js?1657152586"></script>
   </body>
 </html>

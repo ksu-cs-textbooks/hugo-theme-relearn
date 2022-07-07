@@ -10,18 +10,18 @@
     <title>Code highlighting :: Hugo Relearn Theme</title>
     <link rel="canonical" type="text/html" href="/hugo-theme-relearn/cont/syntaxhighlight/" title="Hugo Relearn Theme" />
     <link rel="alternate" type="application/rss&#43;xml" href="/hugo-theme-relearn/cont/syntaxhighlight/index.xml" title="Hugo Relearn Theme" />
-    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657140251" type="image/svg+xml">
-    <link href="/hugo-theme-relearn/css/nucleus.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/auto-complete.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657140251" rel="stylesheet" id="variant-style">
-    <link href="/hugo-theme-relearn/css/ie.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/variant.css?1657140251" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/print.css?1657140251" rel="stylesheet">
-    <script src="/hugo-theme-relearn/js/variant.js?1657140251"></script>
+    <link rel="icon" href="/hugo-theme-relearn/images/logo.svg?1657152585" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/nucleus.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/fontawesome-all.min.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/featherlight.min.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar.min.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/auto-complete.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme-relearn-light.css?1657152585" rel="stylesheet" id="variant-style">
+    <link href="/hugo-theme-relearn/css/ie.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/variant.css?1657152585" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/print.css?1657152585" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/variant.js?1657152585"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/K-State-Computational-Core.github.io\/hugo-theme-relearn/';
       variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
     </script>
-    <script src="/hugo-theme-relearn/js/jquery.min.js?1657140251"></script>
+    <script src="/hugo-theme-relearn/js/jquery.min.js?1657152585"></script>
   </head>
   <body class="mobile-support print" data-url="/hugo-theme-relearn/cont/syntaxhighlight/">
     <div id="body" class="default-animation">
@@ -94,7 +94,10 @@
           <article class="default">
 <h1>Code highlighting</h1>
 
-<p>The Relearn theme uses <a href="https://gohugo.io/content-management/syntax-highlighting/">Hugo&rsquo;s built-in syntax highlighting</a> for code.</p>
+<p>The Relearn theme uses 
+
+<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener">Hugo&rsquo;s built-in syntax highlighting</a>
+ for code.</p>
 <h2 id="markdown-syntax">Markdown syntax</h2>
 <p>Wrap the code block with three backticks and the name of the language. Highlight will try to auto detect the language if one is not provided.</p>
 <!-- markdownlint-disable MD046 -->
@@ -127,9 +130,15 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">]</span>
 </span></span></code></pre></div><h2 id="supported-languages">Supported languages</h2>
-<p>Hugo comes with a <a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages">remarkable list</a> of supported languages.</p>
+<p>Hugo comes with a 
+
+<a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages" target="_blank" rel="noopener">remarkable list</a>
+ of supported languages.</p>
 <h2 id="recommended-configuration">Recommended configuration</h2>
-<p>You can choose a color theme from the <a href="https://xyproto.github.io/splash/docs/all.html">list of supported themes</a> and add it in your <code>config.toml</code></p>
+<p>You can choose a color theme from the 
+
+<a href="https://xyproto.github.io/splash/docs/all.html" target="_blank" rel="noopener">list of supported themes</a>
+ and add it in your <code>config.toml</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># if set to `guessSyntax = true`, there will be no unstyled code even if no language</span>
@@ -218,12 +227,12 @@
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/hugo-theme-relearn/js/auto-complete.js?1657140251"></script>
-        <script src="/hugo-theme-relearn/js/lunr.min.js?1657140251"></script>
-        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657140251"></script>
-        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657140251"></script>
-        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657140251"></script>
-        <script src="/hugo-theme-relearn/js/search.js?1657140251"></script>
+        <script src="/hugo-theme-relearn/js/auto-complete.js?1657152585"></script>
+        <script src="/hugo-theme-relearn/js/lunr.min.js?1657152585"></script>
+        <script src="/hugo-theme-relearn/js/lunr.stemmer.support.min.js?1657152585"></script>
+        <script src="/hugo-theme-relearn/js/lunr.multi.min.js?1657152585"></script>
+        <script src="/hugo-theme-relearn/js/lunr.en.min.js?1657152585"></script>
+        <script src="/hugo-theme-relearn/js/search.js?1657152585"></script>
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
@@ -336,13 +345,13 @@
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-star" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Star</a>
           <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork McShelby/hugo-theme-relearn on GitHub">Fork</a>
           <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657140251"></script>
+          <script async defer src="/hugo-theme-relearn/js/buttons.js?1657152585"></script>
         </div>
       </div>
     </aside>
-    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657140251"></script>
-    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657140251"></script>
-    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657140251"></script>
-    <script src="/hugo-theme-relearn/js/theme.js?1657140251"></script>
+    <script src="/hugo-theme-relearn/js/clipboard.min.js?1657152585"></script>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar.min.js?1657152585"></script>
+    <script src="/hugo-theme-relearn/js/featherlight.min.js?1657152585"></script>
+    <script src="/hugo-theme-relearn/js/theme.js?1657152585"></script>
   </body>
 </html>
