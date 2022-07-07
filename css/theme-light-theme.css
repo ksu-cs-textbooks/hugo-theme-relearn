@@ -71,8 +71,7 @@
   width: 100%;
 }
 
-/* we limit width if we have large screens */
-@media screen and ( min-width: 1300px ){ /* #sidebar/width + ./max-width */
+@media screen and ( min-width: 1300px ){ 
   .embed #body .flex-block-wrapper {
       min-width: 100%;
       max-width: 100%;
