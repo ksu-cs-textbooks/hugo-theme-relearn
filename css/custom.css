@@ -18,6 +18,10 @@
     width: calc(100% - 7*3.25rem);
 }
 
+.embed {
+    width: 100%;
+}
+
 .tele #body,
 .embed #body {
     margin-left: 0px;
@@ -53,6 +57,7 @@
     padding-left: 200px !important;
     padding-right: 200px !important;
     font-size: 25px;
+    width: 100%;
 }
 
 .default-animation {
