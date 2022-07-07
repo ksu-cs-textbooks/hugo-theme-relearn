@@ -33,3 +33,5 @@
       variants.init( [ {{ delimit $quotedthemevariants ", " | safeJS }} ] );
     </script>
     <script src="{{"js/jquery.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
+    <!-- [x] russfeld -->
+    <link href="{{"css/custom.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">

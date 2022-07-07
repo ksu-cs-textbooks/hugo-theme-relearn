@@ -29,10 +29,13 @@
     {{- if eq (.Scratch.Get "customOutputFormat") "EMBED" }}
     <div class="embed">
     {{- end }}
+    {{- if eq (.Scratch.Get "customOutputFormat") "TELE" }}
+    <div id="tele" class="tele mirror">
+    {{- end }}
     <!-- end -->
     <div id="body" class="default-animation">
       <!-- [x] russfeld -->
-      {{- if not (eq (.Scratch.Get "customOutputFormat") "EMBED") }}
+      {{- if not (or (eq (.Scratch.Get "customOutputFormat") "EMBED") (eq (.Scratch.Get "customOutputFormat") "TELE")) }}
       <!-- end -->
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>

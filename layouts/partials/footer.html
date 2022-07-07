@@ -4,12 +4,12 @@
 {{- partial "custom-comments.html" . }}
     </div><!-- #body -->
     <!-- [x] russfeld -->
-    {{- if eq (.Scratch.Get "customOutputFormat") "EMBED" }}
-  </div><!-- .embed -->
+    {{- if or (eq (.Scratch.Get "customOutputFormat") "EMBED") (eq (.Scratch.Get "customOutputFormat") "TELE") }}
+  </div><!-- .embed / .tele -->
     {{- end }}
     <!-- end -->
     <!-- [x] russfeld -->
-    {{- if not (eq (.Scratch.Get "customOutputFormat") "EMBED") }}
+    {{- if not (or (eq (.Scratch.Get "customOutputFormat") "EMBED") (eq (.Scratch.Get "customOutputFormat") "TELE")) }}
     <!-- end -->
 {{- partial "menu.html" . }}
     <!-- [x] russfeld -->
@@ -120,6 +120,11 @@
     <!-- [x] russfeld -->
     {{- if eq (.Scratch.Get "customOutputFormat") "EMBED" }}
     <script src="{{"js/embed-iframe.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    {{- end }}
+    <!-- end -->
+    <!-- [x] russfeld -->
+    {{- if eq (.Scratch.Get "customOutputFormat") "TELE" }}
+    <script src="{{"js/tele-scroll.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     {{- end }}
     <!-- end -->
   </body>
