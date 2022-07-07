@@ -117,5 +117,10 @@
 {{- end }}
     <script src="{{"js/theme.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     {{- partial "custom-footer.html" . }}
+    <!-- [x] russfeld -->
+    {{- if eq (.Scratch.Get "customOutputFormat") "EMBED" }}
+    <script src="{{"js/embed-iframe.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    {{- end }}
+    <!-- end -->
   </body>
 </html>

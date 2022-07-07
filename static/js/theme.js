@@ -9,6 +9,9 @@ else{
 }
 var isPrint = document.querySelector( 'body' ).classList.contains( 'print' );
 
+// [x] russfeld
+var isEmbed = (document.querySelector('.embed') != null)
+
 var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 
 var formelements = 'button, datalist, fieldset, input, label, legend, meter, optgroup, option, output, progress, select, textarea';
@@ -294,6 +297,10 @@ function initArrowNav(){
     if( isPrint ){
         return;
     }
+    // [x] russfeld
+    if ( isEmbed ) {
+        return;
+    }
 
     // button navigation
     jQuery(function() {
@@ -325,6 +332,10 @@ function initArrowNav(){
 
 function initMenuScrollbar(){
     if( isPrint ){
+        return;
+    }
+    // [x] russfeld
+    if ( isEmbed ) {
         return;
     }
 
@@ -566,6 +577,10 @@ function showPrint(){
 
 function initToc(){
     if( isPrint ){
+        return;
+    }
+    // [x] russfeld
+    if ( isEmbed ) {
         return;
     }
 
