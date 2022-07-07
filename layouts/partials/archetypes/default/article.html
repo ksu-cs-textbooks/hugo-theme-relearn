@@ -1,8 +1,13 @@
 {{- $content := .content }}
 {{- with .page }}
           <article class="default">
+    <!-- [x] russfeld -->
+    {{- if not (eq (.Scratch.Get "customOutputFormat") "EMBED") }}
+    <!-- end -->
 {{ partial "heading-pre.html" . }}<h1>{{ .Title }}</h1>{{ partial "heading-post.html" . }}
-
+    <!-- [x] russfeld -->
+    {{- end }}
+    <!-- end -->
 {{ $content | safeHTML }}
             <footer class="footline">
               {{- partial "content-footer.html" . }}

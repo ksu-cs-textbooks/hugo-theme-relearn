@@ -10,3 +10,19 @@
     isHTML = true
     mediaType = 'text/html'
     permalinkable = false
+  # [x] russfeld
+  [outputFormats.TELE]
+    name= "TELE"
+    baseName = "tele"
+    # path = "tele.html"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+  [outputFormats.EMBED]
+    name= "EMBED"
+    baseName = "embed"
+    # path = "embed.html"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = true
+

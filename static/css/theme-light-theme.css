@@ -49,3 +49,33 @@
   --VARIABLE-BOX-color: #512888;
   --VARIABLE-BOX-TEXT-color: rgb(16, 16, 16);
 }
+
+.navigation,
+#top-tele-link,
+#top-embed-link {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    float: right;
+}
+
+#body #breadcrumbs {
+  width: calc(100% - 7*3.25rem);
+}
+
+.embed #body {
+  margin-left: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* we limit width if we have large screens */
+@media screen and ( min-width: 1300px ){ /* #sidebar/width + ./max-width */
+  .embed #body .flex-block-wrapper {
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+  }
+}

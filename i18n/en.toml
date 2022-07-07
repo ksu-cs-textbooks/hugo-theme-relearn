@@ -69,3 +69,10 @@ other = "Copied link to clipboard!"
 
 [Chapter]
 other = "Chapter {{.}}"
+
+# [x] russfeld
+[Teleprompter-view]
+other = "Teleprompter View"
+
+[Embeddable-version]
+other = "Embeddable Version"
