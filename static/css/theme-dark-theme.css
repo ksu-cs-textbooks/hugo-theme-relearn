@@ -1,6 +1,6 @@
 /* theme-ksu-dark-variant */
 /* [x] russfeld */
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
   --PRIMARY-color: #512888; /* brand primary color */

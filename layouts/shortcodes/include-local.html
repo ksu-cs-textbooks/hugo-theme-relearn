@@ -1,0 +1,6 @@
+<!-- [x] russfeld -->
+{{- partial "shortcodes/include.html" (dict
+  "context" .
+  "file"             (printf "%s%s" .Page.File.Dir (.Get "file" | default (.Get 0)))
+  "hidefirstheading" (.Get "hidefirstheading" | default (.Get 1))
+) }}

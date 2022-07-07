@@ -1,9 +1,11 @@
 /* [x] russfeld  */
 
+/* Align text on chapter pages to center */
 .chapter p {
     text-align: center !important;
-  }
-  
+}
+
+/* Add Links for TELE and EMBED to top bar */
 .navigation,
 #top-tele-link,
 #top-embed-link {
@@ -14,14 +16,17 @@
     float: right;
 }
 
+/* Update breadcrumb width to account for new buttons */
 #body #breadcrumbs {
     width: calc(100% - 7*3.25rem);
 }
 
+/* EMBED page should be 100% width */
 .embed {
     width: 100%;
 }
 
+/* Remove sidebar margins on EMBED and TELE pages */
 .tele #body,
 .embed #body {
     margin-left: 0px;
@@ -30,6 +35,7 @@
     width: 100%;
 }
 
+/* Override screen width limit */
 @media screen and ( min-width: 1300px ){ 
     .tele #body .flex-block-wrapper,
     .embed #body .flex-block-wrapper {
@@ -39,10 +45,12 @@
     }
 }
 
+/* Hide .noiframe notices */
 .embed .noiframe {
     display: none;
 }
 
+/* Mirror TELE display */
 .mirror{
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
@@ -51,6 +59,7 @@
     transform: scale(-1, 1);
 }
 
+/* Overrides for TELE output */
 .tele {
     background: #000 !important;
     color: #fff !important;
@@ -60,12 +69,14 @@
     width: 100%;
 }
 
+/* Disable Animations */
 .default-animation {
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
 }
 
+/* TELE code size override */
 .tele pre,
 .tele code {
     font-size: inherit;
@@ -82,6 +93,7 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+/* Teleprompter Padding */
 @media only all and (min-width: 780px) and (max-width: 1400px) {
     .tele{
         padding-left: 25px !important;
@@ -95,15 +107,24 @@
     }
 }
 
-#body-inner.narrow .footline p {
-    font-size: 1.0rem;
-}
-
+/* Git Footer */
 .git-footer {
     padding: 1px 1em;
     background-color: rgba( 134, 134, 134, .066 ) 
 }
-
 .git-footer p {
     margin: 0.5em 0px;
+}
+
+/* Fix Font Weights for Lato */
+body {
+    font-weight: 400;
+}
+#body h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+#body h3 {
+    font-weight: 700;
+    font-size: 2.0rem;
 }
