@@ -95,3 +95,11 @@
     }
 }
 
+.footline {
+    padding: 1px 1em;
+    background-color: rgba( 134, 134, 134, .066 )
+}
+
+.footline p {
+    margin: 0.5em 0px;
+}
