@@ -41,40 +41,7 @@
   --BOX-INFO-color: rgba( 237, 153, 9, 1 );
 }
 
-.chapter p {
-  text-align: center !important;
-}
-
 .cstyle.noiframe {
   --VARIABLE-BOX-color: #512888;
   --VARIABLE-BOX-TEXT-color: rgb(224, 224, 224);
-}
-
-.navigation,
-#top-tele-link,
-#top-embed-link {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    float: right;
-}
-
-#body #breadcrumbs {
-  width: calc(100% - 7*3.25rem);
-}
-
-.embed #body {
-  margin-left: 0px;
-  min-width: 100%;
-  max-width: 100%;
-  width: 100%;
-}
-
-@media screen and ( min-width: 1300px ){
-  .embed #body .flex-block-wrapper {
-      min-width: 100%;
-      max-width: 100%;
-      width: 100%;
-  }
 }

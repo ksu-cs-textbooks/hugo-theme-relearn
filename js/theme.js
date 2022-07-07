@@ -10,7 +10,7 @@ else{
 var isPrint = document.querySelector( 'body' ).classList.contains( 'print' );
 
 // [x] russfeld
-var isEmbed = (document.querySelector('.embed') != null)
+var isEmbed = (document.querySelector('.embed') != null) || (document.querySelector('.tele') != null)
 
 var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 
