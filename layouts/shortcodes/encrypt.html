@@ -1,0 +1,14 @@
+<!-- Encrypt content -->
+<!-- [x] russfeld -->
+{{ $_hugo_config := `{ "version": 1 }` }}
+
+<div>
+  {{ with .Get "encrypted"}}
+    <a id="decrypt" href="#" class="btn btn-default"><i class="fas fa-lock"></i> Decrypt</a>
+  {{ else }}
+    <a id="encrypt" href="#" class="btn btn-default"><i class="fas fa-lock-open"></i> Encrypt</a>
+  {{ end}}
+  <div id="encrypt-div">
+    {{ .Inner }}
+  </div>
+</div>
