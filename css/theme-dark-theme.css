@@ -35,4 +35,17 @@
   --BOX-TEXT-color: #e0e0e0; /* text color of colored box content */
   --MAIN-font: "Lato";
   --MAIN-TITLES-H1-font: "Times New Roman";
+
+  /* Adjust Box Colors */
+  --BOX-NOTE-color: rgba( 48, 117, 229, 1 );
+  --BOX-INFO-color: rgba( 237, 153, 9, 1 );
+}
+
+.chapter p {
+  text-align: center !important;
+}
+
+.cstyle.noiframe {
+  --VARIABLE-BOX-color: #512888;
+  --VARIABLE-BOX-TEXT-color: rgb(224, 224, 224);
 }
