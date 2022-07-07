@@ -1,0 +1,81 @@
+/* reveal theme variant */
+/* [x] russfeld */
+
+:root {
+    --r-background-color: #c0c0c0;
+    --r-main-font: myriad-pro,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    --r-main-font-size: 75px;
+    --r-main-color: #444;
+    --r-block-margin: 20px;
+    --r-heading-margin: 0 0 20px 0;
+    --r-heading-font: myriad-pro,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    --r-heading-color: #512888;
+    --r-heading-line-height: 1.2;
+    --r-heading-letter-spacing: normal;
+    --r-heading-text-transform: none;
+    --r-heading-text-shadow: none;
+    --r-heading-font-weight: 600;
+    --r-heading1-text-shadow: none;
+    --r-heading1-size: 2.5em;
+    --r-heading2-size: 1.6em;
+    --r-heading3-size: 1.3em;
+    --r-heading4-size: 1em;
+    --r-code-font: monospace;
+    --r-link-color: #512888;
+    --r-link-color-dark: #512888;
+    --r-link-color-hover: #512888;
+    --r-selection-background-color: #bee4fd;
+    --r-selection-color: #fff;
+  }
+
+  /* changes to reveal */
+
+  .reveal i {
+    font-style: italic;
+  }
+
+  .reveal table th,
+  .reveal table td {
+    text-align: center;
+    border: 1px solid;
+  }
+
+  .reveal table tbody tr:last-child th,
+  .reveal table tbody tr:last-child td {
+    border-bottom: 1px solid;
+  }
+
+  /* New Stuff */
+
+  .imagecredit {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px;
+  }
+
+  /* https://stackoverflow.com/questions/30861845/how-to-use-two-column-layout-with-reveal-js */
+  .container{
+    display: flex;
+  }
+  .col{
+    flex: 1;
+  }
+  
+  .imgcenter{
+    vertical-align: middle !important;
+    display: inline-block !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .reveal mark{
+    background-color: #909090;
+    color: #444;
+  }
+ 
+  .reveal pre code mark{
+    background-color: #707070;
+    text-shadow:
+         -1px -1px 0 #202020;
+  }
+ 
