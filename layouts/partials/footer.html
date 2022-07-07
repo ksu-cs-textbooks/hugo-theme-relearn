@@ -2,6 +2,11 @@
         </div>
       </main><!-- #body-inner -->
 {{- partial "custom-comments.html" . }}
+    <!-- [x] russfeld -->
+    {{- if not (or (eq (.Scratch.Get "customOutputFormat") "EMBED") (eq (.Scratch.Get "customOutputFormat") "TELE")) }}
+    {{- partial "git-info" . }}
+    {{- end }}
+    <!-- end -->
     </div><!-- #body -->
     <!-- [x] russfeld -->
     {{- if or (eq (.Scratch.Get "customOutputFormat") "EMBED") (eq (.Scratch.Get "customOutputFormat") "TELE") }}

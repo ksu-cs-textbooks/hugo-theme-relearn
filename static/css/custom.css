@@ -95,11 +95,15 @@
     }
 }
 
-.footline {
-    padding: 1px 1em;
-    background-color: rgba( 134, 134, 134, .066 )
+#body-inner.narrow .footline p {
+    font-size: 1.0rem;
 }
 
-.footline p {
+.git-footer {
+    padding: 1px 1em;
+    background-color: rgba( 134, 134, 134, .066 ) 
+}
+
+.git-footer p {
     margin: 0.5em 0px;
 }

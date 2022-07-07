@@ -4,16 +4,3 @@
             <i class='fas fa-calendar'></i> {{ . | time.Format ":date_medium" }}
   {{- end }}
 {{- end }}
-<!-- [x] russfeld -->
-{{- with .GitInfo }}
-<p>Last modified by: 
-            <i class='fas fa-user'></i> {{ .AuthorName }}
-  {{- with .AuthorDate }}
-            <i class='fas fa-calendar'></i> {{ . | time.Format ":date_medium" }}
-  {{- end }}
-  {{- if $.Site.Params.commitURL }}
-            <i class='fas fa-code-branch'></i> <a href="{{ $.Site.Params.commitURL }}{{ .Hash }}">{{ .AbbreviatedHash }}</a>
-  {{- end }}
-</p>
-{{- end }}
-<!-- end -->
