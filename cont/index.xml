@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/cont/pages/</guid>
       <description>In Hugo, pages are the core of your site. Once it is configured, pages are definitely the added value to your documentation site.
-Folders Organize your site like any other Hugo project . Typically, you will have a content folder with all your pages.
+Folders Organize your site like any other Hugo project. Typically, you will have a content folder with all your pages.
 content ├── level-one │ ├── level-two │ │ ├── level-three │ │ │ ├── level-four │ │ │ │ ├── _index.md &amp;lt;-- /level-one/level-two/level-three/level-four │ │ │ │ ├── page-4-a.</description>
     </item>
     <item>
@@ -20,7 +20,7 @@ content ├── level-one │ ├── level-two │ │ ├── level-thre
       <link>https://K-State-Computational-Core.github.io/hugo-theme-relearn/cont/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/cont/archetypes/</guid>
-      <description>Using the command: hugo new [relative new content path], you can start a content file with the date and title automatically set. While this is a welcome feature, active writers need more: archetypes . These are preconfigured skeleton pages with default frontmatter.
+      <description>Using the command: hugo new [relative new content path], you can start a content file with the date and title automatically set. While this is a welcome feature, active writers need more: archetypes. These are preconfigured skeleton pages with default frontmatter.
 The Relearn theme defines some few archetypes of pages but you are free to define new ones to your liking. All can be used at any level of the documentation, the only difference being the layout of the content.</description>
     </item>
     <item>
@@ -30,7 +30,7 @@ The Relearn theme defines some few archetypes of pages but you are free to defin
       <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/cont/i18n/</guid>
       <description>The Relearn theme is fully compatible with Hugo multilingual mode.
 It provides:
-Translation strings for default values (English, Piratized English, Arabic, Simplified Chinese, Traditional Chinesse, Dutch, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Turkish, Vietnamese). Feel free to contribute! Automatic menu generation from multilingual content In-browser language switching Basic configuration After learning how Hugo handle multilingual websites , define your languages in your config.toml file.
+Translation strings for default values (English, Piratized English, Arabic, Simplified Chinese, Traditional Chinesse, Dutch, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Turkish, Vietnamese). Feel free to contribute! Automatic menu generation from multilingual content In-browser language switching Basic configuration After learning how Hugo handle multilingual websites, define your languages in your config.toml file.
 For example with current English and Piratized English website.</description>
     </item>
     <item>
@@ -69,8 +69,8 @@ Example from the current website:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/cont/icons/</guid>
       <description>The Relearn theme for Hugo loads the Font Awesome library, allowing you to easily display any icon or logo available in the Font Awesome free collection.
-Finding an icon Browse through the available icons in the Font Awesome Gallery . Notice that the free filter is enabled, as only the free icons are available by default.
-Once on the Font Awesome page for a specific icon, for example the page for the heart , copy the HTML reference and paste into the Markdown content.</description>
+Finding an icon Browse through the available icons in the Font Awesome Gallery. Notice that the free filter is enabled, as only the free icons are available by default.
+Once on the Font Awesome page for a specific icon, for example the page for the heart, copy the HTML reference and paste into the Markdown content.</description>
     </item>
     <item>
       <title>Tags</title>
