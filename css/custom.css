@@ -128,3 +128,8 @@ body {
     font-weight: 700;
     font-size: 2.0rem;
 }
+
+/* Sidebar Arrows */
+#sidebar ul.topics > li {
+    margin-left: 0;
+}
