@@ -7,7 +7,7 @@
 {{- if $hideFirstHeading }}<div class="include hide-first-heading">{{ end }}
 {{- with $context }}
 
-{{ $file | readFile | $context.Page.RenderString }}
+{{ $file | readFile | markdownify }}
 
 {{- if $hideFirstHeading }}</div>{{ end }}
 {{- end }}
