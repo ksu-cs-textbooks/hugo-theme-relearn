@@ -2,8 +2,8 @@
 <!-- https://github.com/bonartm/hugo-quiz -->
 <!-- [x] russfeld -->
 
-{{- if not (eq (.Page.Scratch.Get "customOutputFormat") "TELE") }}
 {{ $_hugo_config := `{ "version": 1 }` }}
+{{- if not (eq (.Page.Scratch.Get "customOutputFormat") "TELE") }}
 <div class='quizdown'>
   {{ .Inner }}
 </div>

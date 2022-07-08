@@ -2,9 +2,10 @@
 <!-- https://github.com/bonartm/hugo-quiz -->
 <!-- [x] russfeld -->
 
-{{- if not (eq (.Page.Scratch.Get "relearnOutputFormat") "PRINT") }}
 {{ $_hugo_config := `{ "version": 1 }` }}
+{{- if not (eq (.Page.Scratch.Get "relearnOutputFormat") "PRINT") }}
 <div class='quizdown'>
   {{ .Inner }}
 </div>
 {{- end }}
+<i>Quizdown quiz omitted from print view.</i>
