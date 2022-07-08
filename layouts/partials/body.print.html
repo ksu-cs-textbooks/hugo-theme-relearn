@@ -52,7 +52,10 @@
       {{- $pages = (.Pages | union .Sections) }}
     {{- end }}
     {{- $relearnIsHiddenFrom := index ($currentNode.Scratch.Get "relearnIsHiddenFrom") .RelPermalink }}
-    {{- $hidden := and $relearnIsHiddenFrom (not $.showhidden) (not $isSelf) (not $isAncestor) }}
+    {{/* [x] russfeld */}}
+    {{- $relearnNoPrintFrom := index ($currentNode.Scratch.Get "relearnNoPrintFrom") .RelPermalink }}
+    {{- $hidden := and (or $relearnIsHiddenFrom $relearnNoPrintFrom) (not $.showhidden) (not $isSelf) (not $isAncestor) }}
+    {{/* end */}}
     {{- if $hidden }}
     {{- else if or .IsSection .IsHome }}
       {{- $defaultOrdersectionsby := .Site.Params.ordersectionsby | default "weight" }}
