@@ -1,5 +1,29 @@
 # Changelog
 
+## 5.0.3 (2022-07-07)
+
+### Fixes
+
+- [**bug**] ie11: no styles after rework of archetypes [#306](https://github.com/McShelby/hugo-theme-relearn/issues/306)
+
+---
+
+## 5.0.2 (2022-07-07)
+
+### Fixes
+
+- [**bug**] theme: load CSS if JS is disabled [#305](https://github.com/McShelby/hugo-theme-relearn/issues/305)
+
+---
+
+## 5.0.1 (2022-07-07)
+
+### Enhancements
+
+- [**feature**][**breaking**] theme: optimize loading of js and css [#303](https://github.com/McShelby/hugo-theme-relearn/issues/303)
+
+---
+
 ## 5.0.0 (2022-07-05)
 
 ### Enhancements
