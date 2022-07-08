@@ -67,11 +67,10 @@ Th&#39; graph be interactive an&#39; reflect th&#39; current colors.</descriptio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/basics/history/</guid>
       <description>Arrr! Pirrrates Fello&#39; pirrates, be awarrre some stuff may not work fer us in this trrranslat&#39;n. Like table of rrramblings, see&#39;ng Merrrmaids, do&#39;ng math or chemistrrry and stuff.
-Changelog 5.0.0 (2022-07-05) Enhancements [feature][change] archetypes: modularize render&#39;n #300
-[feature] history: don&amp;rsquo;t reload plank when history gets cleared #299
-[feature] menu: replace expander by fontawesome chevrons #296
-[feature] theme: align rrrambl&#39;n wit&#39; topbar ay&#39;con limits #290
-[feature] button: allow fer empty href #288</description>
+Changelog 5.0.3 (2022-07-07) Fixes [bug] ie11: no styles aft rework o&#39; archetypes #306
+5.0.2 (2022-07-07) Fixes [bug] theme: board CSS if JS be disabled #305
+5.0.1 (2022-07-07) Enhancements [feature][break&#39;n] theme: opt&#39;mize load&#39;n o&#39; js an&#39; css #303
+5.0.0 (2022-07-05) Enhancements [feature][change] archetypes: modularize render&#39;n #300</description>
     </item>
   </channel>
 </rss>

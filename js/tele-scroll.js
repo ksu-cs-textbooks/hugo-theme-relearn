@@ -134,7 +134,7 @@ var onDocumentMouseClick = function( event ) {
   }
 }
 
-jQuery(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener( 'keydown', onDocumentKeyDown, false );
   document.addEventListener( 'click', onDocumentMouseClick, false);
 
