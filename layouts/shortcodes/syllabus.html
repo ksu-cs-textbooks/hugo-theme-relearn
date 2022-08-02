@@ -1,0 +1,29 @@
+<!-- [x] russfeld -->
+{{- $_hugo_config := `{ "version": 1 }` }}
+
+{{- partial "shortcodes/include.html" (dict
+  "context" .
+  "file" "themes/hugo-theme-relearn/static/files/syllabus/header.md"
+) }}
+
+{{- $all := slice "honesty" "disabilities" "conduct" "respect" "netiquette" "facecoverings" "discrimination" "freedom" "safety" "resources" "creations" "mentalhealth" "absences" "copyright" }}
+{{- $files := slice "" }}
+{{- if .IsNamedParams }}
+  {{- $include := split (.Get "include" | default $all ) " " }}
+  {{- $exclude := split (.Get "exclude" | default "") " "}}
+  {{- $files = $include | symdiff $exclude }}
+{{- else }}
+  {{- if eq (len .Params) 0 }}
+    {{- $files = $all}}
+  {{- else }}
+    {{- $files = .Params }}
+  {{- end }}
+{{- end }}
+
+{{- range $files }}
+  {{- $file := (print "themes/hugo-theme-relearn/static/files/syllabus/" . ".md") }}
+  {{- partial "shortcodes/include.html" (dict
+    "context" .
+    "file" $file
+  ) }}
+{{- end}}
