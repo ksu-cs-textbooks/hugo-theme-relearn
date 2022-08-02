@@ -314,15 +314,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plank 3 on Cap&#39;n Hugo Relearrrn Theme</title>
-    <link>https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/</link>
+    <link>https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/</link>
     <description>Recent content in Plank 3 on Cap&#39;n Hugo Relearrrn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plank 3-1</title>
-      <link>https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/test3/</link>
+      <link>https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/test3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/test3/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/shortcodes/children/children-3/test3/</guid>
       <description>Arrr! Pirrrates Fello&#39; pirrates, be awarrre some stuff may not work fer us in this trrranslat&#39;n. Like table of rrramblings, see&#39;ng Merrrmaids, do&#39;ng math or chemistrrry and stuff.
 This be a plain demo child plank.</description>
     </item>

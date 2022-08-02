@@ -314,9 +314,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Th&#39; one an&#39; only hidden child on Cap&#39;n Hugo Relearrrn Theme</title>
-    <link>https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/tests/chapters/children-1/</link>
+    <link>https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/tests/chapters/children-1/</link>
     <description>Recent content in Th&#39; one an&#39; only hidden child on Cap&#39;n Hugo Relearrrn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://K-State-Computational-Core.github.io/hugo-theme-relearn/pir/tests/chapters/children-1/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-theme-relearn/pir/tests/chapters/children-1/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
