@@ -12,11 +12,20 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 **For this course, a violation of the Honor Pledge will result in sanctions such as a 0 on the assignment or an XF in the course, depending on severity. Actively seeking unauthorized aid, such as posting lab assignments on sites such as Chegg or StackOverflow or asking another person to complete your work, even if unsuccessful, will result in an immediate XF in the course.**
 
-The Codio platform can perform automatic plagiarism detection by comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
+We reserve the right to use various platforms that can perform automatic plagiarism detection by tracking changes made to files and comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
 
 ### Students with Disabilities
 
-Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor.  Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at [accesscenter@k-state.edu](mailto:accesscenter@k-state.edu), 785-532-6441; for K-State Polytechnic campus, contact Julie Rowe, Diversity, Inclusion and Access Coordinator, at [jarowe@ksu.edu](mailto:jarowe@ksu.edu) or call 785-826-2971.
+At K-State it is important that every student has access to course content and the means to demonstrate course mastery. Students with disabilities may benefit from services including accommodations provided by the Student Access Center. Disabilities can include physical, learning, executive functions, and mental health. You may register at the [Student Access Center](https://k-state.edu/accesscenter) or to learn more contact:  
+
+* Manhattan/Olathe/Global Campus – Student Access Center  
+   * accesscenter@k-state.edu
+   * 785-532-6441    
+* K-State Salina Campus – Julie Rowe; Student Success Coordinator
+   * jarowe@k-state.edu
+   * 785-820-7908    
+
+Students already registered with the Student Access Center please request your Letters of Accommodation early in the semester to provide adequate time to arrange your approved academic accommodations. Once SAC approves your Letter of Accommodation it will be e-mailed to you,  and your instructor(s) for this course.  Please follow up with your instructor to discuss how best to implement the approved accommodations. 
 
 ### Expectations for Conduct
 
@@ -61,7 +70,13 @@ As a participant in course discussions, you should also strive to honor the dive
 
 ### Face Coverings
 
-All students are expected to comply with K-State’s face mask policy. As of August 2, 2021, everyone must wear face masks over their mouths and noses in all indoor spaces on university property, including while attending in-person classes. This policy is subject to change at the university’s discretion. For additional information and the latest on K-State’s face covering policy, see [this page](https://www.k-state.edu/covid-19/guidance/health/face-covering.html).
+Kansas State University strongly encourages, but does not require, that everyone wear masks while indoors on university property, including while attending in-person classes. For additional information and the latest on K-State’s face covering policy, see [this page](https://www.k-state.edu/covid-19/guidance/health/face-covering.html).
+
+### Discrimination, Harassment, and Sexual Harassment
+
+Kansas State University is committed to maintaining academic, housing, and work environments that are free of discrimination, harassment, and sexual harassment. Instructors support the University’s commitment by creating a safe learning environment during this course, free of conduct that would interfere with your academic opportunities. Instructors also have a [duty to report](https://www.k-state.edu/oie/faqs.html) any behavior they become aware of that potentially violates the University’s policy prohibiting discrimination, harassment, and sexual harassment ([PPM 3010](https://www.k-state.edu/policies/ppm/3000/3010.html)).  
+
+If a student is subjected to discrimination, harassment, or sexual harassment, they are encouraged to make a non-confidential report to the University’s [Office for Institutional Equity (OIE)](https://www.k-state.edu/oie/) using the [online reporting form](https://cm.maxient.com/reportingform.php?KansasStateUniv&layout_id=34). Incident disclosure is not required to receive resources at K-State. Reports that include domestic and dating violence, sexual assault, or stalking, should be considered for reporting by the complainant to the [Kansas State University Police Department](https://www.k-state.edu/police/suggest/) or the [Riley County Police Department](https://www.rileycountypolice.org/). Reports made to law enforcement are separate from reports made to OIE. A complainant can choose to report to one or both entities. Confidential support and advocacy can be found with the [K-State Center for Advocacy, Response, and Education (CARE)](https://www.k-state.edu/care/). Confidential mental health services can be found with Lafene [Counseling and Psychological Services (CAPS)](https://www.k-state.edu/counseling/). Academic support can be found with the [Office of Student Life (OSL)](https://www.k-state.edu/studentlife/). OSL is a non-confidential resource. A comprehensive list of resources is available [here](https://www.k-state.edu/oie/resources.html). If you have questions about non-confidential and confidential resources, please contact OIE at equity@ksu.edu or (785) 532–6220. 
 
 ### Academic Freedom Statement
 
