@@ -9,7 +9,7 @@
 {{- $all := slice "honesty" "disabilities" "conduct" "respect" "netiquette" "facecoverings" "discrimination" "freedom" "safety" "resources" "creations" "mentalhealth" "absences" "copyright" }}
 {{- $files := slice "" }}
 {{- if .IsNamedParams }}
-  {{- $include := split (.Get "include" | default $all ) " " }}
+  {{- $include := split (.Get "include" | default (delimit $all " ") ) " " }}
   {{- $exclude := split (.Get "exclude" | default "") " "}}
   {{- $files = $include | symdiff $exclude }}
 {{- else }}
