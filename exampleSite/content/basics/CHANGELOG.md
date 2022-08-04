@@ -1,5 +1,44 @@
 # Changelog
 
+## 5.2.0 (2022-07-29)
+
+### Enhancements
+
+- [**feature**][**change**] menu: expand collapsed menus if search term is found in submenus [#312](https://github.com/McShelby/hugo-theme-relearn/issues/312)
+
+### Fixes
+
+- [**bug**] print: switch mermaid and swagger style before print [#316](https://github.com/McShelby/hugo-theme-relearn/issues/316)
+- [**bug**] theme: fix chapter margins on big screens [#315](https://github.com/McShelby/hugo-theme-relearn/issues/315)
+
+---
+
+## 5.1.2 (2022-07-18)
+
+### Fixes
+
+- [**bug**] print: reset mermaid theme to light [#313](https://github.com/McShelby/hugo-theme-relearn/issues/313)
+- [**bug**] mermaid: header is showing up in FF [#311](https://github.com/McShelby/hugo-theme-relearn/issues/311)
+
+---
+
+## 5.1.1 (2022-07-15)
+
+### Fixes
+
+- [**bug**] tags: don't count tags if page is hidden [#310](https://github.com/McShelby/hugo-theme-relearn/issues/310)
+
+---
+
+## 5.1.0 (2022-07-15)
+
+### Enhancements
+
+- [**feature**][**change**] print: make print url deterministic [#309](https://github.com/McShelby/hugo-theme-relearn/issues/309)
+- [**feature**] theme: allow overriding partials for output formats [#308](https://github.com/McShelby/hugo-theme-relearn/issues/308)
+
+---
+
 ## 5.0.3 (2022-07-07)
 
 ### Fixes

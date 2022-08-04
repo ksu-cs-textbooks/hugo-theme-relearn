@@ -14,6 +14,27 @@ This document shows you what's new in the latest release. For a detailed list of
 
 ---
 
+## 5.2.0
+
+- **Change**: If you've set `collapsibleMenu = true` in your `config.toml`, the menu will be expanded if a search term is found in a collapsed submenu. The menu will return to its initial collapse state once the search term does not match any submenus.
+
+## 5.1.0
+
+- **Change**: Because the print preview URLs were non deterministic for normal pages in comparison to page bundles, this is now changed. Each print preview is now accessible by adding a `index.print.html` to the default URL.
+
+  You can revert this behavior by overwriting the PRINT output format setting in your `config.toml`to:
+
+  ````toml
+  [outputFormats]
+    [outputFormats.PRINT]
+      name= "PRINT"
+      baseName = "index"
+      path = "_print"
+      isHTML = true
+      mediaType = 'text/html'
+      permalinkable = false
+  ````
+
 ## 5.0.0
 
 - **Breaking**: The theme changed how JavaScript and CSS dependencies are loaded to provide a better performance. In case you've added own JavaScript code that depends on the themes jQuery implementation, you have to put it into a separate `*.js` file (if not already) and add the `defer` keyword to the `script` element. Eg.

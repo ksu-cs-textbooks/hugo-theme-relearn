@@ -1,5 +1,5 @@
 name: Release milestone
-description: Creates a release with changelog and tag out of a given milestone
+description: Creates a release and tag out of a given milestone
 inputs:
   milestone:
     description: Milestone for this release
@@ -41,7 +41,7 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         GREN_GITHUB_TOKEN: ${{ inputs.github_token }}
       run: |
-        echo "$MILESTONE" > layouts/partials/version.html
+        echo -n "$MILESTONE" > layouts/partials/version.txt
         npx github-release-notes@0.17.1 changelog --generate --override --tags=all
         git add *
         git commit --message "Ship tag $MILESTONE"
@@ -71,7 +71,24 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         GREN_GITHUB_TOKEN: ${{ inputs.github_token }}
       run: |
-        echo "$MILESTONE+tip" > layouts/partials/version.html
+        echo -n "$MILESTONE+tip" > layouts/partials/version.txt
         git add *
         git commit --message "Mark non-release version"
         git push origin main
+
+    - name: Generate next version number
+      id: semvers
+      uses: "WyriHaximus/github-action-next-semvers@v1"
+      with:
+        version: ${{ env.MILESTONE }}
+      env:
+        MILESTONE: ${{ inputs.milestone }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+
+    - name: Create next patch milestone
+      uses: "WyriHaximus/github-action-create-milestone@v1"
+      with:
+        title: ${{ steps.semvers.outputs.patch }}
+      env:
+        MILESTONE: ${{ inputs.milestone }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}

@@ -3,8 +3,5 @@
 <!-- [x] russfeld -->
 
 {{ $_hugo_config := `{ "version": 1 }` }}
-{{- if not (eq (.Page.Scratch.Get "customOutputFormat") "TELE") }}
-<div class='quizdown'>
-  {{ .Inner }}
-</div>
-{{- end }}
+<!-- {{.Inner}} -->
+<i>Quizdown quiz omitted from teleprompter view.</i>

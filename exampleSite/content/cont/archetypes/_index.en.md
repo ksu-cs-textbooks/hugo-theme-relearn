@@ -13,7 +13,7 @@ The Relearn theme defines some few archetypes of pages but you are free to defin
 
 A **Home** page is the starting page of your project. It's best to have only one page of this kind in your project.
 
-![Home page](images/pages-home.png?classes=shadow&width=60pc)
+![Home page](pages-home.png?classes=shadow&width=60pc)
 
 To create a home page, run the following command
 
@@ -36,7 +36,7 @@ Lorem Ipsum.
 
 A **Chapter** displays a page meant to be used as introduction for a set of child pages. Commonly, it contains a simple title and a catch line to define content that can be found below it.
 
-![Chapter page](images/pages-chapter.png?classes=shadow&width=60pc)
+![Chapter page](pages-chapter.png?classes=shadow&width=60pc)
 
 To create a chapter page, run the following command
 
@@ -62,7 +62,7 @@ Replace the `X` with a number. Because this number will be used to generate the 
 
 A **Default** page is any other content page. If you set an unknown archetype in your frontmatter, this archetype will be used to generate the page.
 
-![Default page](images/pages-default.png?classes=shadow&width=60pc)
+![Default page](pages-default.png?classes=shadow&width=60pc)
 
 To create a default page, run either one of the following commands
 
@@ -115,7 +115,7 @@ To define how your archetypes are rendered, define corresponding partial files i
 
 If you use an unknown archetype in your frontmatter, the `default` archetype will be used to generate the page.
 
-Related to each archetype, several _hook_ partial files can be given. If a partial for a specific hook is missing, no output is generated for this hook.
+Related to each archetype, several _hook_ partial files in the form of `<hook>.html` can be given inside each archetype directory. If a partial for a specific hook is missing, no output is generated for this hook.
 
 The following hooks are used:
 
@@ -125,3 +125,7 @@ The following hooks are used:
 | article              | Defines the HTML how to render your content |
 
 Take a look at the existing archetypes of this theme to get an idea how to utilize it.
+
+#### Output formats
+
+Each hook file can be overridden of a specific [output format](https://gohugo.io/templates/output-formats/). Eg. if you define a new output format `PLAINTEXT` in your `config.toml`, you can add a file `layouts/partials/archetypes/default.plaintext.html` to change the way how normal content is written for that output format.
