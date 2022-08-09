@@ -98,8 +98,8 @@ var onDocumentKeyDown = function( event ) {
       autoScroll = 0;
       break;
     case 77:
-      $('#body').toggleClass('mirror');
-      if($('#body').hasClass('mirror')){
+      $('#tele').toggleClass('mirror');
+      if($('#tele').hasClass('mirror')){
         localStorage.setItem('mirror', 'on');
       }else{
         localStorage.setItem('mirror', 'off');
@@ -140,11 +140,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var mirror = localStorage.getItem('mirror');
     if(mirror == "on"){
-        $('#body').addClass('mirror');
+        $('#tele').addClass('mirror');
     } else if (mirror == "off"){
-      $('#body').removeClass('mirror');
+      $('#tele').removeClass('mirror');
     } else {
-      $('#body').addClass('mirror');
+      $('#tele').addClass('mirror');
     }
 });
 
