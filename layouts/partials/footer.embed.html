@@ -98,6 +98,7 @@
     {{- partial "custom-footer.html" . }}
     <!-- [x] russfeld -->
     <script src="{{"js/embed-iframe.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }} defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.2/js/iframeResizer.contentWindow.min.js"></script>
     <!-- end -->
   </body>
 </html>
