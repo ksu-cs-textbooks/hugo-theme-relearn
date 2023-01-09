@@ -1,3 +1,5 @@
 ### Campus Safety
 
-Kansas State University is committed to providing a safe teaching and learning environment for student and faculty members. In order to enhance your safety in the unlikely case of a campus emergency make sure that you know where and how to quickly exit your classroom and how to follow any emergency directives. To view additional campus emergency information go to the University's main page, [www.k-state.edu](http://www.k-state.edu), and click on the Emergency Information button, located at the bottom of the page.
+Kansas State University is committed to providing a safe teaching and learning environment for student and faculty members. In order to enhance your safety in the unlikely case of a campus emergency make sure that you know where and how to quickly exit your classroom and how to follow any emergency directives. Current Campus Emergency Information is available at the [University’s Advisory](https://www.k-state.edu/advisories/) webpage. 
+
+<!-- Updated Spring 2023 -->
