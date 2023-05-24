@@ -10,7 +10,6 @@
 {{- $currentNode.Scratch.Delete "relearnNoPrintStem" }}{{/* the node or one of its parents is flagged as NoPrint */}}
 {{- $currentNode.Scratch.Delete "relearnNoPrintFrom" }}{{/* the node is NoPrint from the current page */}}
 {{/* end */}}
-{{- $currentNode.Scratch.Delete (printf "%sWantsMathJax" (partial "output-format.hugo" $currentNode)) }}
 {{- $wantsMathjax := or (and (ne $currentNode.Params.disableMathjax nil) (not $currentNode.Params.disableMathjax)) (and (ne .Site.Params.disableMathjax nil) (not .Site.Params.disableMathjax)) }}
 {{- if $wantsMathjax }}
 	{{- $currentNode.Store.Set "hasMathJax" true }}
@@ -19,12 +18,12 @@
 {{- if $wantsMermaid }}
 	{{- $currentNode.Store.Set "hasMermaid" true }}
 {{- end }}
-{{- $wantsSwagger := or (and (ne $currentNode.Params.disableSwagger nil) (not $currentNode.Params.disableSwagger)) (and (ne .Site.Params.disableSwagger nil) (not .Site.Params.disableSwagger)) }}
-{{- if $wantsSwagger }}
-	{{- $currentNode.Store.Set "hasSwagger" true }}
+{{- $wantsOpenapi := or (and (ne $currentNode.Params.disableOpenapi nil) (not $currentNode.Params.disableOpenapi)) (and (ne .Site.Params.disableOpenapi nil) (not .Site.Params.disableOpenapi)) }}
+{{- if $wantsOpenapi }}
+	{{- $currentNode.Store.Set "hasOpenapi" true }}
 {{- end }}
 {{/* [x] russfeld */}}
-{{- template "relearn-structure" dict "node" .Site.Home "currentnode" $currentNode "hiddenstem" false "hiddencurrent" false "defaultOrdersectionsby" .Site.Params.ordersectionsby "noprintstem" false "noprintcurrent" false }}
+{{- template "relearn-structure" dict "node" .Site.Home "currentnode" $currentNode "hiddenstem" false "hiddencurrent" false "defaultOrdersectionsby" (.Site.Params.ordersectionsby | default "weight") "noprintstem" false "noprintcurrent" false }}
 {{/* end */}}
 {{- define "relearn-structure" }}
 	{{- $currentNode := .currentnode }}
@@ -70,17 +69,12 @@
 	{{- end }}
 
 	{{- $pages := .node.Pages }}
-	{{- if .node.IsHome }}
-		{{- $pages = .node.Sections }}
-	{{- else if .node.Sections }}
-		{{- $pages = (.node.Pages | union .node.Sections) }}
-	{{- end }}
 	{{- $defaultOrdersectionsby := .defaultOrdersectionsby }}
 	{{- $currentOrdersectionsby := .node.Params.ordersectionsby | default $defaultOrdersectionsby }}
 	{{- if eq $currentOrdersectionsby "title"}}
-		{{- $pages := $pages.ByTitle }}
+		{{- $pages = $pages.ByTitle }}
 	{{- else}}
-		{{- $pages := $pages.ByWeight }}
+		{{- $pages = $pages.ByWeight }}
 	{{- end }}
 	{{- range $pages }}
 		{{/* [x] russfeld */}}

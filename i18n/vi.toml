@@ -1,5 +1,17 @@
+[Reading-direction]
+other = "ltr"
+
+[Search]
+other = "Tìm kiếm"
+
 [Search-placeholder]
 other = "Tìm kiếm..."
+
+[No-results-found]
+other = "Không tìm thấy kết quả nào cho \"{0}\""
+
+[N-results-found]
+other = "{1} kết quả được tìm thấy cho \"{0}\""
 
 [Clear-History]
 other = "Xóa lịch sử.."
@@ -72,3 +84,27 @@ other = "Liên kết được sao chép vào bảng tạm!"
 
 [Chapter]
 other = "Chương {{.}}"
+
+[Language]
+other = "Ngôn ngữ"
+
+[Theme]
+other = "Đề tài"
+
+[Submenu]
+other = "Menu con {{.}}"
+
+[Subsections]
+other = "Tiểu mục của {{.}}"
+
+[tags]
+other = "Thẻ"
+
+[tag]
+other = "Nhãn"
+
+[categories]
+other = "Thể loại"
+
+[category]
+other = "Loại"

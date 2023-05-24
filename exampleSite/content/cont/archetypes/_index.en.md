@@ -1,6 +1,6 @@
 +++
 title = "Archetypes"
-weight = 10
+weight = 2
 +++
 
 Using the command: `hugo new [relative new content path]`, you can start a content file with the date and title automatically set. While this is a welcome feature, active writers need more: [archetypes](https://gohugo.io/content/archetypes/). These are preconfigured skeleton pages with default frontmatter.
@@ -87,9 +87,9 @@ weight = X
 Lorem Ipsum.
 ```
 
-Replace the `X` with a number or delete the whole `weight` parameter entirly.
+Replace the `X` with a number or delete the whole `weight` parameter entirely.
 
-## Selfdefined Archetypes
+## Self defined Archetypes
 
 If you are in need of further archetypes you can define your own or even redefine existing ones.
 
@@ -103,7 +103,7 @@ archetype = "<kind>"
 +++
 ````
 
-Afterwards you can generate new content files of that kind with the follwing command
+Afterwards you can generate new content files of that kind with the following command
 
 ```shell
 hugo new --kind <kind> <name>/_index.md

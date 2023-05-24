@@ -1,5 +1,17 @@
+[Reading-direction]
+other = "ltr"
+
+[Search]
+other = "Telusuri"
+
 [Search-placeholder]
 other = "Telusuri..."
+
+[No-results-found]
+other = "Tidak ada hasil yang ditemukan untuk \"{0}\""
+
+[N-results-found]
+other = "Ditemukan {1} hasil untuk \"{0}\""
 
 [Clear-History]
 other = "Bersihkan Riwayat"
@@ -69,3 +81,27 @@ other = "Link disalin ke clipboard!"
 
 [Chapter]
 other = "Bab {{.}}"
+
+[Language]
+other = "Bahasa"
+
+[Theme]
+other = "Tema"
+
+[Submenu]
+other = "Submenu {{.}}"
+
+[Subsections]
+other = "Subbagian {{.}}"
+
+[tags]
+other = "Tag"
+
+[tag]
+other = "Tag"
+
+[categories]
+other = "Kategori"
+
+[category]
+other = "Kategori"

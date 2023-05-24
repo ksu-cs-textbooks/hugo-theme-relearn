@@ -4,28 +4,25 @@
     display: none;
 }
 #body {
-    margin-left: 0;
-    min-width: 100%;
-    max-width: 100%;
-    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
 }
 #body #navigation {
     display: none;
 }
-html,
-body #body{
-    font-size: 8.9pt;
+html{
+    font-size: 8.763pt;
 }
 body {
     background-color: white;
 }
-pre code {
-    font-size: 8.3pt;
-}
 code.copy-to-clipboard-code {
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px;
-    border-right-width: 1px;
+    border-start-end-radius: 2px;
+    border-end-end-radius: 2px;
+    border-inline-end-width: 1px;
 }
 pre {
     border: 1px solid #ccc;
@@ -34,8 +31,9 @@ pre {
     background-color: #fff; /* avoid background bleeding*/
     border-bottom: 1px solid #ddd;
     border-radius: 0;
-    padding-left: 0; /* for print, we want to align with the footer to ease the layout */
     color: #777;
+    padding-left: 0; /* for print, we want to align with the footer to ease the layout */
+    padding-right: 0;
 }
 .navigation,
 #top-print-link,
@@ -54,7 +52,7 @@ pre {
     display: none;
 }
 
-#body h1, #body h2, #body h3, #body h4, #body h5, #body h6 {
+#body h1, #body h2, #body h3, #body .article-subheading, #body h4, #body h5, #body h6 {
     /* better contrast for colored elements */
     color: black;
 }
@@ -62,7 +60,7 @@ pre {
 #body code, #body strong, #body b,
 #body li, #body dd, #body dt,
 #body p,
-#body a {
+#body a, #body button, #body .badge .badge-content {
     /* better contrast for colored elements */
     color: black;
 }
@@ -96,7 +94,12 @@ body,
 #body-inner .chapter h3:first-of-type {
     margin-top: 2rem;
 }
-#body-inner .chapter p {
+
+/* Children shortcode */
+.children p,
+.children-li p,
+.children-h2 p,
+.children-h3 p {
     font-size: 1rem;
 }
 
@@ -107,7 +110,9 @@ body,
     margin-top: 1.5rem;
     padding-top: .75rem;
 }
-#body #body-inner .footline a {
+#body #body-inner .headline a,
+#body #body-inner .footline a,
+#body #body-inner .btn a {
     text-decoration: none;
 }
 #body #body-inner a {
@@ -138,7 +143,7 @@ body,
 #body .tab-nav-button:not(.active) {
     opacity: .5;
 }
-#head-tags {
+.tags {
     display: none;
 }
 mark {
@@ -148,18 +153,10 @@ mark {
 .mermaid > svg:hover {
     border-color: transparent;
 }
-div.box {
-    border: 1px solid #ddd;
-}
 div.box > .box-content {
     background-color: white;
 }
-rapi-doc{
-    /* adjust rapi-doc internals to fill out available space */
-    font-size: 4pt;
-    margin-left: -12px;
-    width: calc( 100% + 12px + 8px );
-}
+
 .btn,
 #body .tab-nav-button {
     color: black !important;

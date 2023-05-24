@@ -1,5 +1,17 @@
+[Reading-direction]
+other = "ltr"
+
+[Search]
+other = "Cerca"
+
 [Search-placeholder]
 other = "Cerca..."
+
+[No-results-found]
+other = "Nessun risultato trovato per \"{0}\""
+
+[N-results-found]
+other = "{1} risultati trovati per \"{0}\""
 
 [Clear-History]
 other = "Reimposta storico"
@@ -69,3 +81,27 @@ other = "Collegamento copiato dalla clipboard!"
 
 [Chapter]
 other = "Capitolo {{.}}"
+
+[Language]
+other = "Lingua"
+
+[Theme]
+other = "Tema"
+
+[Submenu]
+other = "Sottomenu {{.}}"
+
+[Subsections]
+other = "Sottosezioni di {{.}}"
+
+[tags]
+other = "Tag"
+
+[tag]
+other = "Tag"
+
+[categories]
+other = "Categorie"
+
+[category]
+other = "Categoria"
