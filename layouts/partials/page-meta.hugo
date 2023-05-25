@@ -55,8 +55,10 @@
 	{{- $noprint_stem:= or $noprint_node .noprintstem }}
 	{{- $noprint_current_stem:= or $noprint_node .noprintcurrent }}
 	{{- $noprint_from_current := or (and $noprint_node (not $isAncestor) (not $isSelf) ) (and .noprintcurrent (or $isPreSelf $isPostSelf $isDescendant) ) }}
-	{{- $currentNode.Scratch.SetInMap "relearnNoPrintNode" .node.RelPermalink $noprint_node }}
-	{{- $currentNode.Scratch.SetInMap "relearnNoPrintStem" .node.RelPermalink $noprint_stem }}
+	{{- if $isSelf }}
+		{{- $currentNode.Scratch.Set "relearnNoPrintNode" $noprint_node }}
+		{{- $currentNode.Scratch.Set "relearnNoPrintStem" $noprint_stem }}
+	{{- end}}
 	{{- $currentNode.Scratch.SetInMap "relearnNoPrintFrom" .node.RelPermalink $noprint_current_stem }}
 	{{/* end */}}
 
@@ -78,7 +80,7 @@
 	{{- end }}
 	{{- range $pages }}
 		{{/* [x] russfeld */}}
-		{{- template "relearn-structure" dict "node" . "currentnode" $currentNode "hiddenstem" $hidden_stem "hiddencurrent" $hidden_from_current "defaultOrdersectionsby" $defaultOrdersectionsby "noprintstem" $noprint_stem "noprintcurrent" $noprint_from_current}}
+		{{- template "relearn-structure" dict "node" . "currentnode" $currentNode "hiddenstem" $hidden_stem "hiddencurrent" $hidden_from_current "defaultOrdersectionsby" $defaultOrdersectionsby "noprintstem" $noprint_stem "noprintcurrent" $noprint_from_current }}
 		{{/* end */}}
 	{{- end}}
 {{- end }}
