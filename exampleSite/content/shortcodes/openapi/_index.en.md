@@ -13,20 +13,20 @@ This only works in modern browsers.
 
 While the examples are using shortcodes with named parameter you are free to also call this shortcode from your own partials.
 
-{{< tabs groupId="shortcode-parameter">}}
-{{% tab name="shortcode" %}}
+{{< tabs groupid="shortcode-parameter">}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{</* openapi src="https://petstore3.openapi.io/api/v3/openapi.json" */>}}
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/openapi.html" (dict
-  "context" .
-  "src" "https://petstore3.openapi.io/api/v3/openapi.json"
+  "page" .
+  "src"  "https://petstore3.openapi.io/api/v3/openapi.json"
 )}}
 ````
 
@@ -36,7 +36,7 @@ While the examples are using shortcodes with named parameter you are free to als
 ### Parameter
 
 | Name                 | Default          | Notes       |
-|:---------------------|:-----------------|:------------|
+|----------------------|------------------|-------------|
 | **src**              | _&lt;empty&gt;_  | The URL to the OpenAPI specification file. This can be relative to the URL of your page if it is a leaf or branch bundle. |
 
 {{% notice note %}}

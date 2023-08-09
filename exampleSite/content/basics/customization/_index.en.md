@@ -30,10 +30,11 @@ This theme defines the following partials :
 - `content.html`: the content page itself. This can be overridden if you want to display page's meta data above or below the content.
 - `content-header.html`: header above the title, has a default implementation but you can overwrite it if you don't like it.
 - `content-footer.html`: footer below the content, has a default implementation but you can overwrite it if you don't like it.
+
 ## Change the logo
 
 Create a new file in `layouts/partials/` named `logo.html`. Then write any HTML you want.
-You could use an `img` HTML tag and reference an image created under the *static* folder, or you could paste a SVG definition!
+You could use an `img` HTML tag and reference an image created under the _static_ folder, or you could paste a SVG definition!
 
 {{% notice note %}}
 The size of the logo will adapt automatically
@@ -42,6 +43,13 @@ The size of the logo will adapt automatically
 ## Change the favicon
 
 If your favicon is a SVG, PNG or ICO, just drop off your image in your local `static/images/` folder and name it `favicon.svg`, `favicon.png` or `favicon.ico` respectively.
+
+Additionally, if you want your site to use light & dark theme favicons that follow the OS' (and in some cases, the browser's) color scheme, add the image files to your local `static/images/` folder and name them eg. `favicon-light.svg` and/or `favicon-dark.svg` respectively corresponding to your file format. In case one of the files is missing, the theme falls back to eg. `favicon.svg` for the missing file. All supplied favicons must be of the same file format.
+
+{{% notice warning %}}
+IE and old browser versions do not support [media queries](https://caniuse.com/css-media-interaction), which are necessary for the light & dark theme favicon option.
+If you have requirements to support IE and/or older browser versions, use one of the other options.
+{{% /notice %}}
 
 If no favicon file is found, the theme will lookup the alternative filename `logo` in the same location and will repeat the search for the list of supported file types.
 

@@ -7,6 +7,9 @@ other = "Procurar"
 [Search-placeholder]
 other = "Procurar..."
 
+[Clear-search]
+other = "Limpar pesquisa"
+
 [No-results-found]
 other = "Nenhum resultado encontrado para \"{0}\""
 
@@ -20,7 +23,7 @@ other = "Limpar Histórico"
 other = "Anexos"
 
 [title-404]
-other = "Erro"
+other = "Não localizado"
 
 [message-404]
 other = "Ops. Parece que a página não existe ¯\\_(ツ)_/¯."

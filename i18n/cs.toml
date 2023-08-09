@@ -7,6 +7,9 @@ other = "Hledat"
 [Search-placeholder]
 other = "Hledat..."
 
+[Clear-search]
+other = "Vymazat vyhledávání"
+
 [No-results-found]
 other = "Žádné výsledky pro \"{0}\""
 
@@ -20,7 +23,7 @@ other = "Vymazat historii"
 other = "Přílohy"
 
 [title-404]
-other = "Error 404"
+other = "Nelokalizované"
 
 [message-404]
 other = "Ups. Zdá se, že tato stránka neexistuje ¯\\_(ツ)_/¯."

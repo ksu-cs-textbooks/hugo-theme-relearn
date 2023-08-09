@@ -12,8 +12,8 @@ The `button` shortcode displays a clickable button with adjustable color, title 
 
 While the examples are using shortcodes with named parameter you are free to also call this shortcode from your own partials.
 
-{{< tabs groupId="shortcode-parameter">}}
-{{% tab name="shortcode" %}}
+{{< tabs groupid="shortcode-parameter">}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{%/* button href="https://gohugo.io/" %}}Get Hugo{{% /button */%}}
@@ -21,16 +21,16 @@ While the examples are using shortcodes with named parameter you are free to als
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/button.html" (dict
-    "context" .
+    "page" .
     "href" "https://gohugo.io/"
     "content" "Get Hugo"
 )}}
 {{ partial "shortcodes/button.html" (dict
-  "context" .
+  "page" .
   "href" "https://gohugo.io/"
   "style" "warning"
   "icon" "dragon"
@@ -46,9 +46,9 @@ Once the button is clicked, it opens another browser tab for the given URL.
 ### Parameter
 
 | Name                  | Default         | Notes       |
-|:----------------------|:----------------|:------------|
+|-----------------------|-----------------|-------------|
 | **href**              | _&lt;empty&gt;_ | Either the destination URL for the button or JavaScript code to be executed on click. If this parameter is not set, the button will do nothing but is still displayed as clickable.<br><br>- if starting with `javascript:` all following text will be executed in your browser<br>- every other string will be interpreted as URL|
-| **style**             | `transparent`   | The style scheme used for the button.<br><br>- by severity: `info`, `note`, `tip`, `warning`<br>- by brand color: `primary`, `secondary`, `accent`<br>- by color: `blue`, `green`, `grey`, `orange`, `red`<br>- by special color: `default`, `transparent` |
+| **style**             | `transparent`   | The style scheme used for the button.<br><br>- by severity: `info`, `note`, `tip`, `warning`<br>- by brand color: `primary`, `secondary`, `accent`<br>- by color: `blue`, `green`, `grey`, `orange`, `red`<br>- by special color: `default`, `transparent`, `code` |
 | **color**             | see notes       | The [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) to be used. If not set, the chosen color depends on the **style**. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching color for the severity<br>- for all other styles: the corresponding color |
 | **icon**              | see notes       | [Font Awesome icon name]({{%relref "shortcodes/icon#finding-an-icon" %}}) set to the left of the title. Depending on the **style** there may be a default icon. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching icon for the severity<br>- for all other styles: _&lt;empty&gt;_<br><br>If you want no icon for a severity style, you have to set this parameter to `" "` (a non empty string filled with spaces) |
 | **iconposition**      | `left`          | Places the icon to the `left` or `right` of the title. |
@@ -114,6 +114,22 @@ Once the button is clicked, it opens another browser tab for the given URL.
 {{% button href="https://gohugo.io/" style="transparent" %}}Get Hugo{{% /button %}}
 
 ### Icon
+
+#### Empty
+
+````go
+{{%/* button href="https://gohugo.io/" icon=" " %}}{{% /button */%}}
+````
+
+{{% button href="https://gohugo.io/" icon=" " %}}{{% /button %}}
+
+#### Only
+
+````go
+{{%/* button href="https://gohugo.io/" icon="download" %}}{{% /button */%}}
+````
+
+{{% button href="https://gohugo.io/" icon="download" %}}{{% /button %}}
 
 #### To the Left
 

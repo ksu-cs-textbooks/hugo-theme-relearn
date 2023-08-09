@@ -23,8 +23,8 @@ You are free to also call this shortcode from your own partials.
 To use codefence syntax you have to turn off `guessSyntax` for the `markup.highlight` setting ([see the configuration section](#configuration)).
 {{% /notice %}}
 
-{{< tabs groupId="shortcode-parameter">}}
-{{% tab name="codefence" %}}
+{{< tabs groupid="shortcode-parameter">}}
+{{% tab title="codefence" %}}
 
 ````md
 ```math { align="center" }
@@ -33,7 +33,7 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 ````
 
 {{% /tab %}}
-{{% tab name="shortcode" %}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{</* math align="center" */>}}
@@ -42,11 +42,11 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/math.html" (dict
-  "context" .
+  "page"    .
   "content" "$$left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$"
   "align"   "center"
 )}}
@@ -59,7 +59,7 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 ### Parameter
 
 | Name                  | Default          | Notes       |
-|:----------------------|:-----------------|:------------|
+|-----------------------|------------------|-------------|
 | **align**             | `center`         | Allowed values are `left`, `center` or `right`. |
 | _**&lt;content&gt;**_ | _&lt;empty&gt;_  | Your formuale. |
 

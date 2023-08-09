@@ -28,13 +28,13 @@ The theme is a fork of the great [Learn theme](https://github.com/matcornic/hugo
   - Predefined light, dark and color variants
   - [User selectable variants]({{%relref "basics/customization#multiple-variants" %}})
   - [Stylesheet generator]({{%relref "basics/generator" %}})
-  - [Configurable syntax highlighting]({{%relref "cont/syntaxhighlight" %}})
+  - [Configurable syntax highlighting]({{%relref "shortcodes/highlight" %}})
 - **Unique theme features**
   - [Print whole chapters or even the complete site]({{%relref "basics/configuration#activate-print-support" %}})
   - In page search
   - [Site search]({{%relref "basics/configuration#activate-search" %}})
   - [Dedicated search page]({{%relref "basics/configuration#activate-dedicated-search-page" %}})
-  - [Tagging support]({{%relref "cont/tags" %}})
+  - [Taxonomy support]({{%relref "cont/taxonomy" %}})
   - Hidden pages
   - Unlimited nested menu dependend on your site structure
   - Navigation buttons dependend on your site structure

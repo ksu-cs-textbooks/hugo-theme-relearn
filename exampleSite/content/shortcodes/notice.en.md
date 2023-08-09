@@ -13,8 +13,8 @@ It is all about the boxes.
 
 While the examples are using shortcodes with named parameter you are free to use positional as well or also call this shortcode from your own partials.
 
-{{< tabs groupId="shortcode-parameter">}}
-{{% tab name="shortcode" %}}
+{{< tabs groupid="shortcode-parameter">}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{%/* notice style="primary" title="There may be pirates" icon="skull-crossbones" */%}}
@@ -23,7 +23,7 @@ It is all about the boxes.
 ````
 
 {{% /tab %}}
-{{% tab name="shortcode (positional)" %}}
+{{% tab title="shortcode (positional)" %}}
 
 ````go
 {{%/* notice primary "There may be pirates" "skull-crossbones" */%}}
@@ -32,11 +32,11 @@ It is all about the boxes.
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/notice.html" (dict
-  "context" .
+  "page"  .
   "style" "primary"
   "title" "There may be pirates"
   "icon" "skull-crossbones"
@@ -50,8 +50,8 @@ It is all about the boxes.
 ### Parameter
 
 | Name      | Position | Default   | Notes       |
-|:----------|:---------|:----------|:------------|
-| **style** | 1        | `default` | The style scheme used for the box.<br><br>- by severity: `info`, `note`, `tip`, `warning`<br>- by brand color: `primary`, `secondary`, `accent`<br>- by color: `blue`, `green`, `grey`, `orange`, `red`<br>- by special color: `default`, `transparent` |
+|-----------|----------|-----------|-------------|
+| **style** | 1        | `default` | The style scheme used for the box.<br><br>- by severity: `info`, `note`, `tip`, `warning`<br>- by brand color: `primary`, `secondary`, `accent`<br>- by color: `blue`, `green`, `grey`, `orange`, `red`<br>- by special color: `default`, `transparent`, `code` |
 | **color** |          | see notes | The [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) to be used. If not set, the chosen color depends on the **style**. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching color for the severity<br>- for all other styles: the corresponding color |
 | **title** | 2        | see notes | Arbitrary text for the box title. Depending on the **style** there may be a default title. Any given value will overwrite the default.<br><br>- for severity styles: the matching title for the severity<br>- for all other styles: _&lt;empty&gt;_<br><br>If you want no title for a severity style, you have to set this parameter to `" "` (a non empty string filled with spaces) |
 | **icon**  | 3        | see notes | [Font Awesome icon name]({{%relref "shortcodes/icon#finding-an-icon" %}}) set to the left of the title. Depending on the **style** there may be a default icon. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching icon for the severity<br>- for all other styles: _&lt;empty&gt;_<br><br>If you want no icon for a severity style, you have to set this parameter to `" "` (a non empty string filled with spaces) |

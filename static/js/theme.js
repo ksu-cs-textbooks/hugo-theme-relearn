@@ -15,6 +15,7 @@ var isPrint = document.querySelector( 'body' ).classList.contains( 'print' );
 // [x] russfeld
 var isEmbed = (document.querySelector('.embed') != null) || (document.querySelector('.tele') != null)
 var isRtl = document.querySelector( 'html' ).getAttribute( 'dir' ) == 'rtl';
+var lang = document.querySelector( 'html' ).getAttribute( 'lang' );
 var dir_padding_start = 'padding-left';
 var dir_padding_end = 'padding-right';
 var dir_key_start = 37;
@@ -65,6 +66,27 @@ function adjustContentWidth(){
         end = Math.max( 0, start - scrollbarSize );
     }
     elc.style[ dir_padding_end ] = '' + end + 'px';
+}
+
+function fixCodeTabs(){
+    /* if only a single code block is contained in the tab and no style was selected, treat it like style=code */
+    var codeTabContents = Array.from( document.querySelectorAll( '.tab-content.tab-panel-style' ) ).filter( function( tabContent ){
+        return tabContent.querySelector( '*:scope > .tab-content-text > div.highlight:only-child, *:scope > .tab-content-text > pre.pre-code:only-child');
+    });
+
+    codeTabContents.forEach( function( tabContent ){
+        var tabId = tabContent.dataset.tabItem;
+        var tabPanel = tabContent.parentNode.parentNode;
+        var tabButton = tabPanel.querySelector( '.tab-nav-button.tab-panel-style[data-tab-item="'+tabId+'"]' );
+        if( tabContent.classList.contains( 'initial' ) ){
+            tabButton.classList.remove( 'initial' );
+            tabButton.classList.add( 'code' );
+            tabContent.classList.remove( 'initial' );
+            tabContent.classList.add( 'code' );
+        }
+        // mark code blocks for FF without :has()
+        tabContent.classList.add( 'codify' );
+    });
 }
 
 function switchTab(tabGroup, tabId) {
@@ -139,21 +161,27 @@ function initMermaid( update, attrs ) {
     };
 
     var parseGraph = function( graph ){
-        var d = /^\s*(%%\s*\{\s*\w+\s*:([^%]*?)%%\s*\n?)/g;
+        // See https://github.com/mermaid-js/mermaid/blob/9a080bb975b03b2b1d4ef6b7927d09e6b6b62760/packages/mermaid/src/diagram-api/frontmatter.ts#L10
+        // for reference on the regex originally taken from jekyll
+        var YAML=1;
+        var INIT=2;
+        var GRAPH=3;
+        var d = /^(?:\s*[\n\r])*(-{3}\s*[\n\r](?:.*?)[\n\r]-{3}(?:\s*[\n\r]+)+)?(?:\s*(?:%%\s*\{\s*\w+\s*:([^%]*?)%%\s*[\n\r]?))?(.*)$/s
         var m = d.exec( graph );
+        var yaml = '';
         var dir = {};
         var content = graph;
-        if( m && m.length == 3 ){
-            dir = JSON.parse( '{ "dummy": ' + m[2] ).dummy;
-            content = graph.substring( d.lastIndex );
+        if( m && m.length == 4 ){
+            yaml = m[YAML] ? m[YAML] : yaml;
+            dir = m[INIT] ? JSON.parse( '{ "init": ' + m[INIT] ).init : dir;
+            content = m[GRAPH] ? m[GRAPH] : content;
         }
-        content = content.trim();
-        return { dir: dir, content: content };
+        var ret = { yaml: yaml, dir: dir, content: content.trim() }
+        return ret;
     };
 
     var serializeGraph = function( graph ){
-        var s = '%%{init: ' + JSON.stringify( graph.dir ) + '}%%\n';
-        s += graph.content;
+        var s = graph.yaml + '%%{init: ' + JSON.stringify( graph.dir ) + '}%%\n' + graph.content;
         return s;
     };
 
@@ -316,7 +344,7 @@ function initOpenapi( update, attrs ){
         oi.classList.toggle('sc-openapi-iframe', true);
         oi.srcdoc =
             '<!doctype html>' +
-            '<html lang="en">' +
+            '<html lang="' + lang + '" dir="' + (isRtl ? 'rtl' : 'ltr') + '">' +
                 '<head>' +
                     '<link rel="stylesheet" href="' + window.themeUseOpenapi.css + '">' +
                     '<link rel="stylesheet" href="' + theme + '">' +
@@ -325,7 +353,7 @@ function initOpenapi( update, attrs ){
                 '</head>' +
                 '<body>' +
                     '<a class="relearn-expander" href="" onclick="return relearn_collapse_all()">Collapse all</a>' +
-                    '<a class="relearn-expander" href="" onclick="return relearn_expand_all()">Exapnd all</a>' +
+                    '<a class="relearn-expander" href="" onclick="return relearn_expand_all()">Expand all</a>' +
                     '<div id="relearn-swagger-ui"></div>' +
                     '<script>' +
                         'function relearn_expand_all(){' +
@@ -458,6 +486,19 @@ function initAnchorClipboard(){
 }
 
 function initCodeClipboard(){
+    function getCodeText( node ){
+        // if highlight shortcode is used in inline lineno mode, remove lineno nodes before generating text, otherwise it doesn't hurt
+        var code = node.cloneNode( true );
+        Array.from( code.querySelectorAll( '*:scope > span > span:first-child:not(:last-child)' ) ).forEach( function( lineno ){
+            lineno.remove();
+        });
+        var text = code.textContent;
+        // remove a trailing line break, this may most likely
+        // come from the browser / Hugo transformation
+        text = text.replace( /\n$/, '' );
+        return text;
+    }
+
     function fallbackMessage( action ){
         var actionMsg = '';
         var actionKey = (action === 'cut' ? 'X' : 'C');
@@ -473,39 +514,41 @@ function initCodeClipboard(){
         return actionMsg;
     }
 
-	var codeElements = document.querySelectorAll( 'code' );
+    var codeElements = document.querySelectorAll( 'code' );
 	for( var i = 0; i < codeElements.length; i++ ){
         var code = codeElements[i];
-        var text = code.textContent;
+        var text = getCodeText( code );
         var inPre = code.parentNode.tagName.toLowerCase() == 'pre';
+        var inTable = inPre &&
+           code.parentNode.parentNode.tagName.toLowerCase() == 'td';
+        // avoid copy-to-clipboard for highlight shortcode in table lineno mode
+        var isFirstLineCell = inTable &&
+            code.parentNode.parentNode.parentNode.querySelector( 'td:first-child > pre > code' ) == code;
 
-        if( inPre || text.length > 5 ){
+        if( !isFirstLineCell && ( inPre || text.length > 5 ) ){
             var clip = new ClipboardJS( '.copy-to-clipboard-button', {
                 text: function( trigger ){
-                    var text = trigger.previousElementSibling && trigger.previousElementSibling.matches( 'code' ) && trigger.previousElementSibling.textContent;
-                    // remove a trailing line break, this may most likely
-                    // come from the browser / Hugo transformation
-                    text = text.replace( /\n$/, '' );
-                    // removes leading $ signs from text in an assumption
-                    // that this has to be the unix prompt marker - weird
-                    return text.replace( /^\$\s/gm, '' );
+                    if( !trigger.previousElementSibling ){
+                        return '';
+                    }
+                    return trigger.previousElementSibling.dataset.code || '';
                 }
             });
 
             clip.on( 'success', function( e ){
                 e.clearSelection();
-                var inPre = e.trigger.parentNode.tagName.toLowerCase() == 'pre';
+                var doBeside = e.trigger.parentNode.tagName.toLowerCase() == 'pre' || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
                 e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
-                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (inPre ? 'w' : 's'+(isRtl?'e':'w')) );
+                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isRtl?'e':'w')) );
             });
 
             clip.on( 'error', function( e ){
-                var inPre = e.trigger.parentNode.tagName.toLowerCase() == 'pre';
+                var doBeside = e.trigger.parentNode.tagName.toLowerCase() == 'pre' || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
                 e.trigger.setAttribute( 'aria-label', fallbackMessage(e.action) );
-                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (inPre ? 'w' : 's'+(isRtl?'e':'w')) );
+                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isRtl?'e':'w')) );
                 var f = function(){
                     e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
-                    e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (inPre ? 'w' : 's'+(isRtl?'e':'w')) );
+                    e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isRtl?'e':'w')) );
                     document.removeEventListener( 'copy', f );
                 };
                 document.addEventListener( 'copy', f );
@@ -532,7 +575,33 @@ function initCodeClipboard(){
                 this.removeAttribute( 'aria-label' );
                 this.classList.remove( 'tooltipped', 'tooltipped-w', 'tooltipped-se', 'tooltipped-sw' );
             });
-            code.parentNode.insertBefore( button, code.nextSibling );
+            if( inTable ){
+                var table = code.parentNode.parentNode.parentNode.parentNode.parentNode;
+                table.dataset[ 'code' ] = text;
+                table.parentNode.insertBefore( button, table.nextSibling );
+            }
+            else if( inPre ){
+                var pre = code.parentNode;
+                pre.dataset[ 'code' ] = text;
+                var p = pre.parentNode;
+                // indented code blocks are missing the div
+                while( p != document && ( p.tagName.toLowerCase() != 'div' || !p.classList.contains( 'highlight' ) ) ){
+                    p = p.parentNode;
+                }
+                if( p == document ){
+                    var clone = pre.cloneNode( true );
+                    var div = document.createElement( 'div' );
+                    div.classList.add( 'highlight' );
+                    div.appendChild( clone );
+                    pre.parentNode.replaceChild( div, pre );
+                    pre = clone;
+                }
+                pre.parentNode.insertBefore( button, pre.nextSibling );
+            }
+            else{
+                code.dataset[ 'code' ] = text;
+                code.parentNode.insertBefore( button, code.nextSibling );
+            }
         }
     }
 }
@@ -1265,6 +1334,7 @@ ready( function(){
     initToc();
     initAnchorClipboard();
     initCodeClipboard();
+    fixCodeTabs();
     restoreTabSelections();
     initSwipeHandler();
     initHistory();

@@ -39,6 +39,16 @@ runs:
         regex: (\d+\.\d+)\.\d+
         replacement: "$1"
 
+    - name: Get current main version number for anchoring
+      id: mainanchor
+      uses: ashley-taylor/regex-property-action@v1
+      env:
+        MILESTONE: ${{ inputs.milestone }}
+      with:
+        value: ${{ env.MILESTONE }}
+        regex: (\d+)\.(\d+)\.\d+
+        replacement: "$1$2"
+
     - name: Get current major version number
       id: majorvers
       uses: ashley-taylor/regex-property-action@v1
@@ -58,7 +68,7 @@ runs:
         version: ${{ env.MILESTONE }}
 
     - name: Close milestone
-      uses: Akkjon/close-milestone@v2
+      uses: Akkjon/close-milestone@v2.1.0
       continue-on-error: true
       env:
         MILESTONE: ${{ inputs.milestone }}
@@ -81,7 +91,7 @@ runs:
       uses: mingjun97/file-regex-replace@v1
       with:
         regex: '(.)[\n\r\s]*<!--GH-ACTION-RELEASE-MILESTONE-->[\n\r\s]*-*\s*[\n\r\s]*?[\n\r]+##\s*.*?[\n\r][\n\r\s]*(.)'
-        replacement: "$1\n\n<!--GH-ACTION-RELEASE-MILESTONE-->\n\n---\n\n## ${{ steps.mainvers.outputs.value }}.0 (${{ steps.date.outputs.time }})\n\n$2"
+        replacement: "$1\n\n<!--GH-ACTION-RELEASE-MILESTONE-->\n\n---\n\n## ${{ steps.mainvers.outputs.value }}.0 (${{ steps.date.outputs.time }}) {#${{ steps.mainanchor.outputs.value }}0}\n\n$2"
         include: exampleSite/content/basics/migration/_index.en.md
 
     - name: Update generator version

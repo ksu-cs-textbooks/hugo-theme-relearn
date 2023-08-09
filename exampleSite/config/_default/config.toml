@@ -36,11 +36,6 @@ defaultContentLanguage = "en"
 # the site's title of this showcase; you should change this ;-)
 title = "Hugo Relearn Documentation"
 
-# We disable this for testing the exampleSite; you must do so too
-# if you want to use the themes parameter disableGeneratorVersion=true;
-# otherwise Hugo will create a generator tag on your home page
-disableHugoGeneratorInject = true
-
 [outputs]
   # add JSON to the home to support Lunr search; This is a mandatory setting
   # for the search functionality
@@ -52,18 +47,20 @@ disableHugoGeneratorInject = true
 
 [markup]
   [markup.highlight]
+    # line numbers in a table layout will shift if code is wrapping, so better
+    # not use it; visually both layouts have the same look and behavior
+    lineNumbersInTable = false
+
     # if `guessSyntax = true`, there will be no unstyled code even if no language
     # was given BUT Mermaid and Math codefences will not work anymore! So this is a
     # mandatory setting for your site if you want to use Mermaid or Math codefences
     guessSyntax = false
 
-    # here in this showcase we use our own modified chroma syntax highlightning style
-    # which is imported in theme-relearn-light.css / theme-relearn-dark.css;
+    # the shipped variants come with their own modified chroma syntax highlightning
+    # style which is imported in theme-relearn-light.css, theme-relearn-dark.css, etc.;
     # if you want to use a predefined style instead:
-    # - remove the following `noClasses`
-    # - set the following `style` to a predefined style name
-    # - remove the `@import` of the self-defined chroma stylesheet from your CSS files
-    #   (here eg.: theme-relearn-light.css / theme-relearn-dark.css)
+    # - remove `noClasses` or set `noClasses = true`
+    # - set `style` to a predefined style name
     noClasses = false
     # style = "tango"
 
@@ -89,6 +86,9 @@ disableHugoGeneratorInject = true
     title = "Hugo Relearn Theme"
     weight = 1
     languageName = "English"
+    # Language dependend settings:
+    # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+    #contentDir = "content/en"
     [languages.en.params]
       landingPageName = "<i class='fas fa-home'></i> Home"
 
@@ -100,7 +100,7 @@ disableHugoGeneratorInject = true
 
   [[languages.en.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-camera'></i> Showcases"
-    url = "showcase/"
+    pageRef = "showcase/"
     weight = 11
 
   [[languages.en.menu.shortcuts]]
@@ -111,12 +111,12 @@ disableHugoGeneratorInject = true
 
   [[languages.en.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-    url = "more/credits/"
+    pageRef = "more/credits/"
     weight = 30
 
   [[languages.en.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-tags'></i> Tags"
-    url = "tags/"
+    pageRef = "tags/"
     weight = 40
 
   # this is ourrr way t' showcase th' multilang settings by
@@ -129,6 +129,9 @@ disableHugoGeneratorInject = true
     title = "Cap'n Hugo Relearrrn Theme"
     weight = 2
     languageName = "Arrr! ☠ Pirrrates ☠"
+    # Language dependend settings:
+    # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+    #contentDir = "content/pir"
     [languages.pir.params]
       landingPageName = "<i class='fas fa-home'></i> Arrr! Home"
 
@@ -140,7 +143,7 @@ disableHugoGeneratorInject = true
 
   [[languages.pir.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-camera'></i> Showcases"
-    url = "showcase/"
+    pageRef = "showcase/"
     weight = 11
 
   [[languages.pir.menu.shortcuts]]
@@ -151,12 +154,12 @@ disableHugoGeneratorInject = true
 
   [[languages.pir.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-bullhorn'></i> Crrredits"
-    url = "more/credits/"
+    pageRef = "more/credits/"
     weight = 30
 
   [[languages.pir.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-tags'></i> Arrr! Tags"
-    url = "tags/"
+    pageRef = "tags/"
     weight = 40
 
 # mounts are only needed in this showcase to access the publicly available screenshots;
@@ -168,9 +171,22 @@ disableHugoGeneratorInject = true
   [[module.mounts]]
     source = 'assets'
     target = 'assets'
+
+  # Language dependend settings:
+  # Use case https://gohugo.io/content-management/multilingual/#translation-by-filename
   [[module.mounts]]
     source = 'content'
     target = 'content'
+  # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+  #[[module.mounts]]
+  #  lang = 'en'
+  #  source = 'content/en'
+  #  target = 'content'
+  #[[module.mounts]]
+  #  lang = 'pir'
+  #  source = 'content/pir'
+  #  target = 'content'
+
   [[module.mounts]]
     source = 'data'
     target = 'data'
@@ -179,6 +195,9 @@ disableHugoGeneratorInject = true
     target = 'i18n'
   [[module.mounts]]
     source = '../images'
+    target = 'static/images'
+  [[module.mounts]]
+    source = 'static/images'
     target = 'static/images'
   [[module.mounts]]
     source = 'layouts'
@@ -212,3 +231,5 @@ disableHugoGeneratorInject = true
   # security reasons
   mermaidInitialize = "{ \"securityLevel\": \"loose\" }"
   mermaidZoom = true
+  [params.siteparam.test]
+    text = "A **nested** parameter <b>with</b> formatting"

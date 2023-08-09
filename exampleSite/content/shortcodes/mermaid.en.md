@@ -29,8 +29,8 @@ You are free to also call this shortcode from your own partials.
 To use codefence syntax you have to turn off `guessSyntax` for the `markup.highlight` setting ([see the configuration section](#configuration)).
 {{% /notice %}}
 
-{{< tabs groupId="shortcode-parameter">}}
-{{% tab name="codefence" %}}
+{{< tabs groupid="shortcode-parameter">}}
+{{% tab title="codefence" %}}
 
 ````md
 ```mermaid { align="center" zoom="true" }
@@ -41,7 +41,7 @@ graph LR;
 ````
 
 {{% /tab %}}
-{{% tab name="shortcode" %}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{</* mermaid align="center" zoom="true" */>}}
@@ -52,11 +52,11 @@ graph LR;
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/mermaid.html" (dict
-  "context" .
+  "page"    .
   "content" "graph LR;\nIf --> Then\nThen --> Else"
   "align"   "center"
   "zoom"    "true"
@@ -72,7 +72,7 @@ The generated graphs can be be panned by dragging them and zoomed by using the m
 ### Parameter
 
 | Name                  | Default          | Notes       |
-|:----------------------|:-----------------|:------------|
+|-----------------------|------------------|-------------|
 | **align**             | `center`         | Allowed values are `left`, `center` or `right`. |
 | **zoom**              | see notes        | Whether the graph is pan- and zoomable.<br><br>If not set the value is determined by the `mermaidZoom` setting of the [site](#global-configuration-file) or the [pages frontmatter](#pages-frontmatter) or `false` if not set at all.<br><br>- `false`: no pan or zoom<br>- `true`: pan and zoom active |
 | _**&lt;content&gt;**_ | _&lt;empty&gt;_  | Your Mermaid graph. |
@@ -117,11 +117,13 @@ mermaidZoom = true
 
 ## Examples
 
-### Flowchart with Non-Default Mermaid Theme
+### Flowchart with YAML-Title
 
 ````go
 {{</* mermaid */>}}
-%%{init:{"theme":"forest"}}%%
+---
+title: Example Diagram
+---
 graph LR;
     A[Hard edge] -->|Link text| B(Round edge)
     B --> C{<strong>Decision</strong>}
@@ -131,7 +133,9 @@ graph LR;
 ````
 
 {{< mermaid >}}
-%%{init:{"theme":"forest"}}%%
+---
+title: Example Diagram
+---
 graph LR;
     A[Hard edge] -->|Link text| B(Round edge)
     B --> C{<strong>Decision</strong>}
@@ -247,10 +251,11 @@ stateDiagram-v2
   closed --> open: Open
 {{< /mermaid >}}
 
-### Entity Relationship Model
+### Entity Relationship Model with Non-Default Mermaid Theme
 
 ````go
 {{</* mermaid */>}}
+%%{init:{"theme":"forest"}}%%
 erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
     CUSTOMER ||--o{ ORDER : places
@@ -264,6 +269,7 @@ erDiagram
 ````
 
 {{< mermaid >}}
+%%{init:{"theme":"forest"}}%%
 erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
     CUSTOMER ||--o{ ORDER : places
