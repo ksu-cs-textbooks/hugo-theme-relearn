@@ -2,6 +2,7 @@
 {{- $_hugo_config := `{ "version": 1 }` }}
 
 {{- partial "shortcodes/include.html" (dict
+  "page" $.Page
   "context" .
   "file" "themes/hugo-theme-relearn/static/files/syllabus/header.md"
 ) }}
@@ -23,6 +24,7 @@
 {{- range $files }}
   {{- $file := (print "themes/hugo-theme-relearn/static/files/syllabus/" . ".md") }}
   {{- partial "shortcodes/include.html" (dict
+    "page" $.Page
     "context" .
     "file" $file
   ) }}
