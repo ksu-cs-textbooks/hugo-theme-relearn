@@ -1,15 +1,28 @@
+# Base URL where the site will be hosted
 baseURL = "https://ksucs-hugo.russfeld.me"
+# Default language for the site
 languageCode = "en-us"
+# Site Title
 title = "K-State CS Hugo Framework"
+# This will fix URLs to match baseURL (for hosting in subfolders)
+canonifyURLs = true
 # This displays last edited information at bottom of page
 enableGitInfo = true
 
 # Change the default theme to be use when building the site with Hugo
 theme = ["hugo-theme-relearn", "plausible-hugo"]
 
-# For search functionality
+# Output Types
+# HTML - default page
+# RSS - for RSS feeds
+# PRINT - printable output
+# JSON - enables Lunr search engine
+# TELE - Teleprompter
+# EMBED - Embeddable Version
+# SEARCH - Search index file for Lunr
+# SEARCHPAGE - Dedicated Search Page
 [outputs]
-  home = ["HTML", "RSS", "PRINT", "JSON"]
+  home = ["HTML", "RSS", "PRINT", "JSON", "SEARCH", "SEARCHPAGE"]
   section = ["HTML", "RSS", "PRINT", "TELE", "EMBED"]
   page = ["HTML", "RSS", "PRINT", "TELE", "EMBED"]
 
@@ -39,6 +52,9 @@ theme = ["hugo-theme-relearn", "plausible-hugo"]
   # Javascript and CSS cache are automatically busted when new version of site is generated.
   # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false
+  # Set this to true if you want to disable generation for generator version meta tags of hugo and the theme;
+  # don't forget to also set Hugo's disableHugoGeneratorInject=true, otherwise it will generate a meta tag into your home page
+  disableGeneratorVersion = false
   # Set this to true to disable copy-to-clipboard button for inline code.
   disableInlineCopyToClipBoard = true
   # A title for shortcuts in menu is set by default. Set this to true to disable it.
@@ -64,25 +80,30 @@ theme = ["hugo-theme-relearn", "plausible-hugo"]
   # customMermaidURL = "https://unpkg.com/mermaid/dist/mermaid.min.js"
   # Initialization parameter for Mermaid, see Mermaid documentation
   # mermaidInitialize = "{ \"theme\": \"default\" }"
-  # If set to false, load the Swagger module on every page regardless if a Swagger shortcode is present
-  disableSwagger = true
-  # Specifies the remote location of the RapiDoc js
-  # customSwaggerURL = "https://unpkg.com/rapidoc/dist/rapidoc-min.js"
-  # Initialization parameter for Swagger, see RapiDoc documentation
-  # swaggerInitialize = "{ \"theme\": \"light\" }"
+  # If set to false, load the OpenAPI module on every page regardless if a OpenAPI shortcode is present
+  disableOpenapi = false
+  # Specifies the remote location of the swagger-ui js
+  # customOpenapiURL = "https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"
   # Hide Next and Previous page buttons normally displayed full height beside content
   disableNextPrev = false
   # Order sections in menu by "weight" or "title". Default to "weight";
   # this can be overridden in the pages frontmatter
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Eg. can be "red", "blue", "green" or an array like [ "blue", "green" ].
-  themeVariant = ["light-theme", "dark-theme"]
+  themeVariant = ["auto", "light-theme", "dark-theme"]
+  # The first element is the variant for light mode, the second for dark mode
+  themeVariantAuto = ["light-theme", "dark-theme"]
   # Change the title separator. Default to "::".
   # titleSeparator = "-"
   # If set to true, the menu in the sidebar will be displayed in a collapsible tree view.
   collapsibleMenu = true
   # If a single page can contain content in multiple languages, add those here
   additionalContentLanguage = [ "en" ]
+  # If set to true, no index.html will be appended to prettyURLs; this will cause pages not
+  # to be servable from the file system
+  disableExplicitIndexURLs = true
+  # For external links you can define how they are opened in your browser; this setting will only be applied to the content area but not the shortcut menu
+  externalLinkTarget = "_blank"
 
   # [x] russfeld
   # Custom parameters

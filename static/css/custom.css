@@ -205,3 +205,11 @@ kbd {
       top: 1px;
     }
   }
+    margin-left: 16px;
+}
+
+/* Sidebar Titles */
+#sidebar ul.topics > li > a b {
+    font-weight: 400;
+    opacity: 0.5;
+}

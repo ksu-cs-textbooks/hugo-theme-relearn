@@ -1,0 +1,18 @@
+{{- $context := .context }}
+{{- $src := .src }}
+{{- $id := cond (or (eq .id nil) (eq .id "")) (partial "make-random-md5.hugo" $context) .id }}
+{{- with $context }}
+{{- with .Resources.Match $src }}
+	{{- range . }}
+		{{- $src = .RelPermalink }}
+	{{- end }}
+{{- end }}
+<div class="sc-openapi-wrapper is-loading helper-loading-container">
+  <div
+    class="sc-openapi-container"
+    id="openapi-{{ $id }}"
+    openapi-url="{{ $src }}"
+  ></div>
+</div>
+{{- .Store.Set "hasOpenapi" true }}
+{{- end }}

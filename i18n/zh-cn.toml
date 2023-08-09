@@ -1,5 +1,17 @@
+[Reading-direction]
+other = "ltr"
+
+[Search]
+other = "搜索"
+
 [Search-placeholder]
 other = "搜索..."
+
+[No-results-found]
+other = "找不到\"{0}\"的结果"
+
+[N-results-found]
+other = "为\"{0}\"找到 {1} 个结果"
 
 [Clear-History]
 other = "清理历史记录"
@@ -69,3 +81,27 @@ other = "链接复制到剪贴板！"
 
 [Chapter]
 other = "第{{.}}章"
+
+[Language]
+other = "语言"
+
+[Theme]
+other = "主题"
+
+[Submenu]
+other = "子菜单{{.}}"
+
+[Subsections]
+other = "{{.}} 的子部分"
+
+[tags]
+other = "标签"
+
+[tag]
+other = "标签"
+
+[categories]
+other = "类别"
+
+[category]
+other = "类别"

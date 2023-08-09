@@ -36,6 +36,9 @@ Note that some of these parameters are explained in details in other sections of
   # Javascript and CSS cache are automatically busted when new version of site is generated.
   # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false
+  # Set this to true if you want to disable generation for generator version meta tags of hugo and the theme;
+  # don't forget to also set Hugo's disableHugoGeneratorInject=true, otherwise it will generate a meta tag into your home page
+  disableGeneratorVersion = false
   # Set this to true to disable copy-to-clipboard button for inline code.
   disableInlineCopyToClipBoard = false
   # A title for shortcuts in menu is set by default. Set this to true to disable it.
@@ -61,51 +64,86 @@ Note that some of these parameters are explained in details in other sections of
   customMermaidURL = "https://unpkg.com/mermaid/dist/mermaid.min.js"
   # Initialization parameter for Mermaid, see Mermaid documentation
   mermaidInitialize = "{ \"theme\": \"default\" }"
-  # If set to false, load the Swagger module on every page regardless if a Swagger shortcode is present
-  disableSwagger = false
-  # Specifies the remote location of the RapiDoc js
-  customSwaggerURL = "https://unpkg.com/rapidoc/dist/rapidoc-min.js"
-  # Initialization parameter for Swagger, see RapiDoc documentation
-  swaggerInitialize = "{ \"theme\": \"light\" }"
+  # If set to false, load the OpenAPI module on every page regardless if a OpenAPI shortcode is present
+  disableOpenapi = false
+  # Specifies the remote location of the swagger-ui js
+  customOpenapiURL = "https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"
   # Hide Next and Previous page buttons normally displayed full height beside content
   disableNextPrev = true
   # Order sections in menu by "weight" or "title". Default to "weight";
   # this can be overridden in the pages frontmatter
   ordersectionsby = "weight"
-  # Change default color scheme with a variant one. Eg. can be "red", "blue", "green" or an array like [ "blue", "green" ].
-  themeVariant = "relearn-light"
+  # Change default color scheme with a variant one. Eg. can be "auto", "red", "blue", "green" or an array like [ "blue", "green" ].
+  themeVariant = "auto"
+  # Change the breadcrumb separator. Default to ">".
+  breadcrumbSeparator = "|"
   # Change the title separator. Default to "::".
   titleSeparator = "-"
-  # If set to true, the menu in the sidebar will be displayed in a collapsible tree view.
+  # If set to true, the menu in the sidebar will be displayed in a collapsible tree view. Although the functionality works with old browsers (IE11), the display of the expander icons is limited to modern browsers
   collapsibleMenu = false
   # If a single page can contain content in multiple languages, add those here
   additionalContentLanguage = [ "en" ]
+  # If set to true, no index.html will be appended to prettyURLs; this will cause pages not
+  # to be servable from the file system
+  disableExplicitIndexURLs = false
+  # For external links you can define how they are opened in your browser; this setting will only be applied to the content area but not the shortcut menu
+  externalLinkTarget = "_blank"
 ```
 
-## A word on running your site in a subfolder
+## Serving your page from a subfolder
 
-The theme runs best if your site is installed in the root of your webserver. If your site is served from a subfolder, eg. `https://example.com/mysite/`, you have to set the following lines to your `config.toml`
+If your site is served from a subfolder, eg. `https://example.com/mysite/`, you have to set the following lines to your `config.toml`
 
 ````toml
 baseURL = "https://example.com/mysite/"
 canonifyURLs = true
+relativeURLs = true
 ````
 
 Without `canonifyURLs=true` URLs in sublemental pages (like `sitemap.xml`, `rss.xml`) will be generated falsly while your HTML files will still work. See https://github.com/gohugoio/hugo/issues/5226.
 
+## Serving your page from the filesystem
+
+If you want your page served from the filesystem by using URLs starting with `file://` you'll need the following configuration in your `config.toml`:
+
+````toml
+relativeURLs = true
+````
+
+The theme will append an additional `index.html` to all branch bundle links by default to make the page be servable from the file system. If you don't care about the file system and only serve your page via a webserver you can also generate the links without this change by adding this to your `config.toml`
+
+````toml
+[params]
+  disableExplicitIndexURLs = true
+````
+
+{{% notice note %}}
+If you want to use the search feature from the file system using an older installation of the theme make sure to change your outputformat for the homepage from the now deprecated `JSON` to `SEARCH` [as seen below](#activate-search).
+{{% /notice %}}
+
 ## Activate search
 
-If not already present, add the follow lines in the same `config.toml` file.
+If not already present, add the following lines in the same `config.toml` file.
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "SEARCH"]
 ```
 
-Relearn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.
+This will generate a search index file at the root of your public folder ready to be consumed by the Lunr search library. Note that the `SEARCH` outputformat was named `JSON` in previous releases but was implemented differently. Although `JSON` still works, it is now deprecated.
 
-> Hugo generate lunrjs index.json at the root of public folder.
-> When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem
+### Activate dedicated search page
+
+You can add a dedicated search page for your page by adding the `SEARCHPAGE` outputformat to your home page by adding the following lines in your `config.toml` file.
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "SEARCH", "SEARCHPAGE"]
+```
+
+You can access this page by either clicking on the magnifier glass or by typing some search term and pressing `ENTER` inside of the menu's search box .
+
+![Screenshot of the dedicated search page](search_page.png?&width=60pc)
 
 ## Activate print support
 
@@ -113,7 +151,7 @@ You can activate print support to add the capability to print whole chapters or 
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "PRINT", "JSON"]
+  home = ["HTML", "RSS", "PRINT", "SEARCH"]
   section = ["HTML", "RSS", "PRINT"]
   page = ["HTML", "RSS", "PRINT"]
 ```
@@ -121,7 +159,9 @@ You can activate print support to add the capability to print whole chapters or 
 This will add a little printer icon in the top bar. It will switch the page to print preview when clicked. You can then send this page to the printer by using your browser's usual print functionality.
 
 {{% notice note %}}
-While colors of your chosen color variant are reset to the theme's light standard values for printing, this does not apply for Mermaid diagrams and Swagger/OpenAPI Specification. Those will still use the colors of your chosen color variant which may cause a non coherent look on paper.
+The resulting URL will not be [configured ugly](https://gohugo.io/templates/output-formats/#configure-output-formats) in terms of [Hugo's URL handling](https://gohugo.io/content-management/urls/#ugly-urls) even if you've set `uglyURLs=true` in your `config.toml`. This is due to the fact that for one mime type only one suffix can be configured.
+
+Nevertheless, if you're unhappy with the resulting URLs you can manually redefine `outputFormats.PRINT` in your own `config.toml` to your liking.
 {{% /notice %}}
 
 ## MathJax
@@ -155,13 +195,15 @@ on the left menu. It is an alternative for clicking on the logo. To edit the
 appearance, you will have to configure two parameters for the defined languages:
 
 ```toml
-[Languages]
-[Languages.en]
+[languages]
+[languages.en]
 ...
+[languages.en.params]
 landingPageName = "<i class='fas fa-home'></i> Home"
 ...
-[Languages.pir]
+[languages.pir]
 ...
+[languages.pir.params]
 landingPageName = "<i class='fas fa-home'></i> Arrr! Homme"
 ...
 ```
@@ -175,4 +217,4 @@ landingPageName = "<i class='fas fa-home'></i> Home"
 
 The home button is going to look like this:
 
-![Default Home Button](home_button_defaults.png?classes=shadow&width=300px)
+![Default Home Button](home_button_defaults.png?classes=shadow&width=18.75rem)

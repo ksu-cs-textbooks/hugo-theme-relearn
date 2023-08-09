@@ -1,6 +1,6 @@
 +++
 title = "Pages organization"
-weight = 5
+weight = 1
 +++
 
 In **Hugo**, pages are the core of your site. Once it is configured, pages are definitely the added value to your documentation site.
@@ -96,7 +96,7 @@ menuPre = "<i class='fab fa-github'></i> "
 +++
 ```
 
-![Title with icon](frontmatter-icon.png?classes=shadow&width=300px)
+![Title with icon](frontmatter-icon.png?classes=shadow&width=18.75rem)
 
 ### Ordering sibling menu/page entries
 
@@ -137,7 +137,7 @@ The theme generates the menu based on the following rules:
 - immediate children entries of the active page are shown regardless of any settings
 - if not overridden, all other first level entries behave like they would have been given `alwaysopen=false`
 - if not overridden, all other entries of levels besides the first behave like they would have been given `alwaysopen=true`
-- all visible entries show their immediate children entries if `alwaysopen=true`; this proceeds recursivley
+- all visible entries show their immediate children entries if `alwaysopen=true`; this proceeds recursively
 - all remaining entries are not shown
 
 You can see this feature in action on the example page for [children shortcode]({{< relref "shortcodes/children" >}}) and its children pages.
