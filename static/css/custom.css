@@ -131,7 +131,7 @@ body {
 
 /* Sidebar Arrows */
 #sidebar ul.topics > li {
-    margin-left: 0;
+    margin-left: 1rem; 
 }
 
 /* Keyboard */
