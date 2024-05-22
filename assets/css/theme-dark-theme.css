@@ -1,0 +1,59 @@
+/* theme-ksu-dark-variant */
+/* [x] russfeld */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --PRIMARY-color: #512888; /* brand primary color */
+  --SECONDARY-color: #6c8ce3; /* brand secondary color */
+  --ACCENT-color: #f2c75c; /* brand accent color, used for search highlights */
+
+  --MAIN-TEXT-color: #CDCDCD; /* text color of content and h1 titles */
+  --MAIN-LINK-color:#793CCC; /* Color of links */
+  --MAIN-LINK-HOVER-color: #9b5af0; /* hovered link color of content */
+  --MAIN-BG-color: rgb(16, 16, 16); /* background color of content */
+  --MAIN-TITLES-H1-color: #bcbcbc; /* text color of h1 title */
+  --MAIN-TITLES-TEXT-color: #bcbcbc; /* text color of h2-h6 titles and transparent box titles */
+
+  --CODE-theme: relearn-dark; /* name of the chroma stylesheet file */
+  --CODE-BLOCK-color: #f8f8f8; /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BG-color: #2b2b2b; /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: #555; /* border color of block code */
+  --CODE-INLINE-color: #FF7C9D; /* text color of inline code */
+  --CODE-INLINE-BG-color: #1d1f21; /* background color of inline code */
+  --CODE-INLINE-BORDER-color: #211F20; /* border color of inline code */
+
+  --BROWSER-theme: dark; /* name of the theme for browser scrollbars of the main section */
+  --MERMAID-theme: dark; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-theme: dark; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-CODE-theme: obsidian; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
+
+  --MENU-HOME-LINK-color: #323232; /* home button color if configured */
+  --MENU-HOME-LINK-HOVER-color: #5e5e5e; /* hovered home button color if configured */
+
+  --MENU-SEARCH-color: #e0e0e0; /* text and icon color of search box */
+  --MENU-SEARCH-BG-color: #252c31; /* background color of search box */
+  --MENU-SEARCH-BORDER-color: #e0e0e0; /* border color of search box */
+
+  --MENU-SECTIONS-BG-color: #252c31; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-ACTIVE-BG-color: #20272b; /* background color of the active menu section */
+  --MENU-SECTIONS-LINK-color: #ccc; /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: #ffffff; /* hovered link color of menu topics */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: #b0b0b0; /* text color of the displayed menu topic */
+  --MENU-SECTION-SEPARATOR-color: #606060; /* separator color of menu footer */
+
+  --BOX-CAPTION-color: rgba( 240, 240, 240, 1 ); /* text color of colored box titles */
+  --BOX-BG-color: rgba( 16, 16, 16, .833 ); /* background color of colored boxes */
+  --BOX-TEXT-color: #e0e0e0; /* text color of colored box content */
+  
+  --MAIN-font: "Lato";
+  --MAIN-TITLES-H1-font: "Times New Roman";
+
+  /* Adjust Box Colors */
+  --BOX-NOTE-color: rgba( 48, 117, 229, 1 );
+  --BOX-INFO-color: rgba( 237, 153, 9, 1 );
+}
+
+.cstyle.noiframe {
+  --VARIABLE-BOX-color: #512888;
+  --VARIABLE-BOX-TEXT-color: rgb(224, 224, 224);
+}
