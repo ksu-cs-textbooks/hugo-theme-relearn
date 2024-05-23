@@ -13,7 +13,6 @@
   {{- $include := split (.Get "include" | default (delimit $all " ") ) " " }}
   {{- $exclude := split (.Get "exclude" | default "") " "}}
   {{- $files = $include | symdiff $exclude }}
-  {{ $include | symdiff $exclude }}
 {{- else }}
   {{- if eq (len .Params) 0 }}
     {{- $files = $all}}
