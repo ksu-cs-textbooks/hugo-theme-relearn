@@ -121,3 +121,6 @@ other = "Category"
 # [x] russfeld
 [Teleprompter-view]
 other = "Teleprompter View"
+
+[Embeddable-version]
+other = "Embeddable Version"

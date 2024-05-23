@@ -31,6 +31,21 @@
     permalinkable = false
     noUgly = true
 
+  # [x] russfeld
+  [outputFormats.TELE]
+    name= "TELE"
+    baseName = "tele"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+
+  [outputFormats.EMBED]
+    name= "EMBED"
+    baseName = "embed"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = true
+
 [params.relearn.dependencies]
   [params.relearn.dependencies.mathjax]
     name = "MathJax"
