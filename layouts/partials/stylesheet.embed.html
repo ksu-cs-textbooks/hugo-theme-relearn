@@ -15,7 +15,7 @@
   <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
   <!-- [x] russfeld -->
   <!-- {{- $themevariants := partialCached "get-theme-variants.hugo" . }} -->
-{{- $themevariants := slice | append ("relearn-light") }}
+{{- $themevariants := slice | append (dict "chroma" "relearn-light" "identifier" "relearn-light") }}
   <!-- end -->
   {{- with index $themevariants 0 }}
   <link href="{{(printf "css/theme-%s.css" .identifier) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet" id="R-variant-style">
