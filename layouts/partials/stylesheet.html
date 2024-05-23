@@ -49,4 +49,6 @@
       {{ printf "window.T_No_results_found = `%s`;" (T "No-results-found") | safeJS }}
       {{ printf "window.T_N_results_found = `%s`;" (T "N-results-found") | safeJS }}
     </script>
+    <!-- [x] russfeld -->
+    <link href="{{"css/custom.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
   {{- end }}

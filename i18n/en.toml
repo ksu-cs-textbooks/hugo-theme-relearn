@@ -117,3 +117,7 @@ other = "Categories"
 
 [category]
 other = "Category"
+
+# [x] russfeld
+[Teleprompter-view]
+other = "Teleprompter View"

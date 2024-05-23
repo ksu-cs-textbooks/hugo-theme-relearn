@@ -3,6 +3,9 @@ window.relearn = window.relearn || {};
 var theme = true;
 var isPrint = document.querySelector( 'body' ).classList.contains( 'print' );
 
+// [x] russfeld
+var isEmbed = (document.querySelector('.embed') != null) || (document.querySelector('.tele') != null)
+
 var isRtl = document.querySelector( 'html' ).getAttribute( 'dir' ) == 'rtl';
 var lang = document.querySelector( 'html' ).getAttribute( 'lang' );
 var dir_padding_start = 'padding-left';
@@ -743,6 +746,10 @@ function initArrowHorizontalNav(){
     if( isPrint ){
         return;
     }
+    // [x] russfeld
+    if ( isEmbed ) {
+        return;
+    }
 
     // button navigation
     var prev = document.querySelector( '.topbar-button-prev a' );
@@ -806,6 +813,10 @@ function initArrowHorizontalNav(){
 
 function initMenuScrollbar(){
     if( isPrint ){
+        return;
+    }
+    // [x] russfeld
+    if ( isEmbed ) {
         return;
     }
 
@@ -1101,6 +1112,10 @@ function navNext(){
 
 function initToc(){
     if( isPrint ){
+        return;
+    }
+    // [x] russfeld
+    if ( isEmbed ) {
         return;
     }
 

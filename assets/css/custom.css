@@ -1,0 +1,30 @@
+/* [x] russfeld  */
+
+/* Align text on chapter pages to center */
+.chapter p {
+  text-align: center !important;
+}
+
+/* Fix Font Weights for Lato */
+body {
+  font-weight: 400;
+}
+#body h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+#body h3 {
+  font-weight: 700;
+  font-size: 2.0rem;
+}
+
+/* Sidebar Arrows */
+#sidebar ul.topics > li {
+  margin-left: 1rem; 
+}
+
+/* Sidebar Titles */
+#sidebar ul.topics > li > a b {
+  font-weight: 400;
+  opacity: 0.5;
+}
