@@ -19,12 +19,12 @@ body {
 }
 
 /* Sidebar Arrows */
-#sidebar ul.topics > li {
+#R-sidebar #R-topics ul > li {
   margin-left: 1rem; 
 }
 
 /* Sidebar Titles */
-#sidebar ul.topics > li > a b {
+#R-sidebar #R-topics ul > li > a b {
   font-weight: 400;
   opacity: 0.5;
 }
