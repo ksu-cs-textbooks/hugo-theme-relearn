@@ -45,7 +45,9 @@
     {{- end }}
 
     {{- partialCached "favicon.html" . }}
-    {{- partial "stylesheet.html" (dict "page" . "outputFormat" $outputFormat) }}
+    <!-- [x] russfeld -->
+    {{- partial "stylesheet.embed.html" (dict "page" . "outputFormat" $outputFormat) }}
+    <!-- end -->
     {{- partial "dependencies.html" (dict "page" . "location" "header" "outputFormat" $outputFormat) }}
     {{- partial "custom-header.html" . }}
   </head>
