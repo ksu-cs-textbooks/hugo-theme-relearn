@@ -4,7 +4,7 @@
 {{- partial "shortcodes/include.html" (dict
   "page" $.Page
   "context" .
-  "file" "themes/hugo-theme-relearn/static/files/syllabus/header.md"
+  "file" "data/syllabus/header.md"
 ) }}
 
 {{- $all := slice "honesty" "disabilities" "conduct" "respect" "netiquette" "discrimination" "freedom" "safety" "resources" "creations" "mentalhealth" "absences" "copyright" }}
@@ -22,7 +22,7 @@
 {{- end }}
 
 {{- range $files }}
-  {{- $file := (print "themes/hugo-theme-relearn/static/files/syllabus/" . ".md") }}
+  {{- $file := (print "data/syllabus/" . ".md") }}
   {{- partial "shortcodes/include.html" (dict
     "page" $.Page
     "context" .
