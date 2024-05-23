@@ -1,0 +1,17 @@
+<!-- [x] russfeld -->
+<div class="git-footer">
+  {{- with .GitInfo }}
+  <p class="theme-version-footer">6.0.0</p>
+  <p>Last modified by: 
+              <i class='fas fa-user'></i> {{ .AuthorName }}
+    {{- with .AuthorDate }}
+      {{- if $.Site.Params.commitURL }}
+              <i class='fas fa-calendar'></i> <a href="{{ $.Site.Params.commitURL }}{{ $.GitInfo.Hash }}">{{ . | time.Format ":date_medium" }}</a>
+      {{- else }}
+              <i class='fas fa-calendar'></i> {{ . | time.Format ":date_medium" }}
+      {{- end }}
+    {{- end }}
+  </p>
+  {{- end }}
+  </div>
+  <!-- end -->

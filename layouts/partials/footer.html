@@ -1,6 +1,9 @@
         </div>
       </main><!-- #R-body-inner -->
 {{- partial "custom-comments.html" . }}
+    <!-- [x] russfeld -->
+    {{- partial "git-info" . }}
+    <!-- end -->
     </div><!-- #R-body -->
 {{- $outputFormat := partial "output-format.hugo" .Page }}
 {{- partial "output-partial.hugo" (dict "base" "menu" "page" . "parameter" . "outputFormat" $outputFormat) }}
