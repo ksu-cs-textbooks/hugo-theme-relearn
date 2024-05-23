@@ -57,3 +57,89 @@ body {
 #R-footer p {
   margin: 0;
 }
+
+/* EMBED page should be 100% width */
+.embed {
+  width: 100%;
+}
+
+/* Remove sidebar margins on EMBED and TELE pages */
+.tele #body,
+.embed #body {
+    margin-left: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Override screen width limit */
+@media screen and ( min-width: 1300px ){ 
+    .tele #body .flex-block-wrapper,
+    .embed #body .flex-block-wrapper {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Hide .noiframe notices */
+.embed .noiframe {
+    display: none;
+}
+
+/* Mirror TELE display */
+.mirror{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+/* Overrides for TELE output */
+.tele {
+    background: #000 !important;
+    color: #fff !important;
+    padding-left: 200px !important;
+    padding-right: 200px !important;
+    font-size: 50px;
+    width: 100%;
+}
+
+/* Disable Animations */
+.default-animation {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+/* TELE code size override */
+.tele pre,
+.tele code {
+    font-size: inherit;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tele #body-inner::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.tele #body-inner {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Teleprompter Padding */
+@media only all and (min-width: 780px) and (max-width: 1400px) {
+    .tele{
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+@media only all and (max-width: 779px) {
+    .tele{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}

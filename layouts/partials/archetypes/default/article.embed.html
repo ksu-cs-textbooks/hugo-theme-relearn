@@ -1,0 +1,14 @@
+{{- $page := .page }}
+{{- $content := .content }}
+{{- with $page }}
+          <article class="default">
+    <!-- [x] russfeld -->
+    <!-- remove heading -->
+    <!-- end -->
+
+{{ $content | safeHTML }}
+            <footer class="footline">
+              {{- partial "content-footer.html" . }}
+            </footer>
+          </article>
+{{- end }}
