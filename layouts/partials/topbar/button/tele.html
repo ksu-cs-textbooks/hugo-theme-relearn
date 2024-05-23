@@ -1,0 +1,20 @@
+{{- $onwidths := cond (isset . "onwidths") .onwidths "area-more" }}
+{{- $onwidthm := cond (isset . "onwidthm") .onwidthm "area-more" }}
+{{- $onwidthl := cond (isset . "onwidthl") .onwidthl "area-more" }}
+{{- with .page }}
+	{{- $format := partial "get-format.hugo" . }}
+	{{- $outputFormat := partial "output-format.hugo" (dict "page" . "format" $format) }}
+	{{- $teleFormat := .OutputFormats.Get "tele" }}
+	{{- if and (eq $outputFormat "html") $teleFormat }}
+		{{- partial "topbar/func/button.html" (dict
+			"page" .
+			"class" "topbar-button-tele"
+			"href" $teleFormat.RelPermalink
+			"icon" "tv"
+			"onwidths" $onwidths
+			"onwidthm" $onwidthm
+			"onwidthl" $onwidthl
+			"hint" (printf "%s" (T "Teleprompter-view"))
+		)}}
+	{{- end }}
+{{- end }}
