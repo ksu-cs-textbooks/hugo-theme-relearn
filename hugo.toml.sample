@@ -470,6 +470,9 @@ cleanDestinationDir = true
 
   # [x] russfeld
   # Custom parameters
+  #
+  # This is for linking directly to the GitHub Commit where the most recent
+  # edit on a page was made. 
   commitURL = "https://github.com/russfeld/ksucs-hugo/commit/"
 
 [markup]

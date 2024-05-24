@@ -46,6 +46,14 @@
     mediaType = 'text/html'
     permalinkable = true
 
+  [outputFormats.LTI]
+    name= "LTI"
+    baseName = "index.lti"
+    isPlainText = true
+    mediaType = 'text/javascript'
+    permalinkable = false
+    noUgly = true
+
 [params.relearn.dependencies]
   [params.relearn.dependencies.mathjax]
     name = "MathJax"
