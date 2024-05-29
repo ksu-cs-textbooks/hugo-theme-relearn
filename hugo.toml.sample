@@ -6,8 +6,10 @@ languageCode = "en-us"
 # Site Title
 # TODO changeme
 title = "K-State CS Hugo Framework"
-# This will fix URLs to match baseURL (for hosting in subfolders)
-canonifyURLs = true
+# This setting is deprecated and should be turned off
+canonifyURLs = false
+# Allow relative URLs (not for use with subfolders)
+relativeURLs = false
 # This displays last edited information at bottom of page
 enableGitInfo = true
 # When building, removes files from destination not found in static directories.

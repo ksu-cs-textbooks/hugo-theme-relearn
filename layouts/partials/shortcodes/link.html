@@ -27,12 +27,6 @@
 {{- else }}
   {{- $linkPage := "" }}
   {{- if $path }}
-    {{/* [x] russfeld */}}
-    {{- $basePath := strings.TrimRight "/" (urls.Parse $page.Site.BaseURL).Path }}
-    {{- if ne $basePath "" }}
-      {{- $path = strings.TrimPrefix $basePath $path }}
-    {{- end }}
-    {{/* end */}}
     {{- with or
       ($page.Page.GetPage $path)
       ($page.Page.GetPage (strings.TrimRight "/" $path))
