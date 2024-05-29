@@ -1,8 +1,10 @@
 # Base URL where the site will be hosted
+# TODO changeme
 baseURL = "https://ksucs-hugo.russfeld.me/"
 # Default language for the site
 languageCode = "en-us"
 # Site Title
+# TODO changeme
 title = "K-State CS Hugo Framework"
 # This will fix URLs to match baseURL (for hosting in subfolders)
 canonifyURLs = true
@@ -39,6 +41,7 @@ cleanDestinationDir = true
   # This will be used in HTML meta tags, the opengraph protocol and twitter
   # cards.
   # You can also set `author.email` if you want to publish this information.
+  # TODO changeme
   author.name = "Russell Feldhausen"
 
   # The social media image of your site.
@@ -165,6 +168,7 @@ cleanDestinationDir = true
   # `${FilePath}` was appended at the end of the value. This can be overridden
   # in the pages frontmatter. This is useful if you want to give the opportunity
   # for people to create merge request for your content.
+  # TODO changeme
   editURL = "https://github.com/russfeld/ksucs-hugo/edit/master/content/${FilePath}"
 
   #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -308,6 +312,7 @@ cleanDestinationDir = true
   # Note that lines always wrap in print mode regardless of this option.
   # This can be overridden in the page's frontmatter or given as a parameter to
   # individual code blocks.
+  # TODO changeme
   highlightWrap = false
 
   #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -321,6 +326,7 @@ cleanDestinationDir = true
   # for the unresolved path. If set to `warning` the same happens and an additional
   # warning is printed. If set to `error` an error message is printed and the build
   # is aborted.
+  # TODO changeme - consider setting to warning initially
   include.errorlevel = "error"
 
   #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -335,6 +341,7 @@ cleanDestinationDir = true
   # printed. If set to `error` an error message is printed and the build is
   # aborted.
   # Please note that this can not resolve files inside of your `static` directory.
+  # TODO changeme - consider setting to warning initially
   image.errorlevel = "warning"
 
   # Image effects.
@@ -365,6 +372,7 @@ cleanDestinationDir = true
   # aborted.
   # Please note that with Hugo < 0.123.0 + `uglyURLs=true` this can lead to false
   # negatives.
+  # TODO changeme - consider setting to warning initially to resolve missing links
   link.errorlevel = "error"
 
   # How to open external links.
@@ -473,6 +481,7 @@ cleanDestinationDir = true
   #
   # This is for linking directly to the GitHub Commit where the most recent
   # edit on a page was made. 
+  # TODO changeme
   commitURL = "https://github.com/russfeld/ksucs-hugo/commit/"
 
 [markup]
