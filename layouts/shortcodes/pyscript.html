@@ -1,0 +1,42 @@
+<!-- PyScript -->
+<!-- https://github.com/pyscript/pyscript -->
+<!-- [x] russfeld -->
+{{- $_hugo_config := `{ "version": 1 }` }}
+
+
+{{- $terminal := "terminal" -}}
+{{- $worker := "worker" -}}
+{{- $src :=  "" -}}
+{{- $config := "" -}}
+
+{{- if .IsNamedParams }}
+  {{- $terminal := .Get "terminal" | default "" -}}
+  {{- $worker := .Get "worker" | default "" -}}
+  {{- $src := .Get "src" | default "" -}}
+  {{- $config := .Get "config" | default "" -}}
+{{- else }}
+  {{- if not (eq (len .Params) 0) }}
+    {{- warnf "%q: PyScript shortcode requires named parameters" .page.File.Filename }}
+  {{- end }}
+{{- end }}
+
+<h6>Debugging Script Output</h6>
+<pre>
+&lt;script type="py" {{ if $terminal }} terminal {{ end }} {{ if $worker }} worker {{ end }} {{ if $src }} src="{{ $src }}" {{ end }} {{ if $config }} config="{{ $config }}" {{ end }} &gt;
+  {{ .Inner | safeHTML }}
+&lt; /script &gt;
+</pre>
+
+<h6>Rendered Python Code</h6>
+{{- partial "shortcodes/highlight.html" (dict
+  "page"       .Page
+  "content"    .InnerDeindent
+  "type"       "py"
+) }}
+
+<h6>PyScript Terminal</h6>
+<script type="py" {{ if $terminal }} terminal {{ end }} {{ if $worker }} worker {{ end }} {{ if $src }} src="{{ $src }}" {{ end }} {{ if $config }} config="{{ $config }}" {{ end }} >
+  {{ .Inner | safeHTML }}
+</script>
+
+{{- .Page.Store.Set "hasPyScript" true }}

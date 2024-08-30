@@ -61,3 +61,5 @@
     name = "Mermaid"
   [params.relearn.dependencies.openapi]
     name = "OpenApi"
+  [params.relearn.dependencies.pyscript]
+    name = "PyScript"
