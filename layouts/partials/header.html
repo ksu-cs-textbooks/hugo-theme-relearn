@@ -18,8 +18,8 @@
   <head>
     <!-- [x] russfeld -->
     <!-- https://docs.pyscript.net/2024.8.2/user-guide/workers/ -->
-    {{- $assetBusting := not .Site.Params.disableAssetsBusting }}
-    <script src="{{"mini-coi.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
+    <!-- {{- $assetBusting := not .Site.Params.disableAssetsBusting }} -->
+    <!-- <script src="{{"mini-coi.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script> -->
     <!-- end -->
     {{- partial "meta.html" . }}
     {{- $page := . }}

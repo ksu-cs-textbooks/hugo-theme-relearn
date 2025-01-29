@@ -35,8 +35,9 @@
 ) }}
 
 <h6>PyScript Terminal</h6>
-<script type="py" {{ if $terminal }} terminal {{ end }} {{ if $worker }} worker {{ end }} {{ if $src }} src="{{ $src }}" {{ end }} {{ if $config }} config="{{ $config }}" {{ end }} >
+<!-- <script type="py" {{ if $terminal }} terminal {{ end }} {{ if $worker }} worker {{ end }} {{ if $src }} src="{{ $src }}" {{ end }} {{ if $config }} config="{{ $config }}" {{ end }} >
   {{ .Inner | safeHTML }}
-</script>
+</script> -->
+<b>PyScript Terminal disabled due to security issue - contact the developers of this theme.</b>
 
 {{- .Page.Store.Set "hasPyScript" true }}
