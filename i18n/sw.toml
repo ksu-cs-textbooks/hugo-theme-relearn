@@ -1,6 +1,9 @@
 [Reading-direction]
 other = "ltr"
 
+[Versioning-warning]
+other = 'Unasoma toleo {{.pageVersion.title}} la ukurasa huu. Toleo la sasa linaweza kupatikana <a href="{{.latestUrl}}">hapa</a>.'
+
 [Search]
 other = "Tafuta"
 
@@ -37,8 +40,17 @@ other = "Lo! Inaonekana ukurasa huu haupo ¯\\_(ツ)_/¯."
 [Go-to-homepage]
 other = "Nenda kwenye ukurasa wa kwanza"
 
+[home-button]
+other = "Home"
+
 [Edit-this-page]
 other = "Hariri"
+
+[Show-Markdown]
+other = "Onyesha Alama"
+
+[Show-source]
+other = "Onyesha msimbo wa chanzo"
 
 [Print-this-chapter]
 other = "Chapisha sura nzima"
@@ -46,7 +58,7 @@ other = "Chapisha sura nzima"
 [More-action]
 other = "Zaidi"
 
-[Shortcuts-Title]
+[shortcuts-menuTitle]
 other = "Zaidi"
 
 [Expand-title]
@@ -67,11 +79,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Kumbuka"
+[caution]
+other = "Tahadhari"
+
+[important]
+other = "Muhimu"
 
 [info]
 other = "Habari"
+
+[note]
+other = "Kumbuka"
 
 [tip]
 other = "Kidokezo"
@@ -117,3 +135,6 @@ other = "Kategoria"
 
 [category]
 other = "Kategoria"
+
+[Details]
+other = "Maelezo"

@@ -1,4 +1,5 @@
 {{/* Place Logo Graphic or Text Here */}}
-<a id="logo" href="{{ .Site.Home.RelPermalink | default ("/" | relLangURL) }}">
+<a id="R-logo" class="R-default" href="{{ partial "permalink.gotmpl" (dict "to" .Site.Home) }}">
   {{ .Site.Title }}
 </a>
+

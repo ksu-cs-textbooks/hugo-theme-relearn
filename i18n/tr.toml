@@ -1,6 +1,9 @@
 [Reading-direction]
 other = "ltr"
 
+[Versioning-warning]
+other = 'Bu sayfanın {{.pageVersion.title}} sürümünü okuyorsunuz. Güncel sürüm bulunabilir <a href="{{.latestUrl}}">burada</a>.'
+
 [Search]
 other = "Ara"
 
@@ -37,8 +40,17 @@ other = "Uups. Görünüşe göre böyle bir sayfa yok ¯\\_(ツ)_/¯"
 [Go-to-homepage]
 other = "Anasayfaya dön"
 
+[home-button]
+other = "Home"
+
 [Edit-this-page]
 other = "Düzenlemek"
+
+[Show-Markdown]
+other = "Markdown'ı Göster"
+
+[Show-source]
+other = "Kaynak kodunu göster"
 
 [Print-this-chapter]
 other = "Bölümün tamamını yazdır"
@@ -46,7 +58,7 @@ other = "Bölümün tamamını yazdır"
 [More-action]
 other = "Dahası Var"
 
-[Shortcuts-Title]
+[shortcuts-menuTitle]
 other = "Dahası Var"
 
 [Expand-title]
@@ -67,11 +79,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Not"
+[caution]
+other = "Dikkat"
+
+[important]
+other = "Önemli"
 
 [info]
 other = "Bilgi"
+
+[note]
+other = "Not"
 
 [tip]
 other = "Bahşiş"
@@ -117,3 +135,6 @@ other = "Kategoriler"
 
 [category]
 other = "Kategori"
+
+[Details]
+other = "Şey"

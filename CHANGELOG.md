@@ -1,5 +1,364 @@
 # Changelog
 
+## 8.0.0 (2025-07-07)
+
+### Enhancements
+
+- [**feature**][**change**] theme: make H1 CSS inheritance reasonable [#1111](https://github.com/McShelby/hugo-theme-relearn/issues/1111)
+- [**feature**] search: mark each word of a multi word in-page search independently [#1106](https://github.com/McShelby/hugo-theme-relearn/issues/1106)
+- [**feature**] theme: optimize display of main heading on mobile [#1100](https://github.com/McShelby/hugo-theme-relearn/issues/1100)
+- [**feature**][**change**] theme: use Hugo's default sort order if no `ordersectionsby` was set [#1092](https://github.com/McShelby/hugo-theme-relearn/issues/1092)
+- [**feature**][**breaking**] search: add more filtering options for results [#407](https://github.com/McShelby/hugo-theme-relearn/issues/407)
+
+### Fixes
+
+- [**bug**] breadcrumbs: fix spacing of separator [#1108](https://github.com/McShelby/hugo-theme-relearn/issues/1108)
+- [**bug**] openapi: fix duplicated baseURL for swagger-ui.css [#1102](https://github.com/McShelby/hugo-theme-relearn/issues/1102)
+- [**bug**] children: fix broken console warning [#1099](https://github.com/McShelby/hugo-theme-relearn/issues/1099)
+- [**bug**] clipboard: fix link when using special characters [#1097](https://github.com/McShelby/hugo-theme-relearn/issues/1097)
+- [**bug**] i18n: fix spelling mistake for spanish [#1090](https://github.com/McShelby/hugo-theme-relearn/issues/1090)
+
+### Maintenance
+
+- [**task**] openapi: update swagger-ui to 5.26.1 [#1114](https://github.com/McShelby/hugo-theme-relearn/issues/1114)
+- [**task**] mermaid: update to 11.8.0 [#1113](https://github.com/McShelby/hugo-theme-relearn/issues/1113)
+- [**task**][**breaking**] theme: compatiblity with Hugo 0.146.0 and newer [#1086](https://github.com/McShelby/hugo-theme-relearn/issues/1086)
+- [**task**] tree: simplify code [#1085](https://github.com/McShelby/hugo-theme-relearn/issues/1085)
+
+---
+
+## 7.6.1 (2025-03-30)
+
+### Enhancements
+
+- [**feature**] lists: unify list margins [#1080](https://github.com/McShelby/hugo-theme-relearn/issues/1080)
+- [**feature**] tree: reduce margin [#1079](https://github.com/McShelby/hugo-theme-relearn/issues/1079)
+- [**feature**] versioning: add unique class to warning [#1078](https://github.com/McShelby/hugo-theme-relearn/issues/1078)
+- [**feature**] clipboard: size inline code to fit surrounding text [#1077](https://github.com/McShelby/hugo-theme-relearn/issues/1077)
+
+---
+
+## 7.6.0 (2025-03-25)
+
+### Enhancements
+
+- [**feature**] cookieconsent: prepare theme and docs [#1070](https://github.com/McShelby/hugo-theme-relearn/issues/1070)
+- [**feature**] icon: add `style` and `color` options [#1068](https://github.com/McShelby/hugo-theme-relearn/issues/1068)
+- [**feature**] tree: add new shortcode [#1067](https://github.com/McShelby/hugo-theme-relearn/issues/1067)
+- [**feature**] switcher: reset selection after browser back navigation [#1065](https://github.com/McShelby/hugo-theme-relearn/issues/1065)
+- [**feature**] menu: make footer area configurable [#1059](https://github.com/McShelby/hugo-theme-relearn/issues/1059)
+- [**feature**] menu: make header area configurable [#1057](https://github.com/McShelby/hugo-theme-relearn/issues/1057)
+- [**feature**] theme: add version switcher [#1050](https://github.com/McShelby/hugo-theme-relearn/issues/1050)
+- [**feature**] taxonomy: respect user-defined boxstyle for term-list [#1047](https://github.com/McShelby/hugo-theme-relearn/issues/1047)
+- [**feature**] i18n: add Ukrainian translation [#1045](https://github.com/McShelby/hugo-theme-relearn/issues/1045)
+
+### Fixes
+
+- [**bug**] link: check fragments on same page [#1060](https://github.com/McShelby/hugo-theme-relearn/issues/1060)
+
+### Maintenance
+
+- [**task**] openapi: update swagger-ui to 5.20.1 [#1063](https://github.com/McShelby/hugo-theme-relearn/issues/1063)
+
+---
+
+## 7.5.0 (2025-03-04)
+
+### Enhancements
+
+- [**feature**][**change**] rtl: fix alignment of buttons [#1039](https://github.com/McShelby/hugo-theme-relearn/issues/1039)
+- [**feature**] code: add copy-to-clipboard to pre-only elements [#1036](https://github.com/McShelby/hugo-theme-relearn/issues/1036)
+
+### Fixes
+
+- [**bug**] code: fixing negative margin on inline clipboard [#1038](https://github.com/McShelby/hugo-theme-relearn/issues/1038)
+- [**bug**] tooltip: make font reliable [#1037](https://github.com/McShelby/hugo-theme-relearn/issues/1037)
+- [**bug**] code: avoid inline code to display above sticky table headers [#1035](https://github.com/McShelby/hugo-theme-relearn/issues/1035)
+
+### Maintenance
+
+- [**task**] openapi: update swagger-ui to 5.19.0 [#1041](https://github.com/McShelby/hugo-theme-relearn/issues/1041)
+- [**task**][**change**] theme: move dependencies from static to assets [#1040](https://github.com/McShelby/hugo-theme-relearn/issues/1040)
+
+---
+
+## 7.4.1 (2025-02-19)
+
+### Fixes
+
+- [**bug**] theme: custom.css not written to public [#1033](https://github.com/McShelby/hugo-theme-relearn/issues/1033)
+- [**bug**] print: block code has to much bottom margin in FF [#1030](https://github.com/McShelby/hugo-theme-relearn/issues/1030)
+
+---
+
+## 7.4.0 (2025-02-18)
+
+### Enhancements
+
+- [**feature**] theme: make content footer configurable [#1025](https://github.com/McShelby/hugo-theme-relearn/issues/1025)
+- [**feature**] favicon: respect assets directory [#1023](https://github.com/McShelby/hugo-theme-relearn/issues/1023)
+- [**feature**] code: wrap inline code if necessary [#1022](https://github.com/McShelby/hugo-theme-relearn/issues/1022)
+- [**feature**] image: support for inlining image content [#1019](https://github.com/McShelby/hugo-theme-relearn/issues/1019)
+- [**feature**] search: remove warning for deprecated JSON output format [#1017](https://github.com/McShelby/hugo-theme-relearn/issues/1017)
+- [**feature**] children: improve if listed as headings [#1015](https://github.com/McShelby/hugo-theme-relearn/issues/1015)
+- [**feature**] menu: adjust contrast of zen variants [#1013](https://github.com/McShelby/hugo-theme-relearn/issues/1013)
+- [**feature**] logo: make header color configurable [#1012](https://github.com/McShelby/hugo-theme-relearn/issues/1012)
+- [**feature**] theme: add compat way of including scripts [#1009](https://github.com/McShelby/hugo-theme-relearn/issues/1009)
+- [**feature**][**change**] menu: support downloadable links [#1008](https://github.com/McShelby/hugo-theme-relearn/issues/1008)
+- [**feature**] link: add check for menu links [#1002](https://github.com/McShelby/hugo-theme-relearn/issues/1002)
+- [**feature**] theme: add new source output format [#1001](https://github.com/McShelby/hugo-theme-relearn/issues/1001)
+- [**feature**] openapi: make collapse-all work for tag sections [#999](https://github.com/McShelby/hugo-theme-relearn/issues/999)
+- [**feature**] theme: make table headers sticky [#997](https://github.com/McShelby/hugo-theme-relearn/issues/997)
+- [**feature**] link: add ignore list to checker to skip certain URLs [#971](https://github.com/McShelby/hugo-theme-relearn/issues/971)
+- [**feature**] menu: increase expander left margin [#943](https://github.com/McShelby/hugo-theme-relearn/issues/943)
+- [**feature**][**change**] link: support link variations through query parameter [#850](https://github.com/McShelby/hugo-theme-relearn/issues/850)
+
+### Fixes
+
+- [**bug**] include: a11y: remove first heading for screen reader if hideFirstHeading [#1028](https://github.com/McShelby/hugo-theme-relearn/issues/1028)
+- [**bug**] breadcrumbs: default to site title for home page [#1027](https://github.com/McShelby/hugo-theme-relearn/issues/1027)
+- [**bug**] breadcrumb: fix Google Search Console errors [#1026](https://github.com/McShelby/hugo-theme-relearn/issues/1026)
+- [**bug**] mermaid: tooltips cause page layout to shift [#1021](https://github.com/McShelby/hugo-theme-relearn/issues/1021)
+- [**bug**] scroll: live reload doesn't preserve the scroll position [#1014](https://github.com/McShelby/hugo-theme-relearn/issues/1014)
+- [**bug**] theme: guard access to page.File.Filename [#1005](https://github.com/McShelby/hugo-theme-relearn/issues/1005)
+- [**bug**] variant: fix table contrast issue [#998](https://github.com/McShelby/hugo-theme-relearn/issues/998)
+
+### Maintenance
+
+- [**task**] docs: move docs and provide a simple exampleSite [#1003](https://github.com/McShelby/hugo-theme-relearn/issues/1003)
+
+---
+
+## 7.3.2 (2025-01-26)
+
+### Fixes
+
+- [**bug**] scroll: fix high cpu usage [#996](https://github.com/McShelby/hugo-theme-relearn/issues/996)
+- [**bug**] a11y: don't select a11y helper text in selection [#993](https://github.com/McShelby/hugo-theme-relearn/issues/993)
+- [**bug**] headings: add anchor link in nested shortcode [#992](https://github.com/McShelby/hugo-theme-relearn/issues/992)
+- [**bug**] highlight: make copy of selection work with `noClasses=true` [#991](https://github.com/McShelby/hugo-theme-relearn/issues/991)
+
+---
+
+## 7.3.1 (2025-01-03)
+
+### Fixes
+
+- [**bug**] taxonomy: fix rendering if `unsafe=false` [#986](https://github.com/McShelby/hugo-theme-relearn/issues/986)
+- [**bug**] bug: missing translations for Markdown topbar button [#985](https://github.com/McShelby/hugo-theme-relearn/issues/985)
+
+---
+
+## 7.3.0 (2025-01-02)
+
+### Enhancements
+
+- [**feature**] clipboard: make copy button reachable by keyboard [#983](https://github.com/McShelby/hugo-theme-relearn/issues/983)
+- [**feature**] a11y: use native button elements where appropriate [#982](https://github.com/McShelby/hugo-theme-relearn/issues/982)
+- [**feature**] markdown: support new output format [#979](https://github.com/McShelby/hugo-theme-relearn/issues/979)
+- [**feature**] topbar: improve button configuration [#978](https://github.com/McShelby/hugo-theme-relearn/issues/978)
+- [**feature**] details: support built-in Hugo shortcode [#957](https://github.com/McShelby/hugo-theme-relearn/issues/957)
+
+### Fixes
+
+- [**bug**] notice: avoid tab focus for non-expandable boxes [#977](https://github.com/McShelby/hugo-theme-relearn/issues/977)
+- [**bug**] variant: fix importing base variants [#974](https://github.com/McShelby/hugo-theme-relearn/issues/974)
+
+---
+
+## 7.2.1 (2024-12-10)
+
+### Fixes
+
+- [**bug**] notice: links aren't clickable [#968](https://github.com/McShelby/hugo-theme-relearn/issues/968)
+- [**bug**] shortcodes: correctly detect empty shortcode content [#966](https://github.com/McShelby/hugo-theme-relearn/issues/966)
+
+---
+
+## 7.2.0 (2024-12-08)
+
+### Enhancements
+
+- [**feature**] theme: add Persian language [#961](https://github.com/McShelby/hugo-theme-relearn/issues/961)
+- [**feature**] notice: add parameter groupid [#954](https://github.com/McShelby/hugo-theme-relearn/issues/954)
+- [**feature**] notice: improve accessibility of notice title [#897](https://github.com/McShelby/hugo-theme-relearn/issues/897)
+
+### Fixes
+
+- [**bug**] mermaid: print preview closes automatically after opening [#959](https://github.com/McShelby/hugo-theme-relearn/issues/959)
+- [**bug**] mermaid: escape diagram the recommended way [#950](https://github.com/McShelby/hugo-theme-relearn/issues/950)
+- [**bug**] search: fix compat error with Hugo 0.126.0 [#949](https://github.com/McShelby/hugo-theme-relearn/issues/949)
+- [**bug**][**change**] theme: fix flash on non-default variant [#757](https://github.com/McShelby/hugo-theme-relearn/issues/757)
+
+### Maintenance
+
+- [**task**] menu: replace clumsy expand implementation [#955](https://github.com/McShelby/hugo-theme-relearn/issues/955)
+- [**task**][**change**] expand: use notice internally [#953](https://github.com/McShelby/hugo-theme-relearn/issues/953)
+- [**task**] mermaid: update to 11.4.1 [#951](https://github.com/McShelby/hugo-theme-relearn/issues/951)
+- [**task**] theme: leverage code styling config [#947](https://github.com/McShelby/hugo-theme-relearn/issues/947)
+
+---
+
+## 7.1.1 (2024-10-25)
+
+### Fixes
+
+- [**bug**] children: remove superfluous text ".LinkTitle" [#942](https://github.com/McShelby/hugo-theme-relearn/issues/942)
+
+---
+
+## 7.1.0 (2024-10-24)
+
+### Enhancements
+
+- [**feature**][**change**] children: use LinkTitle instead of Title [#939](https://github.com/McShelby/hugo-theme-relearn/issues/939)
+- [**feature**][**change**] menu: support nested Hugo menus [#423](https://github.com/McShelby/hugo-theme-relearn/issues/423)
+- [**feature**] menu: support for external links [#148](https://github.com/McShelby/hugo-theme-relearn/issues/148)
+
+### Fixes
+
+- [**bug**] search: wrong searchindex URL with multilang per server config [#940](https://github.com/McShelby/hugo-theme-relearn/issues/940)
+
+---
+
+## 7.0.1 (2024-10-15)
+
+### Fixes
+
+- [**bug**] search: search page not generated with renderer.unsafe [#929](https://github.com/McShelby/hugo-theme-relearn/issues/929)
+
+---
+
+## 7.0.0 (2024-10-13)
+
+### Enhancements
+
+- [**feature**][**change**] logo: move Relearn logo to docs [#924](https://github.com/McShelby/hugo-theme-relearn/issues/924)
+- [**feature**][**change**] math: adhere to Hugo's default config params [#923](https://github.com/McShelby/hugo-theme-relearn/issues/923)
+- [**feature**][**change**] theme: replace font [#922](https://github.com/McShelby/hugo-theme-relearn/issues/922)
+- [**feature**][**breaking**] theme: reduce build time [#685](https://github.com/McShelby/hugo-theme-relearn/issues/685)
+
+### Fixes
+
+- [**bug**] theme: remove duplicate path warning [#926](https://github.com/McShelby/hugo-theme-relearn/issues/926)
+
+### Maintenance
+
+- [**task**] theme: remove author deprecation warning [#919](https://github.com/McShelby/hugo-theme-relearn/issues/919)
+- [**task**] theme: remove deprecation waring for usage of .Sites.First [#912](https://github.com/McShelby/hugo-theme-relearn/issues/912)
+- [**task**][**breaking**] theme: restructure code [#891](https://github.com/McShelby/hugo-theme-relearn/issues/891)
+- [**task**][**breaking**] search: improve generation of dedicated search page [#888](https://github.com/McShelby/hugo-theme-relearn/issues/888)
+- [**task**] theme: remove warning for usage of .Site.IsMultiLingual [#877](https://github.com/McShelby/hugo-theme-relearn/issues/877)
+- [**task**][**breaking**] roadmap: upcoming major changes for 7.0.0 [#715](https://github.com/McShelby/hugo-theme-relearn/issues/715)
+
+---
+
+## 6.4.1 (2024-10-11)
+
+### Fixes
+
+- [**bug**] highlight: remove additional newlines from code if copied from cursor selection [#925](https://github.com/McShelby/hugo-theme-relearn/issues/925)
+
+---
+
+## 6.4.0 (2024-09-12)
+
+### Enhancements
+
+- [**feature**] notice: support user defined box styles [#913](https://github.com/McShelby/hugo-theme-relearn/issues/913)
+- [**feature**] frontmatter: add `expanded` parameter for shortcodes [#911](https://github.com/McShelby/hugo-theme-relearn/issues/911)
+- [**feature**] resources: add `expanded` parameter [#908](https://github.com/McShelby/hugo-theme-relearn/issues/908)
+- [**feature**][**change**] notice: collapse borders if single code block is displayed [#906](https://github.com/McShelby/hugo-theme-relearn/issues/906)
+
+### Fixes
+
+- [**bug**] include: don't erroneously remove headings if `hidefirstheading=true` [#914](https://github.com/McShelby/hugo-theme-relearn/issues/914)
+
+### Maintenance
+
+- [**task**] build: add link for migration into changelog [#915](https://github.com/McShelby/hugo-theme-relearn/issues/915)
+- [**task**] shortcodes: fix whitespace issues [#907](https://github.com/McShelby/hugo-theme-relearn/issues/907)
+
+---
+
+## 6.3.0 (2024-09-03)
+
+### Enhancements
+
+- [**feature**] theme: support Obsidian styled alerts [#903](https://github.com/McShelby/hugo-theme-relearn/issues/903)
+- [**feature**] notice: add expander to box title [#901](https://github.com/McShelby/hugo-theme-relearn/issues/901)
+
+### Fixes
+
+- [**bug**] children: fix sort parameter [#898](https://github.com/McShelby/hugo-theme-relearn/issues/898)
+- [**bug**] mermaid: classDiagram breaks when using <<interface>> [#895](https://github.com/McShelby/hugo-theme-relearn/issues/895)
+- [**bug**] toc: don't show toc button if empty [#893](https://github.com/McShelby/hugo-theme-relearn/issues/893)
+
+### Maintenance
+
+- [**task**] mermaid: update to 11.1.0 [#904](https://github.com/McShelby/hugo-theme-relearn/issues/904)
+- [**task**][**change**] expand: rename `open` parameter to `expanded` [#902](https://github.com/McShelby/hugo-theme-relearn/issues/902)
+- [**task**] i18n: update Arabic translation [#900](https://github.com/McShelby/hugo-theme-relearn/issues/900)
+
+---
+
+## 6.2.0 (2024-08-26)
+
+### Enhancements
+
+- [**feature**][**change**] anchor: add option to scroll into view [#886](https://github.com/McShelby/hugo-theme-relearn/issues/886)
+- [**feature**] theme: support for GitHub styled alerts [#885](https://github.com/McShelby/hugo-theme-relearn/issues/885)
+
+### Fixes
+
+- [**bug**] arrownav: avoid rude event handling for form elements [#887](https://github.com/McShelby/hugo-theme-relearn/issues/887)
+
+### Maintenance
+
+- [**task**] 404: move styles to separate file [#889](https://github.com/McShelby/hugo-theme-relearn/issues/889)
+
+---
+
+## 6.1.1 (2024-08-02)
+
+### Fixes
+
+- [**bug**] link: link resolving stopped working in certain configurations [#882](https://github.com/McShelby/hugo-theme-relearn/issues/882)
+
+---
+
+## 6.1.0 (2024-08-02)
+
+### Enhancements
+
+- [**feature**][**change**] assetbuster: use asset buster for all resources [#875](https://github.com/McShelby/hugo-theme-relearn/issues/875)
+- [**feature**] theme: sync to Hugo changes for PublishDate [#872](https://github.com/McShelby/hugo-theme-relearn/issues/872)
+- [**feature**] theme: allow errorlevel override on page level [#870](https://github.com/McShelby/hugo-theme-relearn/issues/870)
+- [**feature**] relref: provide shortcodes to lift certain restrictions [#864](https://github.com/McShelby/hugo-theme-relearn/issues/864)
+- [**feature**] openapi: adjust to Hugo's build-in link render hook [#860](https://github.com/McShelby/hugo-theme-relearn/issues/860)
+- [**feature**][**change**] include: adjust to Hugo's build-in link render hook [#859](https://github.com/McShelby/hugo-theme-relearn/issues/859)
+
+### Fixes
+
+- [**bug**] variant: auto variant references potentially wrong chroma style [#873](https://github.com/McShelby/hugo-theme-relearn/issues/873)
+- [**bug**] schema: sync to Hugo changes for LanguageCode [#866](https://github.com/McShelby/hugo-theme-relearn/issues/866)
+- [**bug**] taxonomy: simplify code [#852](https://github.com/McShelby/hugo-theme-relearn/issues/852)
+- [**bug**] alias: index.html has displays error in content [#851](https://github.com/McShelby/hugo-theme-relearn/issues/851)
+
+### Maintenance
+
+- [**task**] icon: update Font Awesome to 6.6.0 [#881](https://github.com/McShelby/hugo-theme-relearn/issues/881)
+- [**task**] math: update MathJax to 3.2.2 [#880](https://github.com/McShelby/hugo-theme-relearn/issues/880)
+- [**task**] openapi: update swagger-ui to 5.17.14 [#879](https://github.com/McShelby/hugo-theme-relearn/issues/879)
+- [**task**] mermaid: update to 10.9.1 [#878](https://github.com/McShelby/hugo-theme-relearn/issues/878)
+- [**task**] theme: remove special cases for LanguageCode [#861](https://github.com/McShelby/hugo-theme-relearn/issues/861)
+- [**task**] link: adjust to Hugo's build-in code [#858](https://github.com/McShelby/hugo-theme-relearn/issues/858)
+- [**task**] image: adjust to Hugo's build-in code [#857](https://github.com/McShelby/hugo-theme-relearn/issues/857)
+- [**task**] opengraph: sync to Hugo's implementation [#856](https://github.com/McShelby/hugo-theme-relearn/issues/856)
+- [**task**] i18n: improve file naming [#848](https://github.com/McShelby/hugo-theme-relearn/issues/848)
+
+---
+
 ## 6.0.0 (2024-04-27)
 
 ### Enhancements
@@ -14,7 +373,7 @@
 
 ### Fixes
 
-- [**bug**] frontmatter: move frontmatter config for exampleSite out of root [#843](https://github.com/McShelby/hugo-theme-relearn/issues/843)
+- [**bug**] frontmatter: move frontmatter config for docs out of root [#843](https://github.com/McShelby/hugo-theme-relearn/issues/843)
 - [**bug**] images: color outline using primary color [#838](https://github.com/McShelby/hugo-theme-relearn/issues/838)
 - [**bug**][**breaking**] variant: avoid Hugo permission errors on build [#831](https://github.com/McShelby/hugo-theme-relearn/issues/831)
 - [**bug**] theme: unwanted paragraph break with AsciiDoc [#829](https://github.com/McShelby/hugo-theme-relearn/issues/829)
@@ -476,6 +835,7 @@
 ---
 
 ## 5.14.1 (2023-05-20)
+
 *No changelog for this release.*
 
 ---
@@ -501,7 +861,7 @@
 
 ### Fixes
 
-- [**bug**] print: enable print for pages with _build options [#522](https://github.com/McShelby/hugo-theme-relearn/issues/522)
+- [**bug**] print: enable print for pages with build options [#522](https://github.com/McShelby/hugo-theme-relearn/issues/522)
 
 ---
 
@@ -1094,7 +1454,7 @@
 
 ### Fixes
 
-- [**bug**] favicon: fix URL if site resides in subfolder [#302](https://github.com/McShelby/hugo-theme-relearn/issues/302)
+- [**bug**] favicon: fix URL if site resides in subdirectory [#302](https://github.com/McShelby/hugo-theme-relearn/issues/302)
 - [**bug**] code: show copy-to-clipboard marker for blocklevel code [#298](https://github.com/McShelby/hugo-theme-relearn/issues/298)
 - [**bug**] menu: make active expander visible on hover [#297](https://github.com/McShelby/hugo-theme-relearn/issues/297)
 - [**bug**] print: disable arrow navigation [#294](https://github.com/McShelby/hugo-theme-relearn/issues/294)
@@ -1136,11 +1496,13 @@
 ---
 
 ## 4.2.2 (2022-06-23)
+
 *No changelog for this release.*
 
 ---
 
 ## 4.2.1 (2022-06-23)
+
 *No changelog for this release.*
 
 ---
@@ -1221,6 +1583,7 @@
 ---
 
 ## 4.0.1 (2022-06-05)
+
 *No changelog for this release.*
 
 ---
@@ -1427,7 +1790,7 @@
 
 ### Fixes
 
-- [**bug**] exampleSite: fix links in official documentation [#168](https://github.com/McShelby/hugo-theme-relearn/issues/168)
+- [**bug**] docs: fix links in official documentation [#168](https://github.com/McShelby/hugo-theme-relearn/issues/168)
 
 ---
 
@@ -1678,7 +2041,7 @@
 
 ### Maintenance
 
-- [**task**] docs: include changelog in exampleSite [#33](https://github.com/McShelby/hugo-theme-relearn/issues/33)
+- [**task**] docs: include changelog [#33](https://github.com/McShelby/hugo-theme-relearn/issues/33)
 
 ---
 

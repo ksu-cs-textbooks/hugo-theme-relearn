@@ -1,6 +1,9 @@
 [Reading-direction]
 other = "ltr"
 
+[Versioning-warning]
+other = 'Você está lendo a versão {{.pageVersion.title}} desta página. A versão atual pode ser encontrada <a href="{{.latestUrl}}">aqui</a>.'
+
 [Search]
 other = "Procurar"
 
@@ -37,8 +40,17 @@ other = "Ops. Parece que a página não existe ¯\\_(ツ)_/¯."
 [Go-to-homepage]
 other = "Ir para o início"
 
+[home-button]
+other = "Home"
+
 [Edit-this-page]
 other = "Editar"
+
+[Show-Markdown]
+other = "Mostrar Markdown"
+
+[Show-source]
+other = "Mostrar código-fonte"
 
 [Print-this-chapter]
 other = "Imprimir capítulo inteiro"
@@ -46,7 +58,7 @@ other = "Imprimir capítulo inteiro"
 [More-action]
 other = "Mais"
 
-[Shortcuts-Title]
+[shortcuts-menuTitle]
 other = "Mais"
 
 [Expand-title]
@@ -67,11 +79,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Nota"
+[caution]
+other = "Cuidado"
+
+[important]
+other = "Important"
 
 [info]
 other = "Informação"
+
+[note]
+other = "Nota"
 
 [tip]
 other = "Dica"
@@ -117,3 +135,6 @@ other = "Categorias"
 
 [category]
 other = "Categoria"
+
+[Details]
+other = "Detalhes"

@@ -1,6 +1,4 @@
 {{- $page := .page }}
-{{- $format := partial "get-format.hugo" $page }}
-{{- $outputFormat := partial "output-format.hugo" (dict "page" $page "format" $format) }}
 {{- $taxonomy := .taxonomy }}
 {{- $class := .class }}
 {{- $color := .color | default "" }}
@@ -8,45 +6,30 @@
 {{- if and (not $style) (eq (len $style) 0) }}
   {{- $color = .color | default "var(--INTERNAL-TAG-BG-color)" }}
 {{- end }}
-{{- $icon := .icon | default "" }}
-{{- $icon = trim $icon " " }}
+{{- $boxStyle := partial "_relearn/boxStyle.gotmpl" (dict "style" $style "title" "" "icon" .icon) }}
+{{- if and (not $boxStyle.style) (not $color) }}
+  {{- $color = $style }}
+  {{- $style = "" }}
+{{- end }}
+{{- $icon := trim ($boxStyle.icon) " " }}
 {{- if and $icon (not (findRE ".*?\\bfa-\\w.*?" $icon)) }}
   {{- $icon = printf "fa-fw fas fa-%s" $icon }}
 {{- end }}
 {{- $taxonomy_page := $page.Site.GetPage $taxonomy }}
-{{- $terms := slice | append (index $page.Params $taxonomy) }}
 {{- $term_pages := slice }}
-{{- range $terms }}
-  {{- $term := . }}
-  {{- $term_key := $term }}
-  {{- with $page.Site.GetPage (printf "%s/%s" $taxonomy $term_key) }}
-    {{- $term_pages = $term_pages | append (dict "Title" (partial "pageHelper/title.hugo" (dict "page" . "linkTitle" true "format" $format "outputFormat" $outputFormat)) "Term" . )}}
-  {{- else }}
-    {{- $term = trim $term " " }}
-    {{- if not $term }}
-      {{- continue }}
-    {{- end }}
-    {{- $term_key = ($term | plainify | anchorize) }}
-    {{- with $page.Site.GetPage (printf "%s/%s" $taxonomy $term_key) }}
-      {{- $term_pages = $term_pages | append (dict "Title" (partial "pageHelper/title.hugo" (dict "page" . "linkTitle" true "format" $format "outputFormat" $outputFormat)) "Term" . )}}
-    {{- else }}
-      {{- $term_key = ($term | urlize) }}
-      {{- with $page.Site.GetPage (printf "%s/%s" $taxonomy $term_key) }}
-        {{- $term_pages = $term_pages | append (dict "Title" (partial "pageHelper/title.hugo" (dict "page" . "linkTitle" true "format" $format "outputFormat" $outputFormat)) "Term" . )}}
-      {{- end }}
-    {{- end }}
-  {{- end }}
+{{- range $page.GetTerms $taxonomy }}
+  {{- $term_pages = $term_pages | append (dict "Title" (partial "title.gotmpl" (dict "page" . "linkTitle" true)) "Term" . )}}
 {{- end }}
-{{- $taxonomy_title := partial "pageHelper/title.hugo" (dict "page" $taxonomy_page "format" $format "outputFormat" $outputFormat) }}
+{{- $taxonomy_title := partial "title.gotmpl" (dict "page" $taxonomy_page) }}
 {{- with $term_pages }}
-<div class=" taxonomy-{{ $taxonomy }} term-list cstyle {{ $style }} {{ $class }}" title="{{ $taxonomy_title }}"{{ if $color }}{{ printf " style=\"--VARIABLE-TAGS-BG-color: %s;\"" $color | safeHTMLAttr }}{{ end }}>
+<div class="R-taxonomy taxonomy-{{ $taxonomy }} cstyle{{ with $style }} {{ . }}{{ end }}{{ with $class }} {{ . }}{{ end }}" title="{{ $taxonomy_title }}"{{ with $color }}{{ printf " style=\"--VARIABLE-TAGS-BG-color: %s;\"" . | safeHTMLAttr }}{{ end }}>
   {{- if $icon }}
   <i class="{{ $icon }}"></i>
   {{- end }}
   <ul>
   {{- range sort . ".Title" }}
     {{- $to := .Term }}
-    <li><a class="term-link" href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" $to) }}">{{ .Title }}</a></li>
+    <li><a class="term-link" href="{{ partial "permalink.gotmpl" (dict "to" $to) }}">{{ .Title }}</a></li>
   {{- end }}
   </ul>
 </div>

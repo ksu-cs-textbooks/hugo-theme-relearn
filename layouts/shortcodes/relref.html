@@ -1,2 +1,5 @@
-{{/* [x] russfeld */}}
-{{- .Get "path" | default (.Get 0) }}
+{{- if site.Params.disableDefaultRelref }}
+	{{- .Get "path" | default (.Get 0) }}
+{{- else }}
+	{{- relref . .Params }}
+{{- end }}
