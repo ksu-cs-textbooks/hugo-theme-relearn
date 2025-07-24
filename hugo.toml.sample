@@ -15,19 +15,13 @@ enableGitInfo = true
 # When building, removes files from destination not found in static directories.
 cleanDestinationDir = true
 
-# Theme Override for testing
-theme = 'hugo-theme-relearn'
-
-
 # Output Types
 # HTML - default page
 # RSS - for RSS feeds
 # PRINT - printable output
-# JSON - enables Lunr search engine
 # TELE - Teleprompter
 # EMBED - Embeddable Version
-# SEARCH - Search index file for Lunr
-# SEARCHPAGE - Dedicated Search Page
+# LTI - JSON file for LTI integration tools
 [outputs]
   home = ["HTML", "RSS", "PRINT", "LTI"]
   section = ["HTML", "RSS", "PRINT", "TELE", "EMBED"]
@@ -80,7 +74,7 @@ theme = 'hugo-theme-relearn'
   # This name will be used for the link to the main page in the upper section
   # of the menu. If not set, `title` from the Hugo settings will be used.
   # TODO changeme
-  linkTitle = 'KSUCS Hugo'
+  linkTitle = 'K-State CS Hugo Framework'
 
   # Used color variants.
   # Default: 'auto'
@@ -778,25 +772,29 @@ theme = 'hugo-theme-relearn'
   # TODO changeme
   commitURL = "https://github.com/russfeld/ksucs-hugo/commit/"
 
-# [markup]
-#   [markup.highlight]
-#     # Render the highlighted code in an HTML table with two cells. 
-#     # The left table cell contains the line numbers. 
-#     # The right table cell contains the code, allowing a user to 
-#     # select and copy the code without line numbers. 
-#     # Irrelevant if lineNos is false.
-#     lineNumbersInTable = false
-# 
-#     # Use inline CSS styles instead of an external CSS file.
-#     noClasses = false
-# 
-#   [markup.goldmark]
-#     [markup.goldmark.renderer]
-#       # Render raw HTML
-#       unsafe = true
+[markup]
+  # See https://gohugo.io/configuration/markup/#goldmark
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Render raw HTML
+      unsafe = true
+    # See https://gohugo.io/configuration/markup/#extensions
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
 
-## Import Theme as Module
-## https://mcshelby.github.io/hugo-theme-relearn/basics/installation/index.html#using-hugos-module-system
-# [module]
-#   [[module.imports]]
-#     path = 'github.com/ksu-cs-textbooks/hugo-theme-relearn'
+# Import Theme as Module
+# https://mcshelby.github.io/hugo-theme-relearn/basics/installation/index.html#using-hugos-module-system
+ [module]
+   [[module.imports]]
+     path = 'github.com/ksu-cs-textbooks/hugo-theme-relearn'
