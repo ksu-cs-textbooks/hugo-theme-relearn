@@ -27,12 +27,12 @@ body {
 }
 
 /* Sidebar Arrows */
-#R-sidebar #R-topics ul > li {
+#R-sidebar ul > li {
   margin-left: 1rem; 
 }
 
 /* Sidebar Titles */
-#R-sidebar #R-topics ul > li > a b {
+#R-sidebar ul > li > a b {
   font-weight: 400;
   opacity: 0.5;
 }

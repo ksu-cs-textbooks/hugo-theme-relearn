@@ -3,6 +3,11 @@
 {{- block "storeOutputFormat" . }}{{ end }}
 {{- /* override default theme */ -}}
 {{- .Store.Set "defaultTheme" "light-theme" }}
+{{- $minify := not hugo.IsServer }}
+{{- if and (isset site.Params "minify") (ne site.Params.minify "") }}
+  {{- $minify = site.Params.minify }}
+{{- end }}
+{{- $assetBusting := partialCached "assetbusting.gotmpl" . }}
 {{- if .IsHome }}
   {{- $hugoVersion := "0.126.3" }}
   {{- if lt hugo.Version $hugoVersion }}
@@ -63,5 +68,12 @@
 {{- block "menu" . }}{{ end }}
 {{- partial "dependencies.html" (dict "page" . "location" "footer") }}
 {{- partial "custom-footer.html" . }}
+  {{- with resources.Get "/js/embed-iframe.js" }}
+  {{- $res := . }}
+  {{- if $minify }}
+    {{- $res = $res | minify }}
+  {{- end }}
+  <script src="{{ $res.RelPermalink }}{{ $assetBusting }}" defer></script>
+  {{- end }}
   </body>
 </html>

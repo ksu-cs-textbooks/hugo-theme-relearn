@@ -44,7 +44,7 @@
   # [x] russfeld
   [outputFormats.tele]
     name= "tele"
-    baseName = "index.tele"
+    baseName = "tele"
     isHTML = true
     mediaType = 'text/html'
     permalinkable = false
@@ -52,7 +52,7 @@
 
   [outputFormats.embed]
     name= "embed"
-    baseName = "index.embed"
+    baseName = "embed"
     isHTML = true
     mediaType = 'text/html'
     permalinkable = false
