@@ -87,7 +87,7 @@ Generator run:
 {{- /*
 - Read default stuff
 */}}
-{{- $defaultthemevariant := partial "inline/get-theme-details" (dict "themevariant" (dict) "identifier" "relearn-light") }}
+{{- $defaultthemevariant := partial "inline/get-theme-details" (dict "themevariant" (dict) "identifier" "light-theme") }}
 {{- $nucleuscontent := "" }}
 {{- with resources.Get "/css/nucleus.css" }}
   {{- $nucleuscontent = .Content }}
@@ -224,6 +224,11 @@ Write yet non-dynamic stuff
   {{- $url := .RelPermalink }}
 {{- end }}
 {{- range resources.Match "/fonts/robotoflex/**" }}
+  {{- /* the following code causes Hugo to generate our file in public */}}
+  {{- $url := .RelPermalink }}
+{{- end }}
+{{- /* [x] russfeld */}}
+{{- range resources.Match "/fonts/lato/**" }}
   {{- /* the following code causes Hugo to generate our file in public */}}
   {{- $url := .RelPermalink }}
 {{- end }}

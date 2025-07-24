@@ -1,0 +1,23 @@
+{{- $onwidths := cond (isset . "onwidths") .onwidths "area-more" }}
+{{- $onwidthm := cond (isset . "onwidthm") .onwidthm "show" }}
+{{- $onwidthl := cond (isset . "onwidthl") .onwidthl "show" }}
+{{- with .page }}
+	{{- $format := .OutputFormats.Get "embed" }}
+	{{- $show := and $format (not (.Param "disablePrintButton")) }}
+	{{- if $show }}
+		{{- $show = not (partial "_relearn/pageIsSpecial.gotmpl" .) }}
+	{{- end }}
+	{{- if $show }}
+		{{- $href := printf "%s?format=embed" .Path }}
+		{{- partial "topbar/func/button.html" (dict
+			"page" .
+			"class" "topbar-button-embed"
+			"href" $href
+			"icon" "expand-arrows-alt"
+			"onwidths" $onwidths
+			"onwidthm" $onwidthm
+			"onwidthl" $onwidthl
+			"hint" (printf "%s" (T "Embeddable-version"))
+		)}}
+	{{- end }}
+{{- end }}

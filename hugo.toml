@@ -41,6 +41,31 @@
     permalinkable = false
     noUgly = true
 
+  # [x] russfeld
+  [outputFormats.tele]
+    name= "tele"
+    baseName = "index.tele"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+    noUgly = true
+
+  [outputFormats.embed]
+    name= "embed"
+    baseName = "index.embed"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+    noUgly = true
+  
+  [outputFormats.lti]
+    name= "lti"
+    baseName = "index.lti"
+    isPlainText = true
+    mediaType = 'text/javascript'
+    permalinkable = false
+    noUgly = true
+
 [params.relearn.dependencies]
   [params.relearn.dependencies.math]
     name = 'Math'

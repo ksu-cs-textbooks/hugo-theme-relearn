@@ -1,0 +1,42 @@
+{{- /* [x] russfeld */}}
+{{- $LastModifierDisplayName := "" }}
+{{- $LastModifierEmail := "" }}
+{{- $Date := "" }}
+{{- $dateFormat := site.Params.dateFormat | default ":date_medium" }}
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+{{- with .GitInfo }}
+  {{- with and (not site.Params.hideAuthorName) .AuthorName }}
+    {{- $LastModifierDisplayName = . }}
+  {{- end }}
+  {{- with and (not site.Params.hideAuthorEmail) .AuthorEmail }}
+    {{- $LastModifierEmail = . }}
+  {{- end }}
+  {{- with and (not site.Params.hideAuthorDate) .AuthorDate }}
+    {{- $Date = . | time.Format $dateFormat }}
+  {{- end }}
+{{- else }}
+  {{- with and (not site.Params.hideAuthorName) .Params.LastModifierDisplayName }}
+    {{- $LastModifierDisplayName = . }}
+  {{- end }}
+  {{- with and (not site.Params.hideAuthorEmail) .Params.LastModifierEmail }}
+    {{- $LastModifierEmail = . }}
+  {{- end }}
+  {{- with and (not site.Params.hideAuthorDate) .Date }}
+    {{- $Date = . | time.Format $dateFormat }}
+  {{- end }}
+{{- end }}
+<p>Last modified by: 
+{{- if $LastModifierDisplayName }}
+              <i class='fa-fw fas fa-user'></i> {{ with $LastModifierEmail }}<a href="mailto:{{ . }}">{{ end }}{{ $LastModifierDisplayName }}{{ with $LastModifierEmail }}</a>{{ end }}
+{{- end }}
+{{- with $Date }}
+      {{- if $.Site.Params.commitURL }}
+              <i class='fas fa-calendar'></i> <a href="{{ $.Site.Params.commitURL }}{{ $.GitInfo.Hash }}">{{ . }}</a>
+      {{- else }}
+              <i class='fas fa-calendar'></i> {{ . }}
+      {{- end }}
+{{- end }}
+</p>
+
+</div>

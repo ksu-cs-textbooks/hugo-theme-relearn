@@ -1,0 +1,60 @@
+{{/* Custom Template for Reveal.js Slides */}}
+{{/* [x] russfeld */}}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>{{ .Title }}</title>
+
+		<link rel="stylesheet" href="{{"reveal/dist/reset.css" | relURL }}">
+		<link rel="stylesheet" href="{{"reveal/dist/reveal.css" | relURL }}">
+		<link rel="stylesheet" href="{{"reveal/dist/theme/black.css" | relURL }}">
+		<link rel="stylesheet" href="{{"css/reveal-theme.css" | relURL }}">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="{{"reveal/plugin/highlight/monokai.css" | relURL }}">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				{{ .Content }}
+			</div>
+		</div>
+
+		<script src="{{"reveal/dist/reveal.js" | relURL}}"></script>
+		<script src="{{"reveal/plugin/markdown/markdown.js" | relURL}}"></script>
+		<script src="{{"reveal/plugin/highlight/highlight.js" | relURL}}"></script>
+		<script src="{{"reveal/plugin/math/math.js" | relURL}}"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				controls: false,
+				controlsTutorial:false,
+				progress: false,
+				transition: 'fade',
+				width: 1440,
+				height: 1080,
+				highlight: {
+					escapeHTML: false
+				},
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+			});
+
+			window.addEventListener("mousedown", handleClick, false);
+			window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+			function handleClick(e) {
+				e.preventDefault();
+				if(e.button === 0) Reveal.next();
+				if(e.button === 2) Reveal.prev();
+			}
+		</script>
+	</body>
+</html>

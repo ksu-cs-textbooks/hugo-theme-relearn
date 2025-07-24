@@ -8,6 +8,7 @@
 	{{- end }}
 {{- end }}
 {{- if not $set }}
+	#/* [x] russfeld */
 	{{- range (slice
 		(dict "identifier" "caution"   "icon" "hand")
 		(dict "identifier" "important" "icon" "bolt")
@@ -15,6 +16,7 @@
 		(dict "identifier" "note"      "icon" "exclamation-circle")
 		(dict "identifier" "tip"       "icon" "lightbulb")
 		(dict "identifier" "warning"   "icon" "exclamation-triangle")
+		(dict "identifier" "noiframe"   "icon" "times-circle")
 	) }}
 		{{- if eq .identifier $style }}
 			{{- $title := .identifier | T }}

@@ -28,7 +28,9 @@
 
 {{ end }}
 	{{- with $page }}
-{{- $content | safeHTML }}
+<!-- [x] russfeld -->
+<!-- switch from safeHTML to markdownify -->
+{{- $content | markdownify }}
 	{{- end }}
 	{{- if $hideFirstHeading }}</div>{{ end }}
 {{- end }}

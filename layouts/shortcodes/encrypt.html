@@ -1,0 +1,39 @@
+<!-- Encrypt content -->
+<!-- [x] russfeld -->
+{{ $_hugo_config := `{ "version": 1 }` }}
+
+{{- $minify := not hugo.IsServer }}
+{{- if and (isset site.Params "minify") (ne site.Params.minify "") }}
+  {{- $minify = site.Params.minify }}
+{{- end }}
+{{- $assetBusting := partialCached "assetbusting.gotmpl" . }}
+
+<div>
+  {{ with .Get "encrypted"}}
+    <span class="btn cstyle primary">
+      <a id="decrypt" href="#"><i class="fas fa-lock"></i> Decrypt</a>
+    </span>
+  {{ else }}
+    <span class="btn cstyle primary">
+      <a id="encrypt" href="#"><i class="fas fa-lock-open"></i> Encrypt</a>
+    </span>
+  {{ end}}
+  <div id="encrypt-div">
+    {{ .Inner }}
+  </div>
+</div>
+
+{{- with resources.Get "/js/sjcl.js" }}
+  {{- $res := . }}
+  {{- if $minify }}
+    {{- $res = $res | minify }}
+  {{- end }}
+<script src="{{ $res.RelPermalink }}{{ $assetBusting }}" defer></script>
+{{- end }}
+{{- with resources.Get "/js/encrypt.js" }}
+  {{- $res := . }}
+  {{- if $minify }}
+    {{- $res = $res | minify }}
+  {{- end }}
+<script src="{{ $res.RelPermalink }}{{ $assetBusting }}" defer></script>
+{{- end }}

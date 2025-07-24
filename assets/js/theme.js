@@ -4,6 +4,9 @@ var theme = true;
 var isPrint = document.querySelector('body').classList.contains('print');
 var isPrintPreview = false;
 
+// [x] russfeld
+var isEmbed = (document.querySelector('.embed') != null) || (document.querySelector('.tele') != null)
+
 var isRtl = document.querySelector('html').getAttribute('dir') == 'rtl';
 var lang = document.querySelector('html').getAttribute('lang');
 var dir_padding_start = 'padding-left';
@@ -888,6 +891,11 @@ function initArrowHorizontalNav() {
   if (isPrint) {
     return;
   }
+  // [x] russfeld
+  if ( isEmbed ) {
+      return;
+  }
+
 
   // button navigation
   var prev = document.querySelector('.topbar-button-prev a');
@@ -951,6 +959,10 @@ function initArrowHorizontalNav() {
 function initMenuScrollbar() {
   if (isPrint) {
     return;
+  }
+  // [x] russfeld
+  if ( isEmbed ) {
+      return;
   }
 
   var elm = document.querySelector('#R-content-wrapper');
@@ -1252,6 +1264,10 @@ function showPrint() {
 function initToc() {
   if (isPrint) {
     return;
+  }
+  // [x] russfeld
+  if ( isEmbed ) {
+      return;
   }
 
   document.addEventListener('keydown', editShortcutHandler);

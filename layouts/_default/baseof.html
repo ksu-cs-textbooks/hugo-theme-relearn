@@ -71,7 +71,10 @@
         </div>
       </main>
 {{- partial "custom-comments.html" . }}
+    {{- /* [x] russfeld */ -}}
+    {{- partial "git-info.html" . }}
     </div>
+
 {{- block "menu" . }}{{ end }}
 {{- partial "dependencies.html" (dict "page" . "location" "footer") }}
 {{- partial "custom-footer.html" . }}

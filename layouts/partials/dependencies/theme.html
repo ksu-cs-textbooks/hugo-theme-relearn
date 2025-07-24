@@ -21,9 +21,17 @@
     {{- $min := cond $minify ".min" "" }}
     {{- $themevariants := partialCached "_relearn/themeVariants.gotmpl" . }}
     {{- $quotedthemevariants := slice }}
-    {{- range $themevariants }}
-      {{- $quotedthemevariants = $quotedthemevariants | append (printf "'%s'" .identifier) }}
-    {{- end }}
+    {{- /* [x] russfeld */ -}}
+    {{- $writeVariant := true }}
+    {{- with .Store.Get "defaultTheme" }}
+      {{- $writeVariant = false }}
+      {{- $quotedthemevariants = $quotedthemevariants | append (printf "'%s'" . ) }}
+    {{- else }}
+      {{- range $themevariants }}
+        {{- $quotedthemevariants = $quotedthemevariants | append (printf "'%s'" .identifier) }}
+      {{- end }}
+    {{- end}}
+    {{- /* [x] russfeld end */ -}}
     {{- $wrap := true }}
     {{- if isset site.Params "highlightwrap" }}
       {{- $wrap = site.Params.highlightWrap  }}
@@ -90,6 +98,8 @@
       {{ "// variant stuff" | safeJS }}
       window.relearn.themevariants = [ {{ delimit $quotedthemevariants ", " | safeJS }} ];
       window.relearn.customvariantname = "my-custom-variant";
+      {{ "// [x] russfeld" | safeJS }}
+      window.relearn.writeVariant={{ printf "%t" (eq $writeVariant true) | safeJS }};
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
         window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
@@ -108,7 +118,10 @@
         if( variant == window.relearn.customvariantname ){
         }else if( !variant || !window.relearn.themevariants.includes(variant) ){
           variant = window.relearn.themevariants[0];
-          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          // [x] russfeld
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
         }
         document.documentElement.dataset.rThemeVariant = variant;
       }
