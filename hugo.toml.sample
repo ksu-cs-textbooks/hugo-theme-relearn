@@ -363,7 +363,7 @@ cleanDestinationDir = true
   # Note that if set to `true` can have a major performance impact on build
   # for sites with many pages.
   # This can be overridden in the page's frontmatter.
-  collapsibleMenu = false
+  collapsibleMenu = true
 
   # Hide heading above the shortcuts menu.
   # Default: false
