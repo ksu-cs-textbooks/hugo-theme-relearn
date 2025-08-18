@@ -1,6 +1,6 @@
 ### Students with Disabilities
 
-At K-State it is important that every student has access to course content and the means to demonstrate course mastery. Students with disabilities may benefit from services including accommodations provided by the Student Access Center. Disabilities can include physical, learning, executive functions, and mental health. You may register at the[Student Access Center](https://k-state.edu/accesscenter) or to learn more contact:  
+At K-State it is important that every student has access to course content and the means to demonstrate course mastery. Students with disabilities may benefit from services including accommodations provided by the Student Access Center. Disabilities can include physical, learning, executive functions, and mental health. You may register at the [Student Access Center](https://k-state.edu/accesscenter) or to learn more contact:  
 
 * Manhattan/Olathe/Global Campus – Student Access Center  
    * accesscenter@k-state.edu
