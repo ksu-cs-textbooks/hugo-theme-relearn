@@ -2,7 +2,7 @@
 
 {{% notice info %}}
 
-This is our personal policy and not a required syllabus statement from K-State. It has been adapted from [this statement](https://global.k-state.edu/students/courses/netiquette/) from K-State Global Campus, and the[Recurse Center Manual](https://www.recurse.com/manual). We have adapted their ideas to fit this course.
+This is our personal policy and not a required syllabus statement from K-State. It has been adapted from [this statement](https://online.k-state.edu/student-support/netiquette/) from K-State Online, and the[Recurse Center Manual](https://www.recurse.com/manual). We have adapted their ideas to fit this course.
 
 {{% /notice %}}
 
@@ -27,4 +27,4 @@ Here are a few general rules to help us all communicate online in this course, e
 
 As a participant in course discussions, you should also strive to honor the diversity of your classmates by adhering to the [K-State Principles of Community](https://www.k-state.edu/about/values/community/).
 
-<!-- Verified Spring 2024 -->
+<!-- Verified Fall 2025 -->

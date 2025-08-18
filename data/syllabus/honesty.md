@@ -8,4 +8,4 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 We reserve the right to use various platforms that can perform automatic plagiarism detection by tracking changes made to files and comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
 
-<!-- Verified Spring 2024 -->
+<!-- Verified Fall 2025 -->
