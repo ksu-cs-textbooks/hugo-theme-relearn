@@ -16,6 +16,9 @@
       "breadcrumb" (trim (partial "breadcrumbs.html" (dict "page" . "dirOnly" true) | plainify | htmlUnescape) "\n\r\t ")
       "description" (trim (or .Description .Summary | plainify | htmlUnescape) "\n\r\t " )
       "modified" (safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) )
+      "weight" .Weight
+      "wordCount" .WordCount
+      "isSection" .IsSection
     ) }}
   {{- end }}
 {{- end -}}
